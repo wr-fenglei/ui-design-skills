@@ -4,7 +4,7 @@
 
 源提交：7713177643201832893092b2e9e780eb0a523804。
 
-迁移范围：8 个源文件，包括 SKILL.md、README.md、.gitignore、3 个 references 文档及2张 assets 参考图。原文件内容和内部相对路径保持不变，未加入本轮未被选中的三角图标练习。
+迁移范围：8 个源文件，包括 SKILL.md、README.md、.gitignore、3 个 references 文档及2张 assets 参考图。迁入时8文件内容均与源一致，内部相对路径保持不变；随后仅更新模块README的过时维护路径，技能、三份参考文档、两张图片与.gitignore保持源内容，未加入本轮未被选中的三角图标练习。
 
 以下 Git blob SHA 可用于验证源内容：
 
