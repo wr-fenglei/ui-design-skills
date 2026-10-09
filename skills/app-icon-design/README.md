@@ -12,9 +12,9 @@
 
 ## 维护与使用
 
-本仓库由桌面源目录复制建立, 原始资料保留在 /Users/fenglei/Desktop/mine/app-icon-design
+本模块是 UI Design Skills 系统中的图标基础能力，当前唯一活跃维护入口为 skills/app-icon-design/。
 
-维护副本位于 /Users/fenglei/Documents/Codex/2026-10-01/design-and-icon-skills/outputs/app-icon-design, 本次不安装到全局技能目录, 后续设计任务按用户指定范围执行
+2026-10-09 从原私有 app-icon-design 仓库迁入；旧本机路径仅属于历史记录，不作为当前维护入口。不自动安装到全局技能目录。参见 [迁移记录](../../docs/icon-migration.md)。
 
 参考图用于分析图标设计语言, 不作为复制图标外形的模板
 
