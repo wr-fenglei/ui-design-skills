@@ -24,3 +24,15 @@
 ## 维护入口
 
 蔚的职责、研究反馈流程、阶段清理规则与项目进展统一在 [team-coordination/蔚](https://github.com/wr-fenglei/team-coordination/tree/main/%E8%94%9A) 维护。本仓库不重复保存角色操作规程。
+
+## 从整体到细节的工作入口
+
+1. [设计流程](docs/design-process.md)：场景、构图、分组、形体、字体色彩与状态验收。
+2. [已有反馈总结](docs/feedback-summary-2026-10-12.md)：明确认可的范围、后续修正与学习边界。
+3. 基础参考：[构图关系](references/composition-preservation.md)、[分组与层级](references/grouping-and-hierarchy.md)、[颜色与上下文](references/color-in-context.md)。
+4. [代码与图片逐阶段协作](references/code-image-collaboration.md)：待实践验证的双路线探索与融合方法。
+5. [设计参考与素材入口](references/design-sources.md)：只用一份文件记录去哪里找什么。
+6. 典型静态案例：[三联曲面展厅](examples/gallery-001/README.md)、[轨道进度视觉](examples/progress-001/README.md)。
+
+以上新增内容是参考、流程与案例，不表示已实现完整页面设计技能。案例的视觉认可、运行、交互与跨场景有效性分别记录。
+
