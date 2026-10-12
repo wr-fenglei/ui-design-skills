@@ -1,0 +1,14 @@
+{
+  "title": "Amber Clock",
+  "file": "preview.png",
+  "generator": "GPT Image",
+  "dimensions_px": [
+    1536,
+    1024
+  ],
+  "sha256": "be73a0d3588e2ce8ebb7bd75ebb8777daffbe701c2c88e55d44887a61da4043f",
+  "original_prompt_available": false,
+  "reference_status": "Selected static visual reference",
+  "production_status": "Not an implemented interface",
+  "reuse_note": "No third-party asset license is established by this example. Check rights and product suitability before external use."
+}

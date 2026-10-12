@@ -48,3 +48,8 @@ Keywords: shared light, temperature, softness, contour, perceptual coherence.
 Use expressive material for a focal object, product visual, or clearly defined component. Keep surrounding information restrained. Require a concrete use case before expanding decorative studies.
 
 Source: [Apple Materials](https://developer.apple.com/design/human-interface-guidelines/materials).
+
+## Visual references
+
+- [Amber clock](../examples/amber-clock/README.md): warm glass, warm-white numerals, and a cool-edged action.
+- [Green ribbon](../examples/green-ribbon/README.md): soft folds and shadows around a crisp type block.

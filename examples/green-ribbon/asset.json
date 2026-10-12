@@ -1,0 +1,14 @@
+{
+  "title": "Green Ribbon",
+  "file": "preview.png",
+  "generator": "GPT Image",
+  "dimensions_px": [
+    1536,
+    1024
+  ],
+  "sha256": "fbc39b68689075699ea6a82e9c95caea30e1b4cc0688732bedf6cd6a58ac7a47",
+  "original_prompt_available": false,
+  "reference_status": "Selected static visual reference",
+  "production_status": "Not an implemented interface",
+  "reuse_note": "No third-party asset license is established by this example. Check rights and product suitability before external use."
+}

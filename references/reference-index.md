@@ -38,6 +38,23 @@ A dark orbital composition with a large progress value, blue rim light, and a sm
 
 Use it to study information scale, localized contrast, and visual rhythm between type and curves. Do not infer a calibrated progress arc or working loading state.
 
+### [Amber clock](../examples/amber-clock/README.md)
+
+A large warm-white time display in front of amber glass, with a compact cool-edged action.
+
+Use it to study:
+- material cues shared by artwork, type, and controls;
+- a large dark object with concentrated edge brightness;
+- asymmetric overlap and localized warm/cool contrast.
+
+Do not treat the still image as a functioning timer or a verified type/color specification. The original verbatim generation prompt is unavailable.
+
+### [Green ribbon](../examples/green-ribbon/README.md)
+
+A stable black text block beside a flowing green ribbon and a small coral action.
+
+Use it to study tactile context around typography, diagonal continuity, folds and shadows, and unequal color areas. Do not let the artwork obscure text or assume the plus symbol has tested behavior. The original verbatim generation prompt is unavailable.
+
 ## Reference hierarchy
 
 1. Actual task and content requirements.
