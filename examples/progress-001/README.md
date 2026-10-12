@@ -1,25 +1,24 @@
-# 轨道进度加载视觉
+# Orbital Progress
 
-![认可的静态效果](preview.png)
+![Orbital Progress visual study](preview.png)
 
-## 认可与用途
+## Design dimensions
 
-用户明确认可此效果并要求收录。2026-10-12入库。作为进度加载的视觉参考。
+- Hierarchy: large progress value, small supporting label.
+- Color: deep dark field, cool blue rim, localized warm marker.
+- Rhythm: orbital path echoes the underlying curved surface.
+- Typography: compact near-white monospace support without competing with the value.
 
-## 为什么值得保留
+## Use
 
-暗场、冷蓝弧光与白色大数字建立主次；小尺寸近白色等宽状态字不抢数字；一个暖色点提供局部对比，轨道与地球曲面相呼应。
+A visual reference for a progress/loading concept. Keep live values and status text editable; calibrate the arc separately when implementing progress.
 
-这些解释是基于用户认可结果的设计分析，尚非跨场景验证的理论。
+## Construction
 
-## 制作方法
+See [visual specification](recipe.json) for relationships, key parameters, and implementation limits. The image was generated as a study; it is not a screenshot of the source site or a functional component.
 
-参考原作，先保留构图及关键比例，再用GPT Image生成或局部编辑。完整提示和哈希见[制作记录](recipe.json)。原始参考图未在此复制；没有参考输入，仅凭提示不能保证重现完全相同效果。
+## Source and use limits
 
-## 来源与边界
+Reference: https://edolus.com/
 
-原作：https://edolus.com/
-
-仅静态概念；82%数值和弧长未校准，真实进度、加载运动、错误状态及可读性未完整验证。生成编辑造成少量地表纹理漂移。
-
-本图是学习参考后的生成效果，不是原站截图，也不是原作者出品。来源资产版权仍属于各权利人；未确认商业素材许可。
+Static visual only. Interaction, responsive behavior, and accessibility require separate implementation and validation. Source assets remain with their rights holders; commercial reuse clearance has not been established.

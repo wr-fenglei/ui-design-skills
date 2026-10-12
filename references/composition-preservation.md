@@ -1,23 +1,46 @@
-# 提取设计片段时保留构图关系
+# Composition and Proportion
 
-状态：多轮纠正支持的方法。用于学习原作；商业应用须另做原创表达与许可核对。
+## Attention structure
 
-## 为什么保留颜色还不够
+Keywords: dominant mass, reading order, anchor, counterweight, quiet field.
 
-用户对原作的专业效果认可，但多次指出简化示例比例失调。关键关系包含图文占幅、主次尺度、外边距、组间距离、裁切、对齐、景深与曲率，不只是颜色和元素名称。
+- Identify the primary subject and the space reserved for it.
+- Compare the visual weight of text, images, and controls at reduced scale.
+- Choose centered, asymmetric, editorial, or layered composition for the content, not by default.
 
-## 操作
+## Scale and framing
 
-1. 打开原站，看首屏、滚动中段和目标区块。动态主导页面需查看实际运动，单张截图不能替代。
-2. 标出主元素边界和视觉边界，记录相对画布坐标、宽高占比、共同对齐线、裁切位置、空白方向。辅助网格是测量工具；未检查源码时不称其为原站真实网格。
-3. 写下不能丢的3至5项关系，再删除非关键内容。不要为了只演示颜色而把原作构图改成平均卡片。
-4. 同尺寸对照原作与练习。先看整体焦点与占幅，再看局部材质、字号、字色。
+Keywords: region ratio, occupied area, crop, continuation, foreground/background.
 
-## 典型证据
+- Record relative width, height, and position of the key regions.
+- Cropped neighbors can suggest continuation while one complete item establishes the current focus.
+- Preserve the reference's image-to-text ratio when making a study; keeping only its palette is insufficient.
 
-[三联曲面展厅](../examples/gallery-001/README.md)：中心完整、两侧局部裁切，中心左近右远的非对称曲面，外围小字点缀。用户要求先修正效果图，HTML实现已暂停。
-黑白图文结构和非对称画册仅整体左右关系获认可，其他颜色及小字并未通过。
+## Alignment and optical spacing
 
-## 验收与边界
+Keywords: outer margin, gutter, baseline, visible edge, optical correction.
 
-恢复关系优先于像素机械相同。数学等距不一定视觉等距：透明素材、字形或图形内含空白时应检查实际可见边界。缩窄画布或换中文后要重新布局，不能直接压缩整图。
+- Establish common alignment lines before tuning individual offsets.
+- Compare actual visible edges, not just CSS boxes or transparent image bounds.
+- Use a grid overlay to explain relationships. Label an inferred grid as an analysis aid unless verified from implementation.
+- Recompose for narrow screens rather than shrinking an entire desktop image.
+
+## Depth and overlap
+
+Keywords: occlusion, perspective, curvature, near/far, scale gradient.
+
+- Overlap can unite elements and create depth without extra containers.
+- Preserve which side is nearer, how curves recede, and where objects are cropped.
+- Keep important text clear even when it crosses a visual subject.
+
+## Reference study
+
+1. Inspect the target region and surrounding scroll context.
+2. Watch actual movement when motion drives the composition.
+3. Identify three to five essential spatial relationships.
+4. Remove nonessential content without changing those relationships.
+5. Compare at the same canvas size, then test adaptation.
+
+Example: [Curved gallery](../examples/gallery-001/README.md).
+
+Reference proportions are useful study evidence, not permission to copy protected artwork or brand identity.

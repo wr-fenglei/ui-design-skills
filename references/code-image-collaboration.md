@@ -1,28 +1,38 @@
-# 语言模型代码设计与图片设计的阶段协作
+# Code and Image Collaboration
 
-状态：2026-10-12 用户提出的协作方案，已采纳为待验证工作方法；尚未证明融合总比单一路线好。
+## Shared input
 
-## 每轮共同输入
+Keywords: content, canvas, selected reference, invariant, open variable.
 
-实际内容、场景、尺寸、参考及许可、上一阶段基准图、已确认的关系、当前允许调整的变量。HTML或SwiftUI必须实际渲染截图；不能用代码描述冒充视觉产物。
+Give both routes the same content, dimensions, visual goal, and constraints. When refining, supply one approved baseline and identify what may change.
 
-## 两路探索与合并
+## Responsibilities
 
-1. 在整体阶段，语言模型以布局结构、真实文本和可编辑实现探索；GPT Image以构图、色调、形态与材质探索。相同输入，各自探索，不让一条路线只机械复写另一条。
-2. 将代码渲染与图像结果按同画布比较。判断优点落在哪一层：构图、分组、字形、色彩、材质或局部图像。
-3. 合并兼容的优点；不是简单平均，也不叠加所有装饰。保留融合决策及未选方案的简短理由即可，不长期保存全部负例。
-4. 得到唯一基准稿。下轮两条路线都以它为依据，并锁定不变的布局比例等关系，只开放少量细节变量。
+- Code: editable layout, real typography, controls, state, responsive behavior, and data.
+- Image generation: bounded artwork, material, lighting, and visual exploration.
+- Either route can propose overall composition; evaluate the rendered result rather than assuming a model is best at a stage.
 
-## 交接产物
+## Compare and combine
 
-- 构图：区域比例、对齐、边距、裁切及基准图。
-- 色彩与文字：角色、参数、真实文字及对应渲染。
-- 图像素材：尺寸、透明度/背景、裁切、照明方向、生成或编辑提示、原始参考元信息。
-- 实现：HTML/CSS或SwiftUI源码、实际截图、可运行与未验证状态。
+1. Render code as an image; compare it with the generated concept at the same size.
+2. Identify the specific advantage: proportion, type rhythm, color relationship, form, or material.
+3. Transfer only compatible strengths. Do not average compositions or accumulate every decorative detail.
+4. Establish one selected baseline before refining the next level.
 
-图片中的文本、导航、表单和动态数字通常需要转回真实控件。局部插画、纹理、光照素材可以作为图像保留。图片只是视觉方案时，明确标为不可编辑概念，不能称完整功能页。
+## Handoff
 
-## 验收
+Keywords: dimensions, crop, alignment, transparency, light direction, editable text.
 
-在同一场景保留仅代码、仅图片、融合三个对照，比较：是否保住已确认关系、是否更协调、局部编辑有无漂移、中文与窄屏能否适配、真实交互与可读性是否通过。
-针对同一基准评价，不以模型名字决定胜负。生成模型改一个小字仍可能改变其他纹理；需要逐处对照。模型的优势分工是待实验假设，不能宣称已掌握GPT-6与GPT Image的通用最佳组合。
+- Express layout relationships as code or measured parameters.
+- Extract or recreate only the artwork needed for the composition.
+- Implement text, navigation, forms, and changing values as actual interface elements.
+- When a render is used as image input, retain its intended canvas and crop.
+
+## Validation
+
+- Compare code-only, image-only, and combined results when testing whether combination improves the design.
+- Check for unintended changes outside the requested edit region.
+- Test real text and interactions after visual integration.
+- Do not treat a still image as evidence of responsive or native-platform behavior.
+
+This is an execution method, not a claim that combining models always improves aesthetics.

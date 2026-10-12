@@ -1,13 +1,18 @@
 {
-  "title": "轨道进度加载视觉",
-  "status": "user-approved static visual reference",
+  "title": "Orbital Progress",
+  "artifact": "preview.png",
+  "type": "static visual study",
   "source_url": "https://edolus.com/",
-  "collected": "2026-10-09",
-  "feedback_recorded": "2026-10-11",
-  "curated": "2026-10-12",
-  "method": "GPT Image reference-based generation or local edit",
-  "prompt": "Image1 is the edit target, Image2 is typography reference ONLY. Change ONLY the small 'In progress' label below 82% in image1. Match reference image2's compact technical uppercase monospace supporting text: replace with exactly 'IN PROGRESS', near-white #F3F5F7, medium regular monospace weight, very modest letter spacing, font about22px on original1536px-wide target (current label roughly43px is too big). Preserve original label left edge x168px and place top at original y333px below unchanged82%. Keep all other target pixels visually unchanged:82% same size/position, Earth curve, blue atmospheric glow, deep navy/black sky, orbital path and amber dot, lighting and landscape aspect ratio. Do NOT borrow satellite, layout or any other text from reference2. No other changes.",
-  "limitations": "仅静态概念；82%数值和弧长未校准，真实进度、加载运动、错误状态及可读性未完整验证。生成编辑造成少量地表纹理漂移。",
   "sha256": "287847c018b7b29c7412bc1777f83678e2b3f1b43a5b4dc77c4b3cf2b4dbba07",
-  "license": "Reference website assets remain with their respective rights holders; this generated study is retained for private design research. Commercial reuse clearance has not been established."
+  "license": "Reference website assets remain with their respective rights holders; this generated study is retained for private design research. Commercial reuse clearance has not been established.",
+  "composition": {
+    "hierarchy": "Large near-white progress value; smaller supporting status label",
+    "field": "Deep navy/black, blue atmospheric rim, orbital curve, one warm point",
+    "supporting_type": "Compact uppercase monospace; restrained tracking; approximately 22px on a 1536px-wide study"
+  },
+  "method": "Preserve spatial framing and large-value hierarchy. Refine supporting type locally; inspect the full image for unintended material changes.",
+  "implementation_limits": [
+    "Displayed percentage and arc length are not calibrated.",
+    "No validated animation, error state, responsive behavior, or accessibility."
+  ]
 }

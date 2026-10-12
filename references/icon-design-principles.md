@@ -1,4 +1,4 @@
-# Design Principles
+# Icon Design Principles
 
 ## 1. Diversity before refinement
 

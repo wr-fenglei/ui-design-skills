@@ -1,25 +1,25 @@
-# 三联曲面展厅
+# Curved Gallery
 
-![认可的静态效果](preview.png)
+![Curved Gallery visual study](preview.png)
 
-## 认可与用途
+## Design dimensions
 
-用户明确认可此效果并要求收录。2026-10-12入库。适合作品聚焦、图像浏览器或幻灯片播放器的视觉研究。
+- Framing: one complete central image, two cropped neighbors.
+- Perspective: left-near/right-far asymmetric curvature.
+- Attention: warm artwork surrounded by a quiet dark field.
+- Scale: very small peripheral white labels against a large visual subject.
+- Depth: restrained reflection rather than a bright mirror.
 
-## 为什么值得保留
+## Use
 
-中心完整、两侧裁切；中心左近右远，非对称曲面产生空间纵深；暖色主作品被黑场围住；外围三处小白字建立尺度。
+A visual reference for artwork focus, image browsing, or a slide-viewer concept. Preserve the spatial relationships before changing artwork or palette.
 
-这些解释是基于用户认可结果的设计分析，尚非跨场景验证的理论。
+## Construction
 
-## 制作方法
+See [visual specification](recipe.json) for relationships, key parameters, and implementation limits. The image was generated as a study; it is not a screenshot of the source site or a functional component.
 
-参考原作，先保留构图及关键比例，再用GPT Image生成或局部编辑。完整提示和哈希见[制作记录](recipe.json)。原始参考图未在此复制；没有参考输入，仅凭提示不能保证重现完全相同效果。
+## Source and use limits
 
-## 来源与边界
+Reference: http://jesperlandberg.com
 
-原作：http://jesperlandberg.com
-
-用户明确暂停HTML。仅静态效果通过；真实曲面几何、滑动、响应式、键盘导航及性能未验证。中心面板相较参考略宽、地面反射略强。
-
-本图是学习参考后的生成效果，不是原站截图，也不是原作者出品。来源资产版权仍属于各权利人；未确认商业素材许可。
+Static visual only. Interaction, responsive behavior, and accessibility require separate implementation and validation. Source assets remain with their rights holders; commercial reuse clearance has not been established.

@@ -1,9 +1,4 @@
----
-name: app-icon-design
-description: Analyze, explore, and refine app icon designs using bundled references, with attention to metaphor, silhouette, composition, color, material, and small-size recognizability
----
-
-# App Icon Design Skill
+# Icon Design
 
 ## Purpose
 
@@ -224,17 +219,7 @@ Once a direction is selected, refine shape logic, spacing, color, material, and 
 
 ## Reference usage
 
-See:
-- `references/design-principles.md`
-- `references/icon-analysis-framework.md`
-- `references/reference-index.md`
-
-Reference images live in:
-- `assets/`
-
-Use them to understand the intended range and numbering, not to reproduce them mechanically.
-
----
+Read [icon principles](icon-design-principles.md), the [analysis framework](icon-analysis-framework.md), and the [reference index](reference-index.md). Inspect the actual selected sheet before using its numbered directions.
 
 ## Quality checklist
 

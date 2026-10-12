@@ -1,21 +1,48 @@
-# 分组与注意力层级
+# Grouping and Hierarchy
 
-状态：局部方法有多次反馈支持，整体美观需另验。
+## Proximity
 
-## 证据
+Keywords: within-group, between-group, rhythm, density.
 
-- 2026-10-10 F02 B：组内紧凑更好。
-- 2026-10-12 T05 B：组内紧、组间松更好；整体仍单调，需研究浅背景或适量色彩区分。
-- 2026-10-12 T03 B：非活动导航与分割线后退、突出选中项的处理获认可；两版整体页面均未通过。
+- Group by task or meaning before choosing spacing values.
+- Make within-group distances visibly smaller than between-group distances for comparable content.
+- Retain internal breathing room; compact does not mean compressed.
+- Do not turn a successful local pixel value into a universal spacing scale.
 
-## 方法
+## Common region
 
-先把内容按任务关系分组，再设组内、组间两级距离；从文字左边线、基线和容器边界建立共同对齐。固定分组后比较纯间距、浅底区域、必要线条，不把三种分隔手法叠满。
-导航选中项与未选中项同时设计。削弱不等于禁用；未选中仍需可读、可操作。线条只在它解决边界问题时出现。
+Keywords: surface tint, containment, ownership, background transition.
 
-## 产出与验收
+- Use a restrained background region when whitespace alone does not explain membership.
+- Let related items share a surface; avoid putting every label in a separate card.
+- Keep a clear distinction between section grouping and interactive affordances.
 
-一份分组结构、一张有实际内容的上下文效果、可复现的间距与色彩参数。检查是否容易理解所属关系、选中项是否自然突出、是否过分稀疏或单调。
-分组好读和整体好看是两个验收。不能以局部通过替代整页通过；不把某次间距像素值固化为通用模板。
+## Alignment
 
-参考：[NN/g Proximity](https://www.nngroup.com/articles/gestalt-proximity/)、[Linear design refresh](https://linear.app/now/behind-the-latest-design-refresh)。
+Keywords: leading edge, baseline, shared axis, nested offset.
+
+- Align comparable text and controls consistently.
+- Use indentation to express nesting, not arbitrary decoration.
+- Check that spacing still makes sense when text wraps.
+
+## State hierarchy
+
+Keywords: selected, unselected, disabled, emphasis, persistent context.
+
+- Strengthen the active item relative to inactive items.
+- Lower inactive contrast without making available actions look disabled.
+- Use more than color alone when selection or state must be unambiguous.
+
+## Separators
+
+Keywords: boundary, continuity, density, line weight.
+
+- Add a separator only when it resolves an ambiguous boundary.
+- Keep separator contrast below the content it organizes.
+- Compare spacing-only, surface-based, and line-based grouping before combining them.
+
+## Check
+
+Can a reader identify membership and the current selection? Is the composition still visually balanced? Structural clarity alone does not guarantee attractive layout.
+
+Sources: [Proximity](https://www.nngroup.com/articles/gestalt-proximity/), [Linear redesign](https://linear.app/now/behind-the-latest-design-refresh).

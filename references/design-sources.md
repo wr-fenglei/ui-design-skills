@@ -1,31 +1,55 @@
-# 设计参考与素材入口
+# Design Sources
 
-只维护这一份入口索引。记录适合找什么、如何使用、已核验程度和边界；不把网站知名度等同于每件作品都好。
+## [Refero Styles](https://styles.refero.design/?sort=popular)
 
-## Refero Styles
+A discovery library of website styles, previews, and extracted DESIGN.md descriptions.
 
-地址：https://styles.refero.design/?sort=popular
-最近核验：2026-10-12，已阅读当时Popular前10项的Extended DESIGN.md，并对照预览与可访问原站。
+Use it to:
+- find overall visual directions and image/type relationships;
+- identify vocabulary for composition, color, typography, and components;
+- locate original sites for deeper inspection.
 
-适合寻找：官网整体调性、构图、字体组合、颜色角色、组件外观；从喜欢的实例反向找布局与样式术语。特别适合“我知道这个效果好看，但不知道该分析哪些因素”的起点。
+Do not use it to:
+- treat popularity as a verified quality score;
+- treat extracted descriptions as official brand specifications;
+- copy generated CSS values without checking syntax and actual rendering.
 
-使用方式：Popular发现方向 → 详情页看预览和DESIGN.md → 打开原站并滚动 → 选实际有用片段 → 记录构图关系、颜色角色和适用场景 → 小范围复现验证。
+Open the original site, scroll to relevant sections, and inspect movement when it defines the design. Verify extracted color values, units, font features, and component measurements. Examples worth comparing include Apple for product framing, Linear for product hierarchy, Steep for editorial typography, ElevenLabs for neutral structure around colorful media, and Authkit for material around real forms.
 
-需要注意：DESIGN.md明确说明测量经过归一化、角色与建议含解释、HTML是重建示例。不能视为品牌官方规范或可直接运行且正确的代码。此次发现无效五位十六进制色值、行高单位风险、numr与tnum混淆、组件半径与原站不一致、把局部颜色写成全站禁止规则等问题。Popular的排名公式未核实，不写成审美质量排名。发布时间、字体和原作资产授权需另查。视觉重、动态重的网站不能只看首张预览。
+## [Stripe: Accessible color systems](https://stripe.com/blog/accessible-color-systems)
 
-适合优先研究的片段：Apple的产品与留白；Linear的弱层级与产品界面展示；Steep的衬线标题与功能内容；ElevenLabs的中性容器与彩色素材；Authkit的暗色玻璃与组件定制。均为研究选择，不代表用户已认可这些页面。
+Use it to study foreground/background pairs, palette construction, and the interaction between visual consistency and readability.
 
-## 品牌原站与作者文章
+Do not treat an article's decorative colors as a complete product theme or judge a color outside its intended role.
 
-- [Stripe色彩经验](https://stripe.com/blog/accessible-color-systems)：适合前景/背景配对、颜色系统和可读性研究。用户明确评价文章质量高；不能直接将文章页面的全部配色当成产品规范。
-- [Linear设计改版经验](https://linear.app/now/behind-the-latest-design-refresh)：适合导航、层级与产品界面秩序。以具体版本和原文为准。
-- [Apple材料指南](https://developer.apple.com/design/human-interface-guidelines/materials)：适合材质与背景、层级及原生语境；代码近似磨砂不等于系统材质验收。
+## [Linear: Design refresh](https://linear.app/now/behind-the-latest-design-refresh)
 
-## Mobbin
+Use it to study product hierarchy, navigation emphasis, and interface density.
 
-地址：https://mobbin.com/
-用户提供的参考入口，适合进一步寻找真实产品屏幕、组件与流程。此前有一次云端资源未加载完整，不能把那次当成视觉核验；后续实际打开具体作品再评判。登录、访问范围和素材许可按页面当时情况处理。
+Do not transfer one product's density or dark theme to unrelated content without testing.
 
-## X 与作者作品站
+## [Apple: Materials](https://developer.apple.com/design/human-interface-guidelines/materials)
 
-用于发现经验、制作过程和动态作品；原帖须核对作者、日期、永久链接及具体内容，视频必须实际观看。搜索摘要只能作为发现线索。点赞数或传播量不单独证明设计质量。
+Use it to understand material hierarchy and the relationship between surfaces and their backgrounds.
+
+Do not equate a CSS blur or generated glass image with a validated native material.
+
+## [Mobbin](https://mobbin.com/)
+
+Use it to discover product screens, component context, and interface flows when the relevant screens are accessible.
+
+Do not evaluate a screen from a search snippet or an unloaded preview. Inspect the actual visual and surrounding flow before adopting it.
+
+## [X](https://x.com/) and linked author portfolios
+
+Use them to discover design experiments, production techniques, and motion studies.
+
+Verify the original author, permanent link, date, and actual media. Watch a video before discussing its motion. Engagement counts do not establish quality or rights to reuse the work.
+
+## Source priority
+
+1. The selected original work and its actual visible behavior.
+2. The creator's explanation or official design documentation.
+3. A curated preview or extracted description as a discovery aid.
+
+Record source and license information with any retained asset. Access does not imply redistribution or commercial-use permission.
