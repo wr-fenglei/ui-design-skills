@@ -15,6 +15,8 @@ Design relationships before embellishments. Establish what the interface communi
 - Preserve the selected direction's proportions and visual thesis during refinement.
 - Treat visual quality, legibility, and functional correctness as separate checks.
 
+Read [agent design pitfalls](references/agent-design-pitfalls.md) before choosing a direction and again before delivery. Use the feedback-derived checks to avoid recurring composition, typography, color, material, and comparison failures.
+
 ## Inputs
 
 Identify the task, audience, platform, target size, actual content, primary action, selected references, and fixed constraints. For an existing design, identify what is approved and what may change.
