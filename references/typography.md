@@ -40,6 +40,10 @@ Keywords: hierarchy, echo, contrast, backing surface.
 - Choose text color in relation to the actual surface and nearby visual subject.
 - Do not lower contrast so far that hierarchy becomes loss of information.
 
+## Whole before fine adjustment
+
+Tune type size, weight, color and backing surface together before isolating small baseline or icon offsets. A precise alignment inside an unattractive text system is not a successful design study. Repair the complete type hierarchy first; then compare a perceptible, controlled change.
+
 Check at the intended display size, not only in a large image preview.
 
 Sources: [Tabular figures](https://learn.microsoft.com/en-us/typography/opentype/spec/features_pt#tnum), [Numerators](https://learn.microsoft.com/en-us/typography/opentype/spec/features_ko#numr).

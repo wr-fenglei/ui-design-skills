@@ -1,45 +1,51 @@
 # Color in Context
 
-## Role
+## Separate media and interface roles
 
-Keywords: canvas, surface, primary text, supporting text, action, status, media.
+Keywords: canvas, surface, text, action, status, expressive media.
 
-- Assign a role before assigning a color.
-- Let media carry rich color while surrounding controls remain quiet when content is the focus.
-- Keep semantic meanings stable; a decorative accent is not automatically a status color.
+- Assign a role before a color. Product imagery, photography or material can carry most of a composition's chromatic richness.
+- Keep surrounding text and controls restrained when media is the expressive subject; quiet does not require a colorless interface.
+- Preserve semantic meaning. A decorative accent is not automatically a status color.
+- Do not copy colors from an artwork into every interface role.
 
-## Visual weight
+## Balance visual weight
 
 Keywords: luminance, saturation, area, adjacency, contrast.
 
-- Judge hue together with occupied area, brightness, size, and neighboring colors.
-- A subdued status treatment can fit a quiet list better than a vivid treatment; urgent states may need the opposite.
-- A large saturated object need not dominate if its bright area is limited.
+- Judge hue together with size, occupied area, brightness and neighboring elements.
+- A subdued state can fit a quiet list better than a vivid one; urgent states may need the opposite.
+- A large object can remain secondary when its bright area is limited.
+- Use a localized accent to direct attention rather than distributing equal emphasis everywhere.
 
-## Temperature and accent
+## Coordinate without merging
 
-Keywords: warm/cool, echo, counterpoint, accent budget.
+Keywords: selective echo, warm/cool, tonal family, surface separation.
 
-- A supporting text color may echo the main visual while remaining subordinate to the heading.
-- Pale amber can support a warm visual on black; do not make it the default for unrelated pages.
-- Use a small contrasting accent to localize an action instead of distributing it across every element.
-- Treat area proportions as contextual choices, not a mandatory numeric formula.
+- A supporting line may echo the main visual while remaining subordinate to the heading. Pale amber beside a warm object on black is one contextual example.
+- Keep neutral anchors when tinting every label would muddy the hierarchy.
+- Shared hue still needs differences in value and surface behavior. Harmony does not require identical temperature everywhere.
+- After global grading, reassess canvas-to-surface, surface-to-content and action-to-surrounding separation against the baseline.
+- If grading weakens useful boundaries, reduce or localize it instead of adding compensating outlines by default.
 
-## Tonal family
+## Surfaces and themes
 
-Keywords: shared hue, depth, value range, foreground separation.
+Keywords: semantic role, local relationship, light theme, dark theme.
 
-- Build separation through lightness and surface behavior before adding more hues.
-- A pale cool field and a deep blue object can share a color family while remaining distinct.
-- Same-hue harmony still requires enough contrast for text and boundaries.
+- Choose foreground/background pairs together, including type size and weight.
+- Theme roles may remain stable while actual value relationships change.
+- Do not infer a universal palette or elevation formula from one illustration.
+- Generated colors are exploration evidence, not official design tokens.
 
-## Legibility
+Example: [neutral surface layers](../examples/surface-layers/README.md).
+
+## Legibility and aesthetic fit
 
 Keywords: actual background, transparency, composite color, worst case.
 
 - Evaluate foreground/background pairs in the rendered composition.
-- For glass, check the lightest, darkest, and busiest backgrounds that can appear behind it.
-- Improve the local backing or opacity when needed; aesthetic preference for white text is not a contrast guarantee.
-- Keep color assessment and readability assessment separate.
+- For glass, inspect the lightest, darkest and busiest backgrounds that may appear behind it.
+- Improve local backing or opacity when necessary; preference for white text does not guarantee readable contrast.
+- Assess aesthetic fit separately from accessibility. A passing contrast value does not make a palette attractive.
 
-Sources: [Stripe color systems](https://stripe.com/blog/accessible-color-systems), [Contrast minimum](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum).
+Sources: [Stripe color systems](https://stripe.com/blog/accessible-color-systems), [Adobe Spectrum Colors](https://spectrum.adobe.com/page/using-color/), [Contrast minimum](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum).

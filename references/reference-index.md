@@ -65,3 +65,10 @@ Use it to study tactile context around typography, diagonal continuity, folds an
 For a selected icon direction, preserve its thesis while maintaining recognition at intended sizes. For public production, check asset rights and create an original expression rather than copying protected identity.
 
 See [Design sources](design-sources.md) for external discovery platforms and author resources.
+
+## Material and surface studies
+
+- [Material and attention](../examples/material-attention/README.md): equal-circle material comparisons and an outline-to-labeled-capsule attention progression. Use for geometry, transparency and edge emphasis; two related studies in one group.
+- [Neutral surface layers](../examples/surface-layers/README.md): matched light/dark panels with neutral region separation. Use for common surfaces and theme-specific value relationships.
+
+Both include editable HTML/CSS and the scope of visual approval and outstanding technical checks. They are independent studies, not official Adobe components.

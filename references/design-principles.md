@@ -1,62 +1,71 @@
 # Design Principles
 
-## 1. Attention before decoration
+## 1. Give the composition a visual thesis
 
-Keywords: focal point, visual weight, scale contrast, primary/secondary/tertiary.
+Keywords: expressive carrier, task priority, focal point, supporting field.
 
-- Decide what must be noticed first before choosing an accent color.
-- Let supporting elements differ in scale, brightness, area, or position.
-- A large object may remain secondary when most of its surface is dark and its highlights are narrow.
-- Reserve the strongest treatment for the task's priority; not every heading or control needs emphasis.
+Choose what gives this particular interface its character: a product, meaningful product UI, typography, photography, or a material-led component. Other layers should support that choice rather than compete through independent decoration.
 
-## 2. Relationships before isolated values
+- Distinguish the expressive subject from the primary task. A quiet action can remain clear beside rich imagery.
+- Assign emphasis through scale, occupied area, brightness, position and detail together.
+- Concentrate complexity where it explains the content; do not distribute gloss, color and strong type evenly.
+- Check the composition as a thumbnail: can its main relationship still be understood?
 
-Keywords: proportion, context, optical balance, foreground/background.
+Apply through [composition](composition-preservation.md).
 
-- Judge a color with its neighbors, area, and function, not only as a swatch.
-- Judge type at its actual width and reading distance.
-- Measure visible mass as well as element boxes; transparent padding and internal voids change apparent spacing.
+## 2. Organize space at more than one scale
 
-## 3. Group through meaningful differences
+Keywords: nested density, proximity, common region, rhythm.
 
-Keywords: proximity, common region, alignment, hierarchy.
+The canvas, section, component and text block do not need the same density. Generous outer space can frame compact, legible content inside.
 
-- Use tighter spacing within a group than between comparable groups.
-- Add a quiet surface when spacing alone leaves ownership unclear.
-- Reduce inactive navigation and separator emphasis while retaining readability.
-- Removing lines is useful only if the remaining structure still communicates relationships.
+- Group by meaning before choosing spacing.
+- Evaluate gaps relative to the neighboring groups and their visual mass.
+- Use surfaces or separators to clarify ownership only when spacing is insufficient.
+- Judge a group's background, padding and typography together; structural clarity alone is not aesthetic quality.
 
-## 4. Concentrate complexity
+Apply through [grouping and hierarchy](grouping-and-hierarchy.md).
 
-Keywords: detail budget, quiet field, edge highlights, local contrast.
+## 3. Coordinate roles, not isolated properties
 
-- Pair an expressive visual subject with a restrained information layer.
-- Keep broad surfaces calm when edges, folds, or reflections already explain the form.
-- Use a shadow to explain contact or elevation; do not use the same shadow on every element.
-- A small cool accent can contrast with a large warm subject without splitting the composition into competing halves.
+Keywords: context, foreground/background, type scale, selective echo.
 
-## 5. Material belongs to the composition
+A pleasant swatch, polished asset or correct alignment does not establish a successful interface. Evaluate the complete relationship at its intended size.
 
-Keywords: neighboring type, shared cues, atmosphere, coherence.
+- Separate the roles of canvas, surfaces, information, actions and expressive media.
+- Rich color may live mainly in media while interface elements remain restrained.
+- Shared hue or temperature must not erase surface separation.
+- Tune type size, weight, width and foreground together; secondary does not mean tiny or faint.
 
-- Judge material together with adjacent text and controls.
-- Carry a small number of cues across the composition: warmth, soft curvature, luminous edges, or lighting direction.
-- Do not assume a polished object can rescue unrelated typography or controls.
+Apply through [color](color-in-context.md) and [typography](typography.md).
 
-## 6. Unity with variation
+## 4. Make material serve form and use
 
-Keywords: shape family, rhythm, scale, repetition, counterpoint.
+Keywords: silhouette, shared light, thickness, local contrast, integration.
 
-- Repeat a useful geometric relationship, then vary size or role.
-- Circular numerals, a disc, and a capsule can share curvature without becoming identical objects.
-- Keep essential geometry consistent during refinement; removing unwanted texture should not erase the defining form.
+Material is part of the component's composition, not a substitute for it.
 
-## 7. Preserve the design thesis
+- Use light, shadow and edge behavior to explain shape or hierarchy.
+- Coordinate selected cues across material, adjacent type and controls without giving every element the same texture.
+- Keep broad surfaces quiet when folds, edges or reflections already supply character.
+- Preserve defining geometry when removing unwanted microtexture.
+- A brighter rim changes attention as well as perceived thickness.
 
-Keywords: invariants, crop, overlap, perspective, negative space.
+Apply through [shape and material](shape-and-material.md).
 
-- Simplify secondary content while preserving the relationships that make the reference work.
-- When a composition depends on motion, a still frame is incomplete evidence.
-- Validate a principle in its new use case; a pleasing local result is not a universal style prescription.
+## 5. Refine a coherent whole
 
-Read the dimension-specific references for application and checks.
+Keywords: invariants, proportion, crop, baseline, perceptible comparison.
+
+Establish an appealing complete baseline before isolating a variable. During reconstruction, retain region ratios, occupied mass, negative space and text-image relationships before refining finish.
+
+- Simplify secondary content without erasing the design thesis.
+- Make comparison differences perceptible at delivery size while keeping them plausible.
+- Revisit the composition when changes to type, color or material disturb it.
+- A motion-led reference requires actual motion inspection; a still frame is incomplete evidence.
+
+Use [code-image collaboration](code-image-collaboration.md) for implementation and [agent pitfalls](agent-design-pitfalls.md) for corrective checks.
+
+## Scope of evidence
+
+Visual approval, readability and functional correctness are separate findings. Preserve the exact scope of a successful result; do not turn a local preference, brand treatment or one experiment into a universal style prescription.

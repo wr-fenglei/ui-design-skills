@@ -98,8 +98,8 @@ Keywords: peripheral labels, button geometry, alignment, focal support.
 
 - **Failure signal:** The time, backdrop or primary artwork works, but small words and a poorly aligned button spoil the composition.
 - **Mistaken assumption:** Secondary elements are too small to affect the overall aesthetic.
-- **Correction:** Give supporting labels, corner annotations and controls deliberate placement, scale, shape and contrast. Remove nonessential labels that have no compositional or functional purpose.
-- **Check:** Review the entire perimeter and action area, not just the hero object. Preserve useful peripheral text in reference studies rather than deleting it indiscriminately.
+- **Correction:** Give supporting labels, corner annotations and controls deliberate placement, scale, shape and contrast. Choose a control's representation for its task and surrounding visual character, not simply because a default primitive is easy to draw. Remove nonessential labels that have no compositional or functional purpose.
+- **Check:** Review the entire perimeter and action area, not just the hero object. Does each control's geometry, weight and material fit the whole while communicating its state? More elaborate is not automatically better. Preserve useful peripheral text in reference studies rather than deleting it indiscriminately.
 
 ## 12. Offering a difference too small to judge
 

@@ -1,55 +1,55 @@
 # Shape, Material, and Depth
 
-## Silhouette first
+## Form in context
 
-Keywords: contour, proportion, void, geometric/organic, scale.
+Keywords: silhouette, proportion, void, contour, task.
 
-- Establish the recognizable outline before surface rendering.
-- Compare rounded rectangles, continuous curves, superellipses, and cuts in the intended context.
-- Preserve defining folds or spirals when removing surface noise.
+Start with the intended component or focal subject and its relationship to information and controls. Establish the outline and occupied mass before surface finish.
 
-## Surface hierarchy
+- Compare continuous curves, superellipses, cuts or organic forms within the selected composition.
+- Repeat useful curvature or proportions without making every object identical.
+- Preserve defining folds and spirals when removing surface noise.
+- Do not shrink a composition's expressive subject into a detached icon while keeping all other regions unchanged.
 
-Keywords: calm field, edge detail, highlight, microtexture, visual frequency.
+## Material as separable cues
 
-- Concentrate detail on the boundaries and transitions that explain shape.
-- Keep large surfaces calm when the silhouette and lighting already provide interest.
-- Do not confuse smooth material with a flat, featureless object; smooth forms can have rich tonal transitions.
+Keywords: face opacity, backing field, blur, thickness, edge strength, microtexture.
+
+- Distinguish the shape's face from its border, internal gradient and surrounding light.
+- Equal geometry can help compare surface treatments without introducing scale differences.
+- Blur, opacity and edge highlights provide different cues; a blurred fill alone is not a complete glass treatment.
+- Brighter rims can increase perceived thickness and attention simultaneously. Preserve quiet edges when low emphasis is intentional.
+- Keep broad faces calm when boundaries and large tonal transitions already explain the form.
+
+See [material and attention studies](../examples/material-attention/README.md). These are visual approximations, not a physical refraction model.
 
 ## Light and shadow
 
-Keywords: rim light, cast shadow, contact shadow, softness, elevation.
+Keywords: shared direction, contact, cast shadow, softness, elevation.
 
-- Let lighting explain volume or focus rather than adding glow everywhere.
 - Use contact shadow to anchor an object and broader shadow to suggest separation.
-- Compare shadows with the same object, background, scale, and light direction.
+- Let light explain volume or focus; avoid applying the same glow or shadow everywhere.
+- Compare shadows with the same object, background, scale and light direction.
+- Do not remove a form's large-scale flow when correcting unwanted high-frequency detail.
 
-## Glass and translucency
+## Relationship with type and controls
 
-Keywords: thickness, refraction, edge highlight, opacity, backdrop.
+Keywords: proximity, shared light, temperature, visual weight, coherence.
 
-- Distinguish decorative glass artwork from a surface that carries readable controls.
-- Keep live text and controls separate from generated material textures.
-- Check bright, dark, and detailed backgrounds; change local backing when transparency compromises reading.
-- A code blur approximation does not establish native material behavior.
+- Material should participate in the content's composition rather than sit as unrelated ornament.
+- Echo selected cues in neighbors: restrained luminous edges, warmth or soft curvature. Do not give every element the same texture.
+- Keep type legible and comparatively simple; it need not imitate the material to belong.
+- Judge the whole with and without the asset. If controls still feel detached, repair their scale, position and surrounding space before adding more detail.
 
-## Material and neighboring elements
+Examples: [Amber clock](../examples/amber-clock/README.md), [Green ribbon](../examples/green-ribbon/README.md).
 
-Keywords: shared light, temperature, softness, contour, perceptual coherence.
+## Functional surfaces
 
-- Evaluate whether the material makes adjacent type and controls feel integrated, not merely whether the object looks polished alone.
-- Echo selected cues across neighbors: a restrained luminous control edge beside glass, warm text beside warm light, or rounded forms beside soft curves.
-- Let type remain legible and simple; it need not imitate the object's texture to belong to the same composition.
-- Compare the whole arrangement with and without the material. If the object is attractive but the supporting text and controls still feel disconnected, refine their relationships before adding more detail.
-- Treat this as a compositional check, not a claim that one material improves every nearby element.
+Keywords: real text, compositing, background variation, use case.
 
-## Application
-
-Use expressive material for a focal object, product visual, or clearly defined component. Keep surrounding information restrained. Require a concrete use case before expanding decorative studies.
+- Distinguish decorative glass artwork from a surface carrying readable controls.
+- Keep live text and actions separate from generated textures.
+- Check bright, dark and detailed backgrounds; adjust local backing when transparency compromises reading.
+- A CSS approximation or approved still does not establish native material, responsive or dynamic behavior.
 
 Source: [Apple Materials](https://developer.apple.com/design/human-interface-guidelines/materials).
-
-## Visual references
-
-- [Amber clock](../examples/amber-clock/README.md): warm glass, warm-white numerals, and a cool-edged action.
-- [Green ribbon](../examples/green-ribbon/README.md): soft folds and shadows around a crisp type block.

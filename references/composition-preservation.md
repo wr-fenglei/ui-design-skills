@@ -4,8 +4,8 @@
 
 Keywords: dominant mass, reading order, anchor, counterweight, quiet field.
 
-- Identify the primary subject and the space reserved for it.
-- Compare the visual weight of text, images, and controls at reduced scale.
+- Identify the expressive subject, the primary task and the space reserved for each; they need not be the same element.
+- Compare the visual weight of text, images, and controls at reduced scale. Supporting regions should reinforce the chosen subject rather than compete through independent decoration.
 - Choose centered, asymmetric, editorial, or layered composition for the content, not by default.
 
 ## Scale and framing
@@ -40,6 +40,8 @@ Keywords: occlusion, perspective, curvature, near/far, scale gradient.
 3. Identify three to five essential spatial relationships.
 4. Remove nonessential content without changing those relationships.
 5. Compare at the same canvas size, then test adaptation.
+
+A coherent baseline comes before a local spacing or alignment experiment; inspect [grouping](grouping-and-hierarchy.md) for density inside each region.
 
 Example: [Curved gallery](../examples/gallery-001/README.md).
 

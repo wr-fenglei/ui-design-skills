@@ -1,48 +1,46 @@
 # Grouping and Hierarchy
 
-## Proximity
+## Nested density
 
-Keywords: within-group, between-group, rhythm, density.
+Keywords: canvas, section, component, within-group, between-group.
 
-- Group by task or meaning before choosing spacing values.
-- Make within-group distances visibly smaller than between-group distances for comparable content.
-- Retain internal breathing room; compact does not mean compressed.
-- Do not turn a successful local pixel value into a universal spacing scale.
+- Group by task or meaning before choosing values.
+- Set density at each level: a generous page frame can contain compact product information.
+- Make within-group distances visibly smaller than between comparable groups without compressing text or controls.
+- Do not apply one spacing value or one “airy/dense” setting to the entire design.
 
-## Common region
+## Alignment and proximity
 
-Keywords: surface tint, containment, ownership, background transition.
+Keywords: leading edge, baseline, shared axis, nested offset, wrapping.
 
-- Use a restrained background region when whitespace alone does not explain membership.
-- Let related items share a surface; avoid putting every label in a separate card.
-- Keep a clear distinction between section grouping and interactive affordances.
+- Align comparable content consistently; use indentation to explain nesting.
+- Evaluate gaps between visible content, including internal whitespace in an image.
+- Test actual text and wrapping before adjusting fine offsets.
+- A successful local pixel value is not a universal spacing scale.
 
-## Alignment
+## Common surfaces
 
-Keywords: leading edge, baseline, shared axis, nested offset.
+Keywords: containment, ownership, neutral values, theme roles.
 
-- Align comparable text and controls consistently.
-- Use indentation to express nesting, not arbitrary decoration.
-- Check that spacing still makes sense when text wraps.
+- When whitespace does not explain membership, compare a shared surface with spacing-only and line-based grouping.
+- Evaluate fill, foreground, type weight and padding together. A better boundary does not validate its current styling.
+- Let related items share a region rather than wrapping every label in a card.
+- Preserve semantic roles across themes without assuming identical colors or a universal monotonic lightness sequence.
+- Distinguish a section background from an interactive affordance.
 
-## State hierarchy
+See [neutral surface layers](../examples/surface-layers/README.md) and [color roles](color-in-context.md).
 
-Keywords: selected, unselected, disabled, emphasis, persistent context.
+## State and separators
 
-- Strengthen the active item relative to inactive items.
-- Lower inactive contrast without making available actions look disabled.
-- Use more than color alone when selection or state must be unambiguous.
+Keywords: selected, inactive, disabled, continuity, line weight.
 
-## Separators
-
-Keywords: boundary, continuity, density, line weight.
-
-- Add a separator only when it resolves an ambiguous boundary.
-- Keep separator contrast below the content it organizes.
-- Compare spacing-only, surface-based, and line-based grouping before combining them.
+- Strengthen the current item relative to inactive items without making available actions appear disabled.
+- Use more than color when state must be unambiguous.
+- Add a separator when it resolves a real boundary; keep it subordinate to the content.
+- Removing a line is useful only if the remaining cues still explain the structure.
 
 ## Check
 
-Can a reader identify membership and the current selection? Is the composition still visually balanced? Structural clarity alone does not guarantee attractive layout.
+Can a reader identify membership and selection at the intended size? Do the different density levels form an ordered whole? If typography or palette prevents a useful judgment, repair the baseline before comparing finer grouping details.
 
 Sources: [Proximity](https://www.nngroup.com/articles/gestalt-proximity/), [Linear redesign](https://linear.app/now/behind-the-latest-design-refresh).

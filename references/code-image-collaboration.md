@@ -1,38 +1,54 @@
 # Code and Image Collaboration
 
-## Shared input
+## Shared brief and baseline
 
-Keywords: content, canvas, selected reference, invariant, open variable.
+Keywords: task, real content, canvas, selected reference, invariants.
 
-Give both routes the same content, dimensions, visual goal, and constraints. When refining, supply one approved baseline and identify what may change.
+Give both routes the same content, dimensions, visual thesis and constraints. For refinement, identify what is approved and what may change. Begin a local experiment only when the full baseline is coherent enough to judge.
 
 ## Responsibilities
 
-- Code: editable layout, real typography, controls, state, responsive behavior, and data.
-- Image generation: bounded artwork, material, lighting, and visual exploration.
-- Either route can propose overall composition; evaluate the rendered result rather than assuming a model is best at a stage.
+- Code: editable layout, real typography, controls, state, responsive behavior and data.
+- Image generation: bounded artwork, material, lighting and visual exploration.
+- Either route may propose composition. Evaluate rendered results rather than assuming a model is best at a particular stage.
+
+## Reconstruct relationships before finish
+
+Keywords: occupied mass, crop, type rhythm, material cues.
+
+A useful default order:
+1. Match canvas, key region proportions, visible bounds, crop and spatial relationships.
+2. Rebuild real text and controls; tune their size, weight and placement with the geometry.
+3. Establish color roles and surface separation.
+4. Refine gradients, opacity, shadow and highlights; add texture only where it belongs.
+5. Compare at the reference size, then test adaptation.
+
+Return to earlier decisions when a detail changes the whole. Do not place the complete reference image behind controls and call that an editable reconstruction.
 
 ## Compare and combine
 
-1. Render code as an image; compare it with the generated concept at the same size.
-2. Identify the specific advantage: proportion, type rhythm, color relationship, form, or material.
-3. Transfer only compatible strengths. Do not average compositions or accumulate every decorative detail.
-4. Establish one selected baseline before refining the next level.
+- Compare the code render and generated concept at the same size.
+- Name the actual advantage: proportion, type rhythm, color relationship, form or material.
+- Transfer compatible strengths rather than averaging layouts or accumulating decoration.
+- Retain one selected baseline for the next pass.
+- When claiming a hybrid improves the result, compare code-only, image-only and combined outputs.
 
-## Handoff
+## Asset handoff
 
-Keywords: dimensions, crop, alignment, transparency, light direction, editable text.
+Keywords: dimensions, transparency, crop, alignment, light direction.
 
-- Express layout relationships as code or measured parameters.
-- Extract or recreate only the artwork needed for the composition.
-- Implement text, navigation, forms, and changing values as actual interface elements.
-- When a render is used as image input, retain its intended canvas and crop.
+- Express spatial relationships as editable structure or measured parameters.
+- Extract or recreate only the artwork needed; preserve its intended scale and crop.
+- Implement text, navigation, forms and changing values as real interface elements.
+- Inspect drift beyond an image edit's requested region, including reflections and texture.
+- Keep exact generation prompts distinct from later reconstructed briefs.
 
-## Validation
+## Separate validation gates
 
-- Compare code-only, image-only, and combined results when testing whether combination improves the design.
-- Check for unintended changes outside the requested edit region.
-- Test real text and interactions after visual integration.
-- Do not treat a still image as evidence of responsive or native-platform behavior.
+- Visual: inspect the full composition, then local fidelity and perceptible differences.
+- Readability: check actual backgrounds, text sizes and foreground combinations.
+- Behavior: test relevant controls, states and viewport changes in the implementation.
+
+User approval of appearance is valuable visual evidence, not proof of browser behavior. A successful image replica does not validate its CSS translation. Identify blocked checks explicitly.
 
 This is an execution method, not a claim that combining models always improves aesthetics.

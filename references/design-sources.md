@@ -34,6 +34,12 @@ Use it to understand material hierarchy and the relationship between surfaces an
 
 Do not equate a CSS blur or generated glass image with a validated native material.
 
+## [Adobe Spectrum](https://spectrum.adobe.com/)
+
+Use [Colors](https://spectrum.adobe.com/page/using-color/) for semantic color roles, neutral surfaces and foreground/background relationships. Use [Attention hierarchy](https://spectrum.adobe.com/foundations/attention-hierarchy) for how area, contrast, surface treatment and content jointly establish emphasis.
+
+Study the actual illustrations and their component context before reconstructing a fragment. Preserve their key proportions and coordinated type/color relationships. A decorative hero is not a production component specification; generated replica pixels are not official tokens. Source access does not grant asset redistribution rights.
+
 ## [Mobbin](https://mobbin.com/)
 
 Use it to discover product screens, component context, and interface flows when the relevant screens are accessible.

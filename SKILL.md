@@ -1,73 +1,59 @@
 ---
 name: ui-design
-description: Design and refine interface layouts, components, visual assets, and app icons using reference-led composition, hierarchy, typography, color, shape, and material. Use for visual design exploration, reference analysis, and translating selected directions into HTML/CSS or SwiftUI.
+description: Design and refine interface layouts, components, visual assets, and app icons using reference-led composition, hierarchy, typography, color, shape, and material. Use for visual design exploration, foundational exercises, independent examples, and translating selected directions into HTML/CSS or SwiftUI.
 ---
 
 # UI Design
 
-## Core approach
+## Start here
 
-Design relationships before embellishments. Establish what the interface communicates, which element leads, and how the remaining elements support it.
+Read this entrypoint before creating a foundational exercise or independent design example, as well as before page or component work. Read the relevant references for the task; use [agent design pitfalls](references/agent-design-pitfalls.md) before selecting a direction and again before delivery.
 
-- Use real content and a defined application scenario.
-- Explore structurally different directions, not one template in different colors.
-- Judge color, type, spacing, and material in the composition where they will be used.
-- Preserve the selected direction's proportions and visual thesis during refinement.
-- Treat visual quality, legibility, and functional correctness as separate checks.
+Design relationships before embellishments. The workflow zooms from the whole into detail, with permission to return to an earlier decision when the whole stops working. It is not a rigid waterfall.
 
-Read [agent design pitfalls](references/agent-design-pitfalls.md) before choosing a direction and again before delivery. Use the feedback-derived checks to avoid recurring composition, typography, color, material, and comparison failures.
+## Inputs and reference
 
-## Inputs
+Identify the task, audience, platform, actual content, target dimensions and primary action. For an existing design, distinguish approved relationships from open variables.
 
-Identify the task, audience, platform, target size, actual content, primary action, selected references, and fixed constraints. For an existing design, identify what is approved and what may change.
+Use [design sources](references/design-sources.md) to locate suitable work and the [reference index](references/reference-index.md) to inspect retained examples. Observe the actual reference, including relevant scroll states and movement. Do not infer a design from a textual description alone.
 
-## Design sequence
+## 1. Visual thesis and composition
 
-### 1. Composition and attention
+Decide what carries expression and what supports it: product, product UI, type, imagery or a material-led component. Establish reading order, region proportions, visible mass, crop and quiet space. Set rough type scale and color roles now because they affect composition.
 
-Choose the dominant subject, reading order, region proportions, negative space, and crop. Establish rough type scale and color roles now; these affect composition.
+Read [design principles](references/design-principles.md) for the shared reasoning and [composition](references/composition-preservation.md) for spatial decisions.
 
-Use [composition](references/composition-preservation.md) and [design principles](references/design-principles.md).
+## 2. Groups and component relationships
 
-### 2. Groups and component relationships
+Organize meaning into regions and subgroups. Set density separately at canvas, section and component levels. Coordinate alignment, spacing, surfaces and type; a correct grouping mechanism does not rescue an unattractive whole.
 
-Group related content, then establish alignment, within-group spacing, between-group spacing, and surface boundaries. Use only as much separation as needed.
+Read [grouping and hierarchy](references/grouping-and-hierarchy.md).
 
-Use [grouping and hierarchy](references/grouping-and-hierarchy.md).
+## 3. Coordinated visual treatment
 
-### 3. Shape and visual character
+Refine the selected structure as one composition:
+- Shape and material: silhouette, curvature, light, surface and neighboring controls.
+- Typography: actual glyphs, size, weight, rhythm and reading distance.
+- Color: media, canvas, surfaces, information, actions and state.
 
-Refine silhouettes, corner behavior, overlap, material, and lighting. Concentrate expressive detail where it supports the focal subject.
+Read [shape and material](references/shape-and-material.md), [typography](references/typography.md) and [color in context](references/color-in-context.md) as needed. None is a final decorative layer independent of the others.
 
-Use [shape and material](references/shape-and-material.md). For icons, use [icon design](references/icon-design.md), [icon principles](references/icon-design-principles.md), and the [analysis framework](references/icon-analysis-framework.md). Inspect the actual reference images listed in the [reference index](references/reference-index.md) before reference-dependent icon work.
+For icon work, read [icon design](references/icon-design.md), [icon principles](references/icon-design-principles.md), the [analysis framework](references/icon-analysis-framework.md), and the actual reference images in the [reference index](references/reference-index.md).
 
-### 4. Typography and color
+## 4. Implement and compare
 
-Tune size, weight, line height, text width, foreground/background pairs, supporting colors, and state emphasis within the selected structure.
+Use code for editable structure, real typography, controls, data and behavior. Use image generation for bounded artwork, material or visual exploration. Either route can propose a composition; compare actual results with the same content and canvas.
 
-Use [typography](references/typography.md) and [color in context](references/color-in-context.md).
+Read [code-image collaboration](references/code-image-collaboration.md) for reconstruction and handoff, and [image prompting](references/image-prompting.md) for generation briefs.
 
-### 5. Real use and refinement
+Preserve one selected baseline. A foundational experiment needs a coherent whole and a perceptible comparison, not merely a changed numeric parameter.
 
-Render the implementation. Check actual text, small sizes, changed backgrounds, narrow layouts, long content, selection, loading, and error states as applicable. Study motion after the static hierarchy works.
+## 5. Verify and refine
 
-Move back to composition when detail changes disturb the whole. This sequence is a zoom-in process, not a rigid waterfall.
+Inspect actual rendering, first as a whole and then in detail. Check real text, small sizes, narrow layouts, changed backgrounds and relevant interaction states. Study motion after static hierarchy works.
 
-## Code and image routes
-
-Use code for editable structure, typography, controls, data, and interaction. Use image generation to explore visual direction or create bounded visual assets. Either route may propose a composition; compare actual rendered outputs using the same content and canvas.
-
-Use [code-image collaboration](references/code-image-collaboration.md) for handoff and [image prompting](references/image-prompting.md) for generation briefs. A generated interface image is a concept until implemented and tested.
+Report visual review, readability and functional testing separately. User approval of appearance does not verify browser behavior; successful execution does not establish aesthetic quality.
 
 ## Output
 
-Provide the selected visual or running implementation, the key relationships and parameters needed to reproduce it, and any unresolved implementation limits. Do not turn every trial into a new rule.
-
-## Quality check
-
-- One primary focus, with secondary information still readable.
-- Deliberate proportions, spacing, alignment, and negative space.
-- Color and material assigned roles rather than added everywhere.
-- Reference relationships preserved without copying protected brand identity.
-- Actual rendering and relevant states inspected.
-- No claim of interaction, accessibility, or responsiveness based on a still image alone.
+Provide the selected visual or implementation, the essential relationships and reproduction parameters, and unresolved limits. Keep raw trials outside the reusable skill. Retain a method when its application and boundary are clear, or a particularly valuable example with an explanation of why it works.
