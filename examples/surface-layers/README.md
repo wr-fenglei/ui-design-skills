@@ -2,6 +2,12 @@
 
 A light and dark panel share the same three-row geometry, text placement and outer silhouette. Local neutral-value differences organize the regions.
 
+## Browser preview
+
+![Neutral light and dark surface layers](preview.png)
+
+Cropped screenshot of the actual HTML/CSS in cloud Chrome, captured 2026-10-13. This is not a generated concept image.
+
 ## Why the composition works
 
 - **Shared geometry reduces noise:** Comparable widths, heights, radii and text positions make the surfaces easy to read as one system.
@@ -28,7 +34,7 @@ Values are reconstruction choices, not verified Adobe design tokens or font meas
 
 Useful for section grouping, theme comparison and surface-role studies. Re-evaluate real content density, text contrast and actionable states before using the pattern in a product.
 
-Appearance was approved by the commissioning user on 2026-10-13. Agent-side browser visual and responsive testing remains unverified. This study has no business interaction.
+Appearance was approved by the commissioning user on 2026-10-13. Desktop rendering was inspected in cloud Chrome at a 1180 × 757 viewport; no horizontal page overflow was observed. Mobile adaptation and a complete accessibility audit remain unverified. This study has no business interaction.
 
 ## Source and related guidance
 

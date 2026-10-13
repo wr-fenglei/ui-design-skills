@@ -2,6 +2,14 @@
 
 Two related studies: five equal circles with different surface treatments, followed by a progression from a quiet outline to a filled capsule and a luminous labeled capsule.
 
+## Browser previews
+
+![Five material treatments](material-preview.png)
+
+![Material and attention progression](attention-preview.png)
+
+Cropped screenshots of the actual HTML/CSS in cloud Chrome, captured 2026-10-13. These are not generated concept images.
+
 ## Why the composition works
 
 - **Stable rhythm:** Equal circle dimensions, a shared centerline and controlled gaps give different material cues a common frame.
@@ -27,7 +35,7 @@ These are reproduction parameters for this study, not universal UI tokens. CSS b
 
 Useful for comparing material cues or explaining emphasis in a component study. A decorative heading illustration is not itself a usable input/control system. Small-screen scaling preserves the comparison canvas but does not validate mobile component usability.
 
-Appearance was approved by the commissioning user on 2026-10-13. Agent-side browser rendering, responsive behavior, grain-toggle interaction and accessibility are not yet verified. Static parsing and script syntax checks are a separate, narrower result.
+Appearance was approved by the commissioning user on 2026-10-13. Desktop rendering was inspected in cloud Chrome at a 1180 × 757 viewport; no horizontal page overflow was observed. The grain toggle was tested off and on, including its pressed state and visible canvas state. Mobile adaptation and a complete accessibility audit remain unverified. Static parsing and script syntax checks also passed.
 
 ## Source and related guidance
 
