@@ -16,6 +16,10 @@ Start with [SKILL.md](SKILL.md). Read only the references relevant to the design
 - [Code and image collaboration](references/code-image-collaboration.md): shared baselines and editable implementation.
 - [Image prompting](references/image-prompting.md): composition-first briefs and controlled edits.
 
+## Quality review
+
+- [Agent design and aesthetic pitfalls](references/agent-design-pitfalls.md): feedback-derived failure signals, mistaken assumptions, corrections, and delivery checks.
+
 ## Visual references
 
 - [Reference index](references/reference-index.md): bundled icon sheets and selected visual examples.
