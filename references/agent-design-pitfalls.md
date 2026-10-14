@@ -2,6 +2,16 @@
 
 A feedback-derived corrective guide. Use it before choosing a direction, after a reference reconstruction, and before delivery. These are checks for recurring failures, not a universal house style or a claim that one palette suits every interface.
 
+## 0. Reading the skill but bypassing its stages
+
+Keywords: procedural compliance, premature finish, missing baseline, skipped model comparison, approval gate.
+
+- **Failure signal:** The agent reads the documents, glances at a reference's opening screen, then delivers a dense, fully styled page using familiar cards, muted text and default spacing. There is no inspected direction study, selected baseline or code/image comparison.
+- **Mistaken assumption:** Reading instructions, including every requested feature and taking a browser screenshot are enough to establish reference-led design. Calling the result a sample does not repair missing exploration.
+- **Correction:** Return to the earliest missing stage in [SKILL.md](../SKILL.md#evidence-before-advancement). Inspect a relevant interface rather than its promotional cover. Establish task, hierarchy and proportions; compare Web and GPT Image direction studies under a shared brief; select a coherent baseline before detailing the entire page. Keep direction studies schematic: macro layout, relative mass and broad tone only; full copy, precise typography and finished controls belong to the refinement stage. Observe the user's review gates.
+- **Check:** Point to the actual reference region, rendered studies, selected relationships and current approval state. If these do not exist, report the stage as incomplete. A written checklist, tool-call success or polished screenshot is not a substitute.
+- **Boundary:** Preserve approved work for narrow edits. If a tool is restricted or unavailable, state the reduced scope instead of fabricating comparison evidence. Do not treat a rejected palette or card shape as universally wrong; the recurring error is choosing them by habit without a validated composition.
+
 ## 1. Reusing a default visual vocabulary
 
 Keywords: template drift, repeated cards, inherited palette, habitual typography.
