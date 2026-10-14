@@ -1,15 +1,25 @@
 # Code and Image Collaboration
 
-## Shared brief and baseline
+## Independent discovery comes first
 
-Keywords: task, real content, canvas, selected reference, invariants.
+Keywords: expressive core, independent proposals, divergent results, user selection.
 
-Give both routes the same content, dimensions, visual thesis and constraints. For refinement, identify what is approved and what may change. Begin a local experiment only when the full baseline is coherent enough to judge.
+Follow the [gold standard](../SKILL.md#gold-standard--first-decide-what-carries-the-beauty): first decide what carries the beauty, then organize space around it.
+
+- Share the problem, content needs, use context and hard constraints. A common display size may help comparison, but is not a shared layout.
+- Web and GPT Image independently propose what carries the design's appeal. Neither receives the other's draft or a preselected core, palette, composition, shape or material to reproduce.
+- Large differences are allowed and expected. Compare task fit, expressive strength and supporting relationships, not similarity between routes.
+- Show both actual candidates and let the user review the core before expanding the surrounding page or component. Keep the initial output bounded to the requested discovery stage.
+- Select one, request alternatives, or selectively combine compatible strengths after review. A hybrid is optional; averaging unrelated solutions can weaken both.
+
+## Shared baseline after selection
+
+Once a core or composition has been selected, identify approved relationships and open variables. A screenshot, common visual thesis and controlled image-to-code handoff now support faithful refinement. This later sharing does not replace independent discovery.
 
 ## Stage outputs for visual-direction work
 
-- **Before exploration:** Keep a small shared brief and the actual reference regions. Use the same content priorities, viewport and constraints for both routes.
-- **At the overall-impression stage:** Render a Web composition study and a GPT Image concept independently. Compare overall layout, approximate spatial relationships, silhouettes, occupied mass, density and broad color, lighting and material character at equal size. Use the same sparse representative content or equivalent placeholders; do not fill the entire page or refine typography, buttons, exact shadows, reflections or textures at this stage. Broad light/shadow masses and material feel should remain visible as low-detail cues. Preserve realistic content volume so the rough composition does not rely on unrealistically empty regions.
+- **Before exploration:** Keep a shared problem brief and actual reference evidence. Preserve content needs and constraints while leaving each route free to find its own visual answer.
+- **At the overall-impression stage:** After core review, render a Web composition study and a GPT Image concept around the selected expressive core. Compare overall layout, approximate spatial relationships, silhouettes, occupied mass, density and broad color, lighting and material character at equal size. Use the same sparse representative content or equivalent placeholders; do not fill the entire page or refine typography, buttons, exact shadows, reflections or textures at this stage. Broad light/shadow masses and material feel should remain visible as low-detail cues. Preserve realistic content volume so the rough composition does not rely on unrealistically empty regions.
 - **At selection:** Show both actual renders and the overall comparison to the user; recommend what to retain from each result and what to reject. Combining is selective translation, not adding every attractive feature. Wait for the user's explicit selection or approval of one baseline; do not substitute agent preference for that decision. Keep that baseline and do not extend it to unreviewed screens by habitual styling.
 - **At the detail stage, after user approval:** Hand the selected baseline to both routes when another comparison is useful. Now introduce real copy and precise type, spacing, colors, controls, shadows and materials. For a Web baseline, capture a real screenshot for the image route; for an image baseline, preserve its spatial relationships in code. State which regions may change and which must remain stable.
 - **At a user review gate:** Deliver the current-stage studies and the specific decision needed. Wait for requested approval before further refinement or functional implementation.
