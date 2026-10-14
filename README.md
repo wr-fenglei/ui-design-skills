@@ -1,5 +1,11 @@
 # UI Design Skills
 
+## Gold standard
+
+**First decide what carries the beauty; then organize space around it.**
+
+Every design starts here. For new exploration, Web and GPT Image independently discover the expressive core from the same problem and constraints. Their layouts, colors, shapes and materials may be radically different. Present both for user review before expanding a selected core into its surrounding space. Do not force agreement or a hybrid. See [SKILL.md](SKILL.md#gold-standard--first-decide-what-carries-the-beauty) for the required starting point.
+
 A unified design skill for interfaces, components, visual assets, and app icons.
 
 Start with [SKILL.md](SKILL.md). Read only the references relevant to the design problem.
