@@ -1,5 +1,9 @@
 # Image Prompting for Design
 
+## Match the prompt to the design stage
+
+During independent expressive-core discovery, give GPT Image the problem, usage context, content needs and hard constraints. Let it choose what carries the beauty. Do not preselect a visual thesis or supply the Web route's layout, palette or draft. Ask for a bounded core study and keep the surrounding interface unresolved. The relationship-specific guidance below applies after a core has been selected, or when faithfully studying a specific reference; it must not erase independence at discovery. See [code-image collaboration](code-image-collaboration.md).
+
 ## Write relationships, not praise
 
 Keywords: focal point, supporting mass, occupied area, overlap, quiet space.
