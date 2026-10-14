@@ -5,11 +5,24 @@ description: Design and refine interface layouts, components, visual assets, and
 
 # UI Design
 
-## Start here
+## Start here — do not skip the design stages
 
 Read this entrypoint before creating a foundational exercise or independent design example, as well as before page or component work. Read the relevant references for the task; use [agent design pitfalls](references/agent-design-pitfalls.md) before selecting a direction and again before delivery.
 
 Design relationships before embellishments. The workflow zooms from the whole into detail, with permission to return to an earlier decision when the whole stops working. It is not a rigid waterfall.
+
+### Evidence before advancement
+
+Reading this skill is preparation, not evidence that its workflow was followed. For a new page or a substantial visual redesign, do not jump from a requirements list to a polished, fully populated screen.
+
+1. **Reference and direction:** Inspect a task-relevant interface, including the regions and states being borrowed. Produce a compact visual brief with the primary task, reading order, key proportions, density and what stays quiet. A marketing article's first screen alone does not establish a dashboard reference.
+2. **Overall impression — layout and silhouette:** Produce comparable Web and GPT Image overall-impression studies from the same brief, content priorities and canvas. Explore overall layout, approximate spatial relationships, dominant silhouettes, visual focus, density, broad color/light distribution and the overall sense of material. Keep them contour-led and low-detail. Use sparse representative text or placeholders that preserve plausible content mass; omit complete copy, precise type styling, finished controls and fine texture. Broad shadow masses and material cues belong here; exact shadow parameters, reflections and surface microdetail do not. Inspect both as whole compositions, explain their strengths and trade-offs, and show both to the user with a recommendation. Obtain the user's review and explicit selection or approval of the overall baseline before refinement; agent self-review cannot replace this gate. Follow [code-image collaboration](references/code-image-collaboration.md); do not substitute an intention to compare for actual renders.
+3. **Controlled refinement:** Only after the user's overall-baseline approval, populate real content and refine group spacing, exact type size/weight/color, control geometry, surface colors, shadows and material. Show the current stage and open decisions; do not silently expand an unapproved composition into a finished page.
+4. **Implementation and validation:** Integrate real behavior only within the requested scope, after any required visual/operation-path approval. Inspect the actual implementation against the selected baseline.
+
+When the user asks for staged review or a sample before implementation, stop at the requested review gate and obtain their feedback before advancing. Label overall-impression studies with their stage. Keep short-lived stage evidence locally rather than adding process logs to this skill.
+
+Both routes and the user review gate are required for new overall-impression exploration in this workflow, not a requirement to regenerate an approved layout for a copy fix or narrowly specified adjustment. Respect explicit tool restrictions. If a route is unavailable, disclose the missing comparison and ask the user whether to proceed with reduced scope; do not silently bypass a route or claim this gate was completed.
 
 ## Inputs and reference
 
