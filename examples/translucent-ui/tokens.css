@@ -1,0 +1,24 @@
+/* Implementation starting values, extracted from the approved family's Web study.
+   Not a production accessibility specification or measured image palette. */
+:root {
+  --translucent-ink: #162430;
+  --translucent-ink-secondary: #738089;
+  --translucent-mint: #d5f7df;
+  --translucent-cream: #fff3ba;
+  --translucent-pink: #ffd8e9;
+  --translucent-lavender: #e8dcfa;
+  --translucent-blue: #bdc9fa;
+  --translucent-control-fill: #ffffff70;
+  --translucent-control-edge: #ffffffd4;
+  --selection-stroke: #8296e5;
+  --selection-fill: #becaf035;
+  --selection-handle-fill: #dbe2ff;
+  --selection-handle-edge: #ffffff;
+  --selection-line-width: 2px;
+  --selection-handle-size: 18px;
+  --selection-handle-radius: 3px;
+}
+/* Illustrative default: keep these visual dimensions independent of hit targets. */
+.selection-frame {position:absolute; border:var(--selection-line-width) dashed var(--selection-stroke);background:var(--selection-fill);pointer-events:none;}
+.selection-frame > i {position:absolute;width:var(--selection-handle-size);height:var(--selection-handle-size);background:var(--selection-handle-fill);border:2px solid var(--selection-stroke);box-shadow:0 0 0 2px var(--selection-handle-edge);border-radius:var(--selection-handle-radius);transform:translate(-50%,-50%);}
+.selection-frame > i:nth-child(1){left:0;top:0}.selection-frame > i:nth-child(2){left:100%;top:0}.selection-frame > i:nth-child(3){left:0;top:100%}.selection-frame > i:nth-child(4){left:100%;top:100%}

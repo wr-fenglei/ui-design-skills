@@ -55,6 +55,12 @@ A stable black text block beside a flowing green ribbon and a small coral action
 
 Use it to study tactile context around typography, diagonal continuity, folds and shadows, and unequal color areas. Do not let the artwork obscure text or assume the plus symbol has tested behavior. The original verbatim generation prompt is unavailable.
 
+### [Translucent UI example system](../examples/translucent-ui/README.md)
+
+An approved selection-preview composition and a paired-choice composition. Use them together to study broad translucent surfaces, readable dark typography, numbered instruction pills, nested preview scale and restrained selected states. Four retained PNGs preserve the whole and key details; implementation tokens are starting values, not a production system.
+
+The [selection frame](selection-frame.md) also has an independent guide for potential screenshot, crop and canvas use. Its appearance is approved in the original context; cross-background portability and complete interactions still require testing.
+
 ## Reference hierarchy
 
 1. Actual task and content requirements.
