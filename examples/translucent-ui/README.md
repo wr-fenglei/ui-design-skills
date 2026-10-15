@@ -56,11 +56,11 @@ Equal surfaces provide a fair comparison. An active outline separates selection 
 4. Add one restrained surface contour, then the nested previews and controls.
 5. Compare with the retained PNG at the same aspect ratio; review edges and auxiliary regions as carefully as the focal content.
 
-See [foundation CSS](tokens.css). A whole-page renderer exists in the working prototype, but its unapproved navigation/footer are intentionally not included here.
+See [foundation CSS](tokens.css), the editable [instruction specimen](step-pill.html), and the editable [selection specimen](selection-frame.html). Both component specimens are static visual demonstrations, with complete boundaries and deliberate surrounding space; they do not implement actions or resizing. A whole-page renderer exists in the working prototype, but its unapproved navigation/footer are intentionally not included here.
 
 ## Scope and provenance
 
-Retained on 2026-10-15 after explicit visual approval. PNGs are the exact user-selected screenshots of the Web recreation, derived from an earlier GPT Image direction and then implemented with HTML/CSS/SVG. They contain illustrative labels and placeholder content, not live project state.
+Retained on 2026-10-15 after explicit visual approval. The two full-page PNGs preserve the selected Web recreation, derived from an earlier GPT Image direction and then implemented with HTML/CSS/SVG. The two component PNGs are newly rendered, deliberately framed HTML/CSS specimens with supportive backgrounds; feedback screenshots served only as references, not as the final component assets. They contain illustrative labels and placeholder content, not live project state.
 
 The whole selection composition, its instruction pills and selection frame were strongly approved. The choice composition was approved as an additional example. Other pages in the exploration are not implicitly approved.
 
