@@ -31,4 +31,5 @@ Start with [SKILL.md](SKILL.md). Read only the references relevant to the design
 - [Reference index](references/reference-index.md): bundled icon sheets and selected visual examples.
 - [Design sources](references/design-sources.md): where to find references for specific design questions.
 
-The references provide usable decision criteria, not a universal visual template. Included images are visual studies, not functional UI implementations. Reference-asset redistribution and commercial-use rights are not granted by this repository.
+The references provide usable decision criteria, not a universal visual template. Images alone do not establish functioning interfaces. Selected runnable examples document their implemented behavior and unverified boundaries separately. Reference-asset redistribution and commercial-use rights are not granted by this repository.
+

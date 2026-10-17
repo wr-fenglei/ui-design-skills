@@ -1,10 +1,16 @@
 # Translucent UI — a small example system
 
-An approved visual family, not a production component library. The selection-preview composition is the primary reference; the choice composition is a second retained example. Start with these complete relationships before borrowing individual tokens.
+An approved visual family with bounded component studies and a runnable page example, not a production component library. The selection-preview composition is the primary reference; the choice composition is a second retained example. Start with these complete relationships before borrowing individual tokens.
 
 ![Selection preview](selection-preview.png)
 
 ![Choice preview](choice-preview.png)
+
+## Example levels
+
+- **Component relationships:** the selection and choice compositions below establish the visual family.
+- **Page-level composition:** [Pastel Workspace](pastel-workspace/README.md) extends it through unequal project density, restrained surfaces, and a focused action area. Includes desktop/narrow screenshots and runnable code.
+- **Portable primitive:** the [selection frame](../../references/selection-frame.md) can be examined independently.
 
 ## What carries the beauty
 
@@ -56,7 +62,7 @@ Equal surfaces provide a fair comparison. An active outline separates selection 
 4. Add one restrained surface contour, then the nested previews and controls.
 5. Compare with the retained PNG at the same aspect ratio; review edges and auxiliary regions as carefully as the focal content.
 
-See [foundation CSS](tokens.css), the editable [instruction specimen](step-pill.html), and the editable [selection specimen](selection-frame.html). Both component specimens are static visual demonstrations, with complete boundaries and deliberate surrounding space; they do not implement actions or resizing. A whole-page renderer exists in the working prototype, but its unapproved navigation/footer are intentionally not included here.
+See [foundation CSS](tokens.css), the editable [instruction specimen](step-pill.html), and the editable [selection specimen](selection-frame.html). Both component specimens are static visual demonstrations, with complete boundaries and deliberate surrounding space; they do not implement actions or resizing. For the page-level extension, see [Pastel Workspace](pastel-workspace/README.md): a fictional English project overview with live controls, one-question-at-a-time interaction, and a compact local-choice dialog. Its validation boundaries are documented separately.
 
 ## Scope and provenance
 
@@ -67,3 +73,4 @@ The whole selection composition, its instruction pills and selection frame were 
 Local Chrome rendering and basic pointer selection were exercised in the working prototype. Cross-browser, mobile, keyboard resizing, screen-reader operation, real App launch, persistent feedback and handoff are not verified by these images. The four corner handles are a visual state, not proof of implemented resizing.
 
 Use as a reference for a bounded task or review interface. Do not apply transparency automatically to dense tables, long-form reading or high-contrast environments. No third-party brand assets are included. Follow repository licensing; no separate license for third-party fonts is granted.
+

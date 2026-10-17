@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pastel Workspace — Demo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scene">
+<main class="app" aria-label="Project overview demo">
+ <header class="toolbar">
+  <button class="date" id="date-button" aria-label="Demo date Oct 17"><span class="date-label">Oct 17</span><svg class="date-chevron" aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <nav class="tabs" aria-label="Page actions"><button class="active" id="home-button" aria-current="page">Projects</button><button id="open-selections" aria-haspopup="dialog">Your choices</button></nav>
+ </header>
+ <div class="workspace" id="projects-view">
+  <h1>Featured projects</h1>
+  <section class="primary" aria-label="Featured projects">
+   <button class="project journal" data-project="journal"><img src="assets/journal.png" alt="Layered stationery"><span class="project-copy"><strong>Studio Journal</strong><span class="status">A new page is taking shape</span><span class="next-label">Next step</span><span class="next">Gather a few ideas</span></span><span class="arrow" aria-hidden="true"><svg width="12" height="16" viewBox="0 0 12 16" fill="none" focusable="false"><path d="m3.5 3 4 5-4 5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+   <button class="project library" data-project="library"><img src="assets/library.png" alt="Dark collection preview"><span class="project-copy"><strong>Photo Library</strong><span class="status">A collection in progress</span><span class="next-label">Next step</span><span class="next">Explore a cleaner preview</span></span><span class="arrow" aria-hidden="true"><svg width="12" height="16" viewBox="0 0 12 16" fill="none" focusable="false"><path d="m3.5 3 4 5-4 5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+  </section>
+  <div class="lower">
+   <section class="secondary" aria-labelledby="secondary-title"><h2 id="secondary-title">More projects</h2><div class="secondary-grid">
+    <button class="project" data-project="planner"><img src="assets/planner.png" alt="Planning canvas on a phone"><span class="project-copy"><strong>Weekend Planner</strong><span class="status">Ready to sketch</span></span><span class="arrow" aria-hidden="true"><svg width="12" height="16" viewBox="0 0 12 16" fill="none" focusable="false"><path d="m3.5 3 4 5-4 5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+    <button class="project" data-project="reading"><img src="assets/reading.png" alt="Layered book pages"><span class="project-copy"><strong>Reading List</strong><span class="status">A few pages saved</span></span><span class="arrow" aria-hidden="true"><svg width="12" height="16" viewBox="0 0 12 16" fill="none" focusable="false"><path d="m3.5 3 4 5-4 5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+    <button class="project" data-project="sound"><img src="assets/sound.png" alt="Blue and violet audio bars"><span class="project-copy"><strong>Sound Sketch</strong><span class="status">Ideas in progress</span></span><span class="arrow" aria-hidden="true"><svg width="12" height="16" viewBox="0 0 12 16" fill="none" focusable="false"><path d="m3.5 3 4 5-4 5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+    <button class="project" data-project="learning"><img src="assets/learning.png" alt="Connected learning cards"><span class="project-copy"><strong>Learning Notes</strong><span class="status">Choose a direction</span></span><span class="arrow" aria-hidden="true"><svg width="12" height="16" viewBox="0 0 12 16" fill="none" focusable="false"><path d="m3.5 3 4 5-4 5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+   </div><button class="other" id="other-projects">Other projects <span aria-hidden="true"><svg width="12" height="16" viewBox="0 0 12 16" fill="none" focusable="false"><path d="m3.5 3 4 5-4 5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></section>
+   <section class="questions" aria-labelledby="questions-title"><h2 id="questions-title">A few minutes. One next step.</h2><div class="stack"><div class="sheet-back back-two" aria-hidden="true"></div><div class="sheet-back back-one" aria-hidden="true"></div><form class="question-card" id="question-form" tabindex="0" aria-label="Question card. Use left and right arrow keys to browse.">
+    <div class="question-project"><span class="document-icon" aria-hidden="true"><svg width="21" height="23" viewBox="0 0 24 26" fill="none"><path d="M5 2h10l5 5v17H5zM15 2v6h5M9 12h7M9 16h7M9 20h5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span id="question-project">Photo Library</span></div>
+    <h3 id="question-title">What should we explore next?</h3>
+    <fieldset id="options" aria-labelledby="question-title"></fieldset>
+    <label class="note"><svg aria-hidden="true" width="18" height="20" viewBox="0 0 24 24" fill="none"><path d="m4 16 12-12a2.2 2.2 0 0 1 4 4L8 20l-5 1 1-5ZM14 6l4 4M4 16l4 4M12 21h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><input id="note" name="note" maxlength="300" placeholder="Add your thoughts…" aria-label="Additional thoughts"></label>
+    <div class="question-bottom"><div class="pager"><span id="counter" aria-live="polite" aria-atomic="true">1 / 3</span></div><div class="dots" aria-hidden="true"><span data-question="0"></span><span data-question="1"></span><span data-question="2"></span></div><button class="confirm" type="submit">Save choice</button></div>
+    <p class="save-status" id="save-status" role="status"></p>
+   </form></div></section>
+  </div>
+ </div>
+
+ <footer>Demo content • Saved in this browser only</footer>
+</main>
+</div>
+<dialog id="selections-dialog" aria-labelledby="selections-title" aria-describedby="selections-boundary"><button class="close" id="close-selections" aria-label="Close your choices">×</button><h2 id="selections-title">Your choices</h2><p id="selections-boundary">Saved in this browser only. Not sent to anyone.</p><div id="selections-list"></div></dialog>
+<dialog id="detail"><button class="close" id="close-detail" aria-label="Close details">×</button><span class="detail-eyebrow">Project demo</span><h2 id="detail-title"></h2><p id="detail-description"></p><p class="detail-note">This is a fictional interface demo. No live projects or apps are connected.</p><button id="detail-done">Done</button></dialog>
+<script src="swipe.js"></script>
+<script src="app.js"></script>
+</body></html>

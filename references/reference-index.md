@@ -57,7 +57,7 @@ Use it to study tactile context around typography, diagonal continuity, folds an
 
 ### [Translucent UI example system](../examples/translucent-ui/README.md)
 
-An approved selection-preview composition and a paired-choice composition. Use them together to study broad translucent surfaces, readable dark typography, numbered instruction pills, nested preview scale and restrained selected states. Four retained PNGs preserve the whole and key details; implementation tokens are starting values, not a production system.
+An approved selection-preview composition and a paired-choice composition. Use them together to study broad translucent surfaces, readable dark typography, numbered instruction pills, nested preview scale and restrained selected states. Retained PNGs preserve the whole and key details; implementation tokens are starting values, not a production system. The [Pastel Workspace page example](../examples/translucent-ui/pastel-workspace/README.md) adds a fictional English overview, desktop/narrow renderings, local-choice dialog and bounded runnable behavior.
 
 The [selection frame](selection-frame.md) also has an independent guide for potential screenshot, crop and canvas use. Its appearance is approved in the original context; cross-background portability and complete interactions still require testing.
 
@@ -78,3 +78,4 @@ See [Design sources](design-sources.md) for external discovery platforms and aut
 - [Neutral surface layers](../examples/surface-layers/README.md): matched light/dark panels with neutral region separation. Use for common surfaces and theme-specific value relationships.
 
 Both include editable HTML/CSS and the scope of visual approval and outstanding technical checks. They are independent studies, not official Adobe components.
+

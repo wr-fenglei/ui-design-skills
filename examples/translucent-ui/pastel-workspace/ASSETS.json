@@ -1,0 +1,58 @@
+{
+  "journal.png": {
+    "bytes": 29472,
+    "sha256": "5bb304cf451547b8ced5ded4e1c57be2365ebc8ce365bb2bf10647a81df7e7e0",
+    "before_optimization_bytes": 45208,
+    "rgba_sha256": "670a77bf924932e30ebf3a48d0f94ab9ef65b4c4a1becdba498b000f3943ad67",
+    "rgba_verified_equal": true,
+    "optimizer": "OxiPNG 10.2.1 -o 4"
+  },
+  "learning.png": {
+    "bytes": 18514,
+    "sha256": "f1b01c01d6c4c9a60778bb39665a442f3203d54143bbd4e52a0629f8db72d335",
+    "before_optimization_bytes": 31569,
+    "rgba_sha256": "b3feff0a64008d783524117959fea536fdb6dd82e83b65abb7f60fe8dffeebc5",
+    "rgba_verified_equal": true,
+    "optimizer": "OxiPNG 10.2.1 -o 4"
+  },
+  "library.png": {
+    "bytes": 46468,
+    "sha256": "b934a51a7bd7c3b9d3295a47a13f425f5c3491dbdf8f137aaea7fc857e861298",
+    "before_optimization_bytes": 72490,
+    "rgba_sha256": "9e5d9f14109237b0f53380d453b0f12c0442964ce372c5305f93090c733e696d",
+    "rgba_verified_equal": true,
+    "optimizer": "OxiPNG 10.2.1 -o 4"
+  },
+  "planner.png": {
+    "bytes": 17383,
+    "sha256": "14e77269a19573b9de61d4d66dd75a6a961a641dee093f39b72e08c1208d49f6",
+    "before_optimization_bytes": 27621,
+    "rgba_sha256": "dae52cfb9f09310a89b1bbaf2538dbba3dbb90a7f0a40ba850d0c9a0d9d20929",
+    "rgba_verified_equal": true,
+    "optimizer": "OxiPNG 10.2.1 -o 4"
+  },
+  "reading.png": {
+    "bytes": 19457,
+    "sha256": "afb1a69ae0b77ea321219c857c5e105715564f10dc2c362d2c0ab6685eae7d70",
+    "before_optimization_bytes": 36655,
+    "rgba_sha256": "13a7f91ac7caa5f50fa922ef300d76ada482eda7e16006784887fdc0fc854182",
+    "rgba_verified_equal": true,
+    "optimizer": "OxiPNG 10.2.1 -o 4"
+  },
+  "sound.png": {
+    "bytes": 17548,
+    "sha256": "0faa8b3ba0069a6313cf3674fd7482685f3810b0d288d134574a76c3951c5035",
+    "before_optimization_bytes": 39761,
+    "rgba_sha256": "155cd81a26ea74f44c9ac39ae915c1bb02b7336448e286be4911506685c08fe4",
+    "rgba_verified_equal": true,
+    "optimizer": "OxiPNG 10.2.1 -o 4"
+  },
+  "wallpaper-refined.png": {
+    "bytes": 258208,
+    "sha256": "ca15b29f095930165b40bb0390e09d8796895bf9b1cba1d74580b038b348839c",
+    "before_optimization_bytes": 658330,
+    "rgba_sha256": "372e63c0c910567351ccb0071db9e3108d9b245868ea9b0f08b3f332b9e4676d",
+    "rgba_verified_equal": true,
+    "optimizer": "OxiPNG 10.2.1 -o 4"
+  }
+}
