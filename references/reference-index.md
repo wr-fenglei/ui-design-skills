@@ -79,3 +79,7 @@ See [Design sources](design-sources.md) for external discovery platforms and aut
 
 Both include editable HTML/CSS and the scope of visual approval and outstanding technical checks. They are independent studies, not official Adobe components.
 
+
+### [Form & Field](../examples/form-and-field/README.md)
+
+An approved generated editorial programme: meaningful objects, shared lighting, distinct color fields and integrated typography. A static visual reference, not a working event UI.

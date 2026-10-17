@@ -12,6 +12,10 @@ An approved visual family with bounded component studies and a runnable page exa
 - **Page-level composition:** [Pastel Workspace](pastel-workspace/README.md) extends it through unequal project density, restrained surfaces, and a focused action area. Includes desktop/narrow screenshots and runnable code.
 - **Portable primitive:** the [selection frame](../../references/selection-frame.md) can be examined independently.
 
+## The journey
+
+[From 05min to a small UI system](case-study.md) — five images, the core method, and the choices that changed the result.
+
 ## What carries the beauty
 
 Keywords: quiet translucent planes, warm focal field, dark typography, nested scale, purposeful outline.
@@ -72,5 +76,5 @@ The whole selection composition, its instruction pills and selection frame were 
 
 Local Chrome rendering and basic pointer selection were exercised in the working prototype. Cross-browser, mobile, keyboard resizing, screen-reader operation, real App launch, persistent feedback and handoff are not verified by these images. The four corner handles are a visual state, not proof of implemented resizing.
 
-Use as a reference for a bounded task or review interface. Do not apply transparency automatically to dense tables, long-form reading or high-contrast environments. No third-party brand assets are included. Follow repository licensing; no separate license for third-party fonts is granted.
+Use as a reference for a bounded task or review interface. Do not apply transparency automatically to dense tables, long-form reading or high-contrast environments. The critical case study includes an attributed Apple promotional reference; it is not a reusable component asset and remains Apple’s property. The implementation includes no third-party brand assets. Follow repository licensing; no separate license for third-party fonts is granted.
 
