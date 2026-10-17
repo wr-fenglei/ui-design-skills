@@ -10,6 +10,23 @@ A unified design skill for interfaces, components, visual assets, and app icons.
 
 Start with [SKILL.md](SKILL.md). Read only the references relevant to the design problem.
 
+## Selected examples
+
+A few outcomes refined through practice and user feedback. Open an example for its method, source and validation limits.
+
+### A complete page
+
+[![Pastel Workspace — actual Web screenshot](examples/translucent-ui/pastel-workspace/screenshots/desktop.jpg)](examples/translucent-ui/pastel-workspace/README.md)
+
+**[Pastel Workspace](examples/translucent-ui/pastel-workspace/README.md)** — a runnable, fictional project overview. Quiet surfaces, distinct content and one decision at a time. [See how the system evolved](examples/translucent-ui/case-study.md).
+
+| A focused component | An editorial composition |
+| --- | --- |
+| [![Selection composition](examples/translucent-ui/case-study-assets/02-selection.png)](examples/translucent-ui/README.md) | [![Form & Field programme](examples/form-and-field/preview.png)](examples/form-and-field/README.md) |
+| **[Selection](examples/translucent-ui/README.md)** — generated visual reference: thin surfaces, instruction pills and a generous preview. | **[Form & Field](examples/form-and-field/README.md)** — generated visual reference: material, lighting and typography share one scene. |
+
+These images represent different scopes. A visual study is not a tested implementation; each example states what is actually verified.
+
 ## Design dimensions
 
 - [Design principles](references/design-principles.md): attention, proportion, grouping, color roles, and material restraint.
