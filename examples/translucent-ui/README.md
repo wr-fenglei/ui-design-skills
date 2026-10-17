@@ -1,80 +1,46 @@
-# Translucent UI — a small example system
+# Translucent UI
 
-An approved visual family with bounded component studies and a runnable page example, not a production component library. The selection-preview composition is the primary reference; the choice composition is a second retained example. Start with these complete relationships before borrowing individual tokens.
+A small, evolving example system: **thin luminous surfaces, readable content and restrained glass controls.** It now spans a visual concept, component studies and a working page-level demo.
 
-![Selection preview](selection-preview.png)
+![Pastel Workspace — actual Web screenshot](pastel-workspace/screenshots/desktop.jpg)
 
-![Choice preview](choice-preview.png)
+**[Explore the Web example](pastel-workspace/README.md)** · **[Read the visual case study](case-study.md)**
 
-## Example levels
+## The system at three scales
 
-- **Component relationships:** the selection and choice compositions below establish the visual family.
-- **Page-level composition:** [Pastel Workspace](pastel-workspace/README.md) extends it through unequal project density, restrained surfaces, and a focused action area. Includes desktop/narrow screenshots and runnable code.
-- **Portable primitive:** the [selection frame](../../references/selection-frame.md) can be examined independently.
+### 1. The visual core — 05min
 
-## The journey
+[View the retained concept](case-study-assets/01-05min.png)
 
-[From 05min to a small UI system](case-study.md) — five images, the core method, and the choices that changed the result.
+Almost weightless sheets, broad multicolor light and delicate edges establish the feeling. Preserve these relationships; reconsider where glass belongs as content grows.
 
-## What carries the beauty
+### 2. Components — Selection and Choice
 
-Keywords: quiet translucent planes, warm focal field, dark typography, nested scale, purposeful outline.
+![Selection reference](selection-preview.png)
 
-The broad pastel surface and crisp content work together. Large type has a quiet field around it; the smaller controls remain part of the same material. The selection rectangle expresses the actual task rather than adding a detached ornament.
+A compact instruction group balances a generous preview and precise selection handles. The [Choice reference](choice-preview.png) adds equal comparison surfaces and a restrained selected boundary.
 
-## Composition
+- **Instruction pill:** [specimen](step-pill.html) · [image](step-pill.png). A numbered circle and a dark label share one quiet surface.
+- **Selection frame:** [specimen](selection-frame.html) · [image](selection-frame.png) · [independent guide](../../references/selection-frame.md). Generous inset, clear boundary and balanced handles. Portability to other contexts still needs testing.
+- **Foundation CSS:** [tokens.css](tokens.css). Starting values for these specimens, not universal or measured reference-image tokens.
 
-- Selection preview: a compact instruction group on the left balances a larger nested preview on the right. Time, title and steps form one readable sequence.
-- Choice preview: equal-sized panels share a heading and aligned content positions. Selection is expressed with a stronger boundary, not an unrelated saturated fill.
-- Keep the approved relative scale of the time, instruction pills, preview and control handles. Do not shrink the preview into an icon or spread the text into disconnected corners.
-- Match the orientation of content and its supporting plane deliberately. Empty space must separate meaningful groups, not become an unoccupied hole between unrelated elements.
+### 3. A full page — Pastel Workspace
 
-## Foundation roles
+[Implementation and screenshots](pastel-workspace/README.md) · [Validation](pastel-workspace/VALIDATION.md) · [Wide/narrow concepts](pastel-workspace/concepts/README.md)
 
-- **Canvas:** pale cool lavender, with warmer quiet areas.
-- **Expressive surface:** broad mint → cream → peach/pink → lavender transitions; low-frequency color fields, thin white edge, restrained shadow.
-- **Primary ink:** dark blue-black, neutral enough to remain stable across the surface.
-- **Secondary ink:** quieter cool gray, still readable at actual size.
-- **Control surface:** translucent white; let background color remain visible without obscuring labels.
-- **Selection accent:** periwinkle outline, pale translucent selection fill, white-separated corner handles.
+A fictional English overview with one question at a time, three options, a free-text field and a compact local-choice dialog. The stack advances one card per gesture. Generated concepts and actual browser screenshots are identified separately.
 
-These are roles, not a universal palette. The CSS companion records implementation starting values, not color measurements reverse-engineered from a generated image.
+## What stays consistent
 
-## Components
+- **Color roles:** varied background, quiet app surface, distinct content; no uniform theme wash.
+- **Material restraint:** thin edges and soft light support reading. Dense areas need calm surfaces.
+- **Changing density:** spacious groups, compact related information. Rework layout as content increases.
+- **Complete design:** supporting text, inputs, states and transitions deserve the same care as the focal area.
 
-### Numbered instruction pill
+## Use and boundaries
 
-![Instruction pill detail](step-pill.png)
+Start from the closest complete example. Preserve proportions and content relationships, then test new content and viewports. Keep text and interaction in code; use generated imagery for bounded artwork.
 
-A broad pill contains a smaller circular number and a dark label. The circle clarifies sequence; it does not compete with the text. Maintain internal breathing room and a consistent vertical center. These rows are instructions in the retained composition, not proven clickable buttons; add button semantics only when a real action exists.
+These examples were approved for their individual scopes; this is not a production component library. Component specimens are static, without implemented resizing. The page demo has local browser state, no real App launch, backend or owner handoff. Physical mobile, Safari and real trackpad behavior remain unverified; see the validation notes.
 
-### Selection frame
-
-![Selection frame detail](selection-frame.png)
-
-A reusable visual primitive with an [independent guide](../../references/selection-frame.md). It can be studied separately from this pastel system. Its portability remains a hypothesis until checked on the target background and interaction model.
-
-### Choice panel
-
-Equal surfaces provide a fair comparison. An active outline separates selection from hover and focus; keep adequate inset around text. A choice becoming selected is not evidence of submission or downstream work.
-
-## Reproduction
-
-1. Establish the complete frame, left/right mass and text scale.
-2. Place live text and real component geometry in code.
-3. Layer broad gradients under the content; keep fine texture absent.
-4. Add one restrained surface contour, then the nested previews and controls.
-5. Compare with the retained PNG at the same aspect ratio; review edges and auxiliary regions as carefully as the focal content.
-
-See [foundation CSS](tokens.css), the editable [instruction specimen](step-pill.html), and the editable [selection specimen](selection-frame.html). Both component specimens are static visual demonstrations, with complete boundaries and deliberate surrounding space; they do not implement actions or resizing. For the page-level extension, see [Pastel Workspace](pastel-workspace/README.md): a fictional English project overview with live controls, one-question-at-a-time interaction, and a compact local-choice dialog. Its validation boundaries are documented separately.
-
-## Scope and provenance
-
-Retained on 2026-10-15 after explicit visual approval. The two full-page PNGs preserve the selected Web recreation, derived from an earlier GPT Image direction and then implemented with HTML/CSS/SVG. The two component PNGs are newly rendered, deliberately framed HTML/CSS specimens with supportive backgrounds; feedback screenshots served only as references, not as the final component assets. They contain illustrative labels and placeholder content, not live project state.
-
-The whole selection composition, its instruction pills and selection frame were strongly approved. The choice composition was approved as an additional example. Other pages in the exploration are not implicitly approved.
-
-Local Chrome rendering and basic pointer selection were exercised in the working prototype. Cross-browser, mobile, keyboard resizing, screen-reader operation, real App launch, persistent feedback and handoff are not verified by these images. The four corner handles are a visual state, not proof of implemented resizing.
-
-Use as a reference for a bounded task or review interface. Do not apply transparency automatically to dense tables, long-form reading or high-contrast environments. The critical case study includes an attributed Apple promotional reference; it is not a reusable component asset and remains Apple’s property. The implementation includes no third-party brand assets. Follow repository licensing; no separate license for third-party fonts is granted.
-
+The case study includes an attributed Apple image for critical comparison, not a reusable UI asset. Source credits and compression exceptions are recorded with the examples.
