@@ -1,6 +1,6 @@
 # Anatomy UI / Fieldnotes
 
-An isolated, experimental small UI system and working research archive, based on selected Anatomy source facts and the the UI experiment brief. **Ready for visual review, not yet visually approved.** No GPT Image, external assets, packages, fonts or network APIs are needed.
+An isolated, experimental small UI system and working research archive, based on selected Anatomy source facts and the UI experiment brief. **Ready for visual review, not yet visually approved.** No GPT Image, external assets, packages, fonts or network APIs are needed.
 
 ![Fieldnotes — real browser screenshot](screenshots/desktop.jpg)
 
@@ -36,4 +36,4 @@ Spacing 4/8/12/16/24/32, type 14/24, row 52, control 38, radius 4, 64/36 composi
 
 Source inspected: Anatomy `e9488296a44211c42701ff71705b7901470ec78f`; target inspected: ui-design-skills `d80ed08516e0a38b351385b2b452023a425b9e5b`. The full audit inventory is intentionally excluded from this minimal handoff. Preserve [LICENSE.anatomy](LICENSE.anatomy), including `Copyright (c) 2026 Ryan`, when distributing reused portions. No blanket license is inferred for the target repository, which had no root license at inspection.
 
-This is a local-only demonstration with at most 500 validated records, no backend/authentication/multi-user conflict handling, no dark theme and no production accessibility certification. User aesthetic review and broader-browser/assistive-technology validation remain separate. This example is collected as an experiment; inclusion is not user approval of its visual quality.
+This is a browser-local data demonstration with at most 500 validated records, no backend/authentication/multi-user conflict handling, no dark theme and no production accessibility certification. User aesthetic review and broader-browser/assistive-technology validation remain separate. This example is collected as an experiment; inclusion is not user approval of its visual quality.
