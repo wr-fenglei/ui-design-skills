@@ -1,0 +1,19 @@
+/* Anatomy UI — experimental adaptation. See provenance.md and LICENSE.anatomy.
+   Paper/ink roles and mono stack derive from Anatomy; UI sizes are new. */
+:root {
+  color-scheme: light;
+  --page: #f2f2ef; --surface: #fbfbfa; --paper: #fff;
+  --ink: #18181a; --text: #57575a; --secondary: #626266;
+  --line: #d4d4d6; --line-soft: #e5e5e2; --selected: #eeefeb;
+  --green: #276747; --green-bg: #edf4ed;
+  --amber: #795a22; --amber-bg: #f5f0e5; --danger: #a63632;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px;
+  --space-4: 16px; --space-6: 24px; --space-8: 32px;
+  --body: 14px; --small: 12px; --title: 24px;
+  --control: 38px; --row: 52px; --radius: 4px;
+  --shadow: inset 0 1px 0 #fff, 0 0 0 1px #0000000f,
+    0 1px 1px -.5px #0000000a, 0 3px 3px -1.5px #0000000a,
+    0 6px 6px -3px #0000000a, 0 12px 12px -6px #0000000a;
+}

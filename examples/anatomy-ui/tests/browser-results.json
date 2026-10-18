@@ -1,0 +1,170 @@
+{
+  "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.6.2 Safari/605.1.15",
+  "tests": [
+    {
+      "name": "1440 viewport",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440 no page/content horizontal overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440 correct inspector placement",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "768 viewport",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "768 no page/content horizontal overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "768 correct inspector placement",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390 viewport",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390 no page/content horizontal overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390 correct inspector placement",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "12 initial rows",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "search owner",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "combined category + search",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "empty results and detail",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "clear restores rows",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "row selection shares detail state",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "ascending title sort",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "repeat sort reverses",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog opened and title focused",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "required validation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "cancel without adding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "one record added despite repeat submit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "saved receipt corresponds to a stored record",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390 long title no overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "768 long title no overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1440 long title no overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reload restores saved records",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "failed save is explicit, no false success",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "retry writes retained session data",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "read failure falls back visibly",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "duplicate DOM ids absent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "page has no active animations",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "controls meet size contract",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "notes": [
+    "Native Escape/focus traversal and screen-reader announcements require separate manual checks.",
+    "Reduced-motion styles are checked statically; OS preference emulation is not provided by this harness."
+  ],
+  "completedAt": "2026-10-18T09:29:08.708Z"
+}

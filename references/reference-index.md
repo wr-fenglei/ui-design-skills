@@ -83,3 +83,8 @@ Both include editable HTML/CSS and the scope of visual approval and outstanding 
 ### [Form & Field](../examples/form-and-field/README.md)
 
 An approved generated editorial programme: meaningful objects, shared lighting, distinct color fields and integrated typography. A static visual reference, not a working event UI.
+
+
+## Experimental code-first systems
+
+- [Anatomy-inspired UI](../examples/anatomy-ui/README.md): a small, attributed adaptation of Anatomy’s surface, geometry-relationship, state and verification ideas. Includes a runnable research archive with table, document preview, filters, form and local saving. This user-requested code-first experiment has no GPT Image comparison and is awaiting aesthetic review; it is not a universally validated UI system or an official Anatomy release.

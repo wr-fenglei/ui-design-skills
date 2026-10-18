@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Anatomy UI browser checks</title>
+<style>body{font:14px/1.5 system-ui;margin:24px;color:#18181a}button{padding:8px 12px}pre{white-space:pre-wrap}iframe{border:1px solid #888;display:block;margin-top:16px;background:#f2f2ef}label{margin-right:12px}#results{max-width:900px}</style>
+<h1>Anatomy UI browser checks</h1><p>This test uses a disposable storage key in its iframe. It never edits the demo archive’s saved records.</p>
+<p><button id="run">Run browser checks</button> <button id="download">Download JSON report</button></p>
+<p><label>Preview width <select id="width"><option>1440</option><option>768</option><option>390</option></select></label><button id="preview">Fresh preview</button></p>
+<pre id="results">Ready. Tests cover real DOM layout and interactions at 390, 768 and 1440 CSS px.</pre><iframe id="frame" title="Test prototype" width="1440" height="1100"></iframe>
+<script>
+const results=[], frame=document.querySelector('#frame'), out=document.querySelector('#results');
+const report={agent:navigator.userAgent,tests:results,notes:['Native Escape/focus traversal and screen-reader announcements require separate manual checks.','Reduced-motion styles are checked statically; OS preference emulation is not provided by this harness.']};
+let w,d,memory=new Map(),mode='ok';
+const wait=()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+const check=(name,pass,detail='')=>{results.push({name,pass:Boolean(pass),detail});out.textContent=results.map(r=>(r.pass?'PASS ':'FAIL ')+r.name+(r.detail?' · '+r.detail:'')).join('\n');if(!pass)throw Error(name+' '+detail)};
+async function fresh(width=1440){
+  frame.width=width; frame.height=1100;
+  const html=await(await fetch('../example.html')).text();
+  const prefix='<base href="'+new URL('../',location).href+'"><script>Object.defineProperty(window,"localStorage",{value:{getItem:k=>parent.testStorageGet(k),setItem:(k,v)=>parent.testStorageSet(k,v)}});<'+ '/script>';
+  await new Promise(resolve=>{frame.onload=resolve;frame.srcdoc=html.replace('<head>','<head>'+prefix)}); w=frame.contentWindow;d=frame.contentDocument;await wait();
+}
+window.testStorageGet=k=>mode==='read-error'?(()=>{throw Error('blocked')})():memory.get(k)??null;
+window.testStorageSet=(k,v)=>{if(mode==='write-error')throw Error('quota');memory.set(k,v)};
+const fire=(id,value,type='input')=>{const n=d.getElementById(id);n.value=value;n.dispatchEvent(new w.Event(type,{bubbles:true}))};
+const click=id=>d.getElementById(id).click();
+function overflow(){return [...d.querySelectorAll('main *, footer')].filter(e=>{const s=w.getComputedStyle(e),r=e.getBoundingClientRect();return s.display!=='none'&&r.width>0&&(r.left< -1||r.right>w.innerWidth+1)}).map(e=>e.id||e.className||e.tagName)}
+document.querySelector('#run').onclick=async()=>{
+  results.length=0;memory=new Map();mode='ok';document.querySelector('#run').disabled=true;
+  try{
+    for(const width of [1440,768,390]){
+      await fresh(width);check(width+' viewport',w.innerWidth===width);
+      const issues=overflow();check(width+' no page/content horizontal overflow',issues.length===0,issues.join(', '));
+      check(width+' correct inspector placement',width>850?d.querySelector('.detail').getBoundingClientRect().left>d.querySelector('.archive').getBoundingClientRect().left:d.querySelector('.detail').getBoundingClientRect().top>=d.querySelector('.archive').getBoundingClientRect().bottom);
+    }
+    await fresh(1440);check('12 initial rows',d.querySelectorAll('#records tr').length===12);
+    fire('search','maya');check('search owner',d.querySelectorAll('#records tr').length===3);
+    fire('category','Discovery','change');check('combined category + search',d.querySelectorAll('#records tr').length===1);
+    fire('search','nothing-matches-this');check('empty results and detail',!d.querySelector('#empty').hidden&&!d.querySelector('#detail-empty').hidden);
+    click('empty-clear');check('clear restores rows',d.querySelectorAll('#records tr').length===12);
+    d.querySelectorAll('.record-button')[1].click();check('row selection shares detail state',d.querySelector('#doc-title').textContent==='The first five minutes'&&d.querySelectorAll('[aria-pressed="true"]').length===1);
+    click('sort-title');check('ascending title sort',d.querySelector('#title-heading').getAttribute('aria-sort')==='ascending'&&d.querySelector('.record-button').textContent==='A better research handoff');
+    click('sort-title');check('repeat sort reverses',d.querySelector('#title-heading').getAttribute('aria-sort')==='descending');
+    click('add-record');check('dialog opened and title focused',d.querySelector('dialog').open&&d.activeElement.id==='new-title');
+    d.querySelector('form').requestSubmit();check('required validation',d.querySelectorAll('[aria-invalid="true"]').length===3&&d.activeElement.id==='new-title');
+    click('cancel-add');check('cancel without adding',!d.querySelector('dialog').open&&d.querySelectorAll('#records tr').length===12);
+    click('add-record');fire('new-title','A long title '+ 'with useful context '.repeat(6));fire('new-owner','Test Researcher');fire('new-summary','A fictional test record, removed when the tests reset their disposable storage.');
+    d.querySelector('form').requestSubmit();d.querySelector('form').requestSubmit();await wait();
+    check('one record added despite repeat submit',d.querySelectorAll('#records tr').length===13);
+    check('saved receipt corresponds to a stored record',d.querySelector('#save-status').textContent.startsWith('Saved locally')&&JSON.parse([...memory.values()][0]).records.length===13);
+    for(const width of [390,768,1440]){frame.width=width;await wait();const issues=overflow();check(width+' long title no overflow',issues.length===0,issues.join(', '))}
+    await fresh(768);check('reload restores saved records',d.querySelectorAll('#records tr').length===13&&d.querySelector('#save-status').textContent.startsWith('Loaded 13'));
+    mode='write-error';click('add-record');fire('new-title','Storage failure test');fire('new-owner','Test Researcher');fire('new-summary','Unsaved record used only for the failure check.');d.querySelector('form').requestSubmit();await wait();
+    check('failed save is explicit, no false success',d.querySelector('#save-status').dataset.error==='true'&&!d.querySelector('#retry-save').hidden&&JSON.parse([...memory.values()][0]).records.length===13);
+    mode='ok';click('retry-save');check('retry writes retained session data',JSON.parse([...memory.values()][0]).records.length===14&&d.querySelector('#retry-save').hidden);
+    mode='read-error';await fresh(390);check('read failure falls back visibly',d.querySelectorAll('#records tr').length===12&&d.querySelector('#save-status').dataset.error==='true');
+    mode='ok';memory=new Map();await fresh(1440);check('duplicate DOM ids absent',new Set([...d.querySelectorAll('[id]')].map(n=>n.id)).size===d.querySelectorAll('[id]').length);
+    check('page has no active animations',d.getAnimations().length===0);
+    check('controls meet size contract',d.querySelector('#search').getBoundingClientRect().height>=38 && d.querySelector('#category').getBoundingClientRect().height>=38);
+    report.completedAt=new Date().toISOString();out.textContent+='\n\nCompleted. Manual keyboard / Escape / visual review remain separate.';
+    try { await fetch('/__test_report',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(report)}); } catch {}
+  }catch(e){out.textContent+='\nStopped: '+e.message}finally{document.querySelector('#run').disabled=false}
+};
+document.querySelector('#preview').onclick=()=>{mode='ok';memory=new Map();fresh(Number(document.querySelector('#width').value))};
+document.querySelector('#download').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(report,null,2)],{type:'application/json'}));a.download='browser-results.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+const params=new URLSearchParams(location.search);
+if(params.has('run')) document.querySelector('#run').onclick();
+else if(params.has('manual')) fresh(Number(params.get('width')||1440)).then(()=>{
+  if(params.get('manual')==='dialog') {
+    click('add-record'); d.querySelector('dialog').addEventListener('close',()=>{out.textContent='Dialog closed. Focus returned: '+d.activeElement.id;});
+    out.textContent='Manual keyboard check: press Escape. The dialog should close and focus should return to add-record.';
+  } else {const b=d.querySelectorAll('.record-button')[1];b.focus();out.textContent='Manual keyboard check: press Return on the focused second record.'; b.addEventListener('click',()=>{out.textContent='Keyboard selection result: '+d.querySelector('#doc-title').textContent;});}
+});
+else if(params.has('width')) fresh(Number(params.get('width'))).then(()=>{out.textContent='Real iframe preview: '+w.innerWidth+' CSS px';document.querySelector('#width').value=String(w.innerWidth);});
+else fresh();
+</script></html>
