@@ -20,6 +20,8 @@ Start with [SKILL.md](SKILL.md). Follow the [development method](references/desi
 - [References](references/design-system-development.md): design reasoning, production methods and recurring-error corrections
 - [Examples by scope](examples/README.md): visual studies, experimental systems and scoped reusable outcomes, without inflating their maturity
 - [Actual visual references](references/reference-index.md): retained images and original-source boundaries
+- [Reference-first calibration](references/reference-first-workflow.md): measure an approved professional reference and rebuild it as variables, components and screens (HTML and Figma)
+- [Research notes](research/2026-10-20-reference-first/README.md): process records in Chinese; not skill rules
 
 ## Selected examples
 
@@ -35,6 +37,12 @@ A few outcomes refined through practice and user feedback. Their scopes differ: 
 | --- | --- |
 | [![Selection composition](examples/translucent-ui/case-study-assets/02-selection.png)](examples/translucent-ui/README.md) | [![Form & Field programme](examples/form-and-field/preview.png)](examples/form-and-field/README.md) |
 | **[Selection](examples/translucent-ui/README.md)** — generated visual reference: thin surfaces, instruction pills and a generous preview. | **[Form & Field](examples/form-and-field/README.md)** — generated visual reference: material, lighting and typography share one scene. |
+
+### A calibrated baseline
+
+[![Linear baseline — Figma desktop](examples/linear-baseline/screenshots/figma-desktop.jpg)](examples/linear-baseline/README.md)
+
+**[Linear baseline](examples/linear-baseline/README.md)** — a Chinese page rebuilt from Linear's measured values, in HTML and as an agent-built Figma file with 77 variables, components and grids. User-approved as more professional than earlier examples; a deliberate imitation, not an original direction.
 
 These images represent different scopes. A visual study is not a tested implementation; each example states what is actually verified.
 

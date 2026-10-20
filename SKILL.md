@@ -21,6 +21,8 @@ For new exploration, Web and GPT Image independently propose the expressive core
 
 See [code-image collaboration](references/code-image-collaboration.md). Shared implementation baselines belong to refinement after selection, not to disguised duplication of initial discovery.
 
+When repeated feedback rejects the whole baseline (layout, type, colour and shadow together), calibrate to one user-approved professional reference first; resume independent exploration from that accepted baseline.
+
 ## Evidence before advancement
 
 Reading documents is preparation, not proof that the stages happened. Do not jump from requirements or an inspiration image to a polished full screen.
@@ -44,6 +46,7 @@ Observe the user's review gates. Do not expand an unapproved direction into a fi
 ## Stage-specific reading
 
 - **Find and compare:** [design sources](references/design-sources.md), [actual reference index](references/reference-index.md), [composition](references/composition-preservation.md)
+- **Baseline not professional yet:** [reference-first calibration](references/reference-first-workflow.md): let the user pick a real reference, measure it, rebuild foundations, components and grids, then review screenshots side by side. Example: [Linear baseline](examples/linear-baseline/README.md)
 - **Develop the system:** [development method](references/design-system-development.md), [design principles](references/design-principles.md), [grouping and hierarchy](references/grouping-and-hierarchy.md)
 - **Refine coordinated relationships:** [typography](references/typography.md), [color in context](references/color-in-context.md), [shape and material](references/shape-and-material.md)
 - **Make and validate:** [code-image collaboration](references/code-image-collaboration.md), [image prompting](references/image-prompting.md), [pitfalls and stage checks](references/agent-design-pitfalls.md)

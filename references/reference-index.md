@@ -91,6 +91,10 @@ An approved generated editorial programme: meaningful objects, shared lighting, 
 
 - [Anatomy-inspired UI](../examples/anatomy-ui/README.md): a small, attributed adaptation of Anatomy’s surface, geometry-relationship, state and verification ideas. Includes a runnable research archive with table, document preview, filters, form and local saving. This user-requested code-first experiment has no GPT Image comparison and is awaiting aesthetic review; it is not a universally validated UI system or an official Anatomy release.
 
+## Reference-calibrated baselines
+
+- [Linear baseline](../examples/linear-baseline/README.md): measured Linear values ([DOM]) plus macOS Finder/Mail/HIG/Bear proportions ([est]), rebuilt as HTML and Figma. Use it to study alignment lines, four-level text in one hue, one accent and line-instead-of-shadow surfaces. Third-party screenshots are not redistributed; see its [provenance](../examples/linear-baseline/provenance.md) for source links.
+
 ## Agent capability baselines — evaluation, not exemplars
 
 - [2026-10-20: 01–08 functional UI studies](../benchmarks/agent-ui/2026-10-20/README.md): eight unchanged GPT Image outputs with task briefs, source provenance and a later-improvement comparison protocol. Retained at the user's request as usable-but-not-yet-excellent baselines; not approved implementations or mature design systems.

@@ -8,6 +8,7 @@ An example is evidence for a bounded relationship, not a universal theme. These 
 | --- | --- | --- |
 | [Translucent UI](translucent-ui/README.md) | Evolving family with selected approved visual relationships, static component specimens and a scoped runnable page; not a production component library | [DESIGN.md](translucent-ui/DESIGN.md), [Pastel Workspace](translucent-ui/pastel-workspace/README.md), [validation](translucent-ui/pastel-workspace/VALIDATION.md) |
 | [Anatomy UI / Fieldnotes](anatomy-ui/README.md) | Experimental code-first system; functional evidence exists, aesthetic approval remains pending; no GPT Image comparison was part of this user-requested experiment | [DESIGN.md](anatomy-ui/DESIGN.md), [rules](anatomy-ui/rules.md), [validation](anatomy-ui/VALIDATION.md) |
+| [Linear baseline](linear-baseline/README.md) | Calibration baseline: one dark Chinese marketing page at 1440/390, user-approved for professional quality; imitates Linear, not an original direction; no interaction tests | [DESIGN.md](linear-baseline/DESIGN.md), [rules](linear-baseline/rules.md), [Figma](https://www.figma.com/design/cytw6jxvr7NDe0K406hGME), [provenance](linear-baseline/provenance.md) |
 
 ## Bounded functional and material studies
 

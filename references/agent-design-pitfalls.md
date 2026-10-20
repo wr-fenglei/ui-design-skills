@@ -47,6 +47,7 @@ Keywords: whole before detail, stable baseline, composition gate.
 - **Failure signal:** A reviewer cannot engage with the intended comparison because the surrounding layout, color or type is unpleasant.
 - **Mistaken assumption:** A controlled variable makes the exercise useful regardless of the presentation.
 - **Correction:** First reconstruct a strong reference or use an approved composition. Establish that the whole works before varying alignment, spacing, color or material.
+  See [reference-first calibration](reference-first-workflow.md) for the measured-rebuild procedure.
 - **Check:** Would the baseline still be worth looking at without the A/B labels and explanation? If not, fix the baseline first.
 
 ## 4. Treating an attractive asset as an attractive interface

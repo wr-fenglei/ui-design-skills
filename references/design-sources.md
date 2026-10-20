@@ -34,6 +34,8 @@ Use it to study product hierarchy, navigation emphasis, and interface density.
 
 Do not transfer one product's density or dark theme to unrelated content without testing.
 
+For measured values (not extracted descriptions) see the [Linear baseline provenance](../examples/linear-baseline/provenance.md).
+
 ## [Apple: Materials](https://developer.apple.com/design/human-interface-guidelines/materials)
 
 Use it to understand material hierarchy and the relationship between surfaces and their backgrounds.
