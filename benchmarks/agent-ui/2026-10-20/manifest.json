@@ -1,0 +1,159 @@
+{
+  "baseline_id": "agent-ui-2026-10-20",
+  "date_timezone": "Asia/Shanghai",
+  "kind": "frozen visual benchmark, not a gold standard",
+  "items": [
+    {
+      "id": "01",
+      "title": "Support inbox A",
+      "task_brief": "12 support requests, one selected request, a conversation and reply area",
+      "artifact": "GPT Image static raster",
+      "path": "images/01.png",
+      "sha256": "845528c04e605c217186c7d68f3de551dfa9e036bd1d7326c0649f3262a78003",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "source_reference": "https://support.apple.com/guide/mail/welcome/mac",
+      "user_feedback": "No obvious issue identified in 01–08, but not yet good enough; retain as baseline for future comparison",
+      "approval_scope": "baseline retention, not excellence or implementation approval",
+      "exact_generation_prompt": "not retained in recoverable local artifacts",
+      "exact_model_version": "not recorded",
+      "tool_attribution": "GPT Image; parallel HTML method labels do not describe image generation",
+      "interactive_validation": "not applicable to raster; no Web implementation accepted here"
+    },
+    {
+      "id": "02",
+      "title": "Support inbox B",
+      "task_brief": "12 support requests, one selected request, a conversation and reply area",
+      "artifact": "GPT Image static raster",
+      "path": "images/02.png",
+      "sha256": "520b8d79baf5d80daa388d9e4518236d308f4a65645f75373d59980ed68d2a90",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "source_reference": "https://support.apple.com/guide/mail/welcome/mac",
+      "user_feedback": "No obvious issue identified in 01–08, but not yet good enough; retain as baseline for future comparison",
+      "approval_scope": "baseline retention, not excellence or implementation approval",
+      "exact_generation_prompt": "not retained in recoverable local artifacts",
+      "exact_model_version": "not recorded",
+      "tool_attribution": "GPT Image; parallel HTML method labels do not describe image generation",
+      "interactive_validation": "not applicable to raster; no Web implementation accepted here"
+    },
+    {
+      "id": "03",
+      "title": "Weekly schedule A",
+      "task_brief": "A five-day week with 8 events and 3 unscheduled tasks",
+      "artifact": "GPT Image static raster",
+      "path": "images/03.png",
+      "sha256": "f0da178e60f0ad18f0e5af25b832d6eb786d4ba22e87a9346a5ff6c6f0dc565e",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "source_reference": "https://support.apple.com/en-mide/guide/calendar/icl8c17e7f55/mac",
+      "user_feedback": "No obvious issue identified in 01–08, but not yet good enough; retain as baseline for future comparison",
+      "approval_scope": "baseline retention, not excellence or implementation approval",
+      "exact_generation_prompt": "not retained in recoverable local artifacts",
+      "exact_model_version": "not recorded",
+      "tool_attribution": "GPT Image; parallel HTML method labels do not describe image generation",
+      "interactive_validation": "not applicable to raster; no Web implementation accepted here"
+    },
+    {
+      "id": "04",
+      "title": "Weekly schedule B",
+      "task_brief": "A five-day week with 8 events and 3 unscheduled tasks",
+      "artifact": "GPT Image static raster",
+      "path": "images/04.png",
+      "sha256": "c022bb487a4d277aa958f36d29a3cab0b445dc7c84fbe24c46a7c556f5af795e",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "source_reference": "https://support.apple.com/en-mide/guide/calendar/icl8c17e7f55/mac",
+      "user_feedback": "No obvious issue identified in 01–08, but not yet good enough; retain as baseline for future comparison",
+      "approval_scope": "baseline retention, not excellence or implementation approval",
+      "exact_generation_prompt": "not retained in recoverable local artifacts",
+      "exact_model_version": "not recorded",
+      "tool_attribution": "GPT Image; parallel HTML method labels do not describe image generation",
+      "interactive_validation": "not applicable to raster; no Web implementation accepted here"
+    },
+    {
+      "id": "05",
+      "title": "Asset browser: grid",
+      "task_brief": "12 assets in a grid, folder navigation and a selected-file inspector",
+      "artifact": "GPT Image static raster",
+      "path": "images/05.png",
+      "sha256": "6ceb4b49295427af421b256aca3cec4945004b1f2fb0c90b5ce5083d7df3f3f6",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "source_reference": "https://support.apple.com/en-ie/guide/mac-help/mchlp2605/27/mac/27",
+      "user_feedback": "No obvious issue identified in 01–08, but not yet good enough; retain as baseline for future comparison",
+      "approval_scope": "baseline retention, not excellence or implementation approval",
+      "exact_generation_prompt": "not retained in recoverable local artifacts",
+      "exact_model_version": "not recorded",
+      "tool_attribution": "GPT Image; parallel HTML method labels do not describe image generation",
+      "interactive_validation": "not applicable to raster; no Web implementation accepted here"
+    },
+    {
+      "id": "06",
+      "title": "Asset browser: list",
+      "task_brief": "12 assets in a list, folder navigation and a selected-file inspector",
+      "artifact": "GPT Image static raster",
+      "path": "images/06.png",
+      "sha256": "ea93e023fb54bada5937f6aa1b674a6477ced4c39cf84ab91cf0fd66a5a66325",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "source_reference": "https://support.apple.com/en-ie/guide/mac-help/mchlp2605/27/mac/27",
+      "user_feedback": "No obvious issue identified in 01–08, but not yet good enough; retain as baseline for future comparison",
+      "approval_scope": "baseline retention, not excellence or implementation approval",
+      "exact_generation_prompt": "not retained in recoverable local artifacts",
+      "exact_model_version": "not recorded",
+      "tool_attribution": "GPT Image; parallel HTML method labels do not describe image generation",
+      "interactive_validation": "not applicable to raster; no Web implementation accepted here"
+    },
+    {
+      "id": "07",
+      "title": "Issue triage A",
+      "task_brief": "10 issues in 3 state groups, a selected issue and its details",
+      "artifact": "GPT Image static raster",
+      "path": "images/07.png",
+      "sha256": "e5d9cf35a151f742cd8e1a0cc9c80778d07def69ca4b4bd6f5174d9e7375ac66",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "source_reference": "https://linear.app/now/behind-the-latest-design-refresh",
+      "user_feedback": "No obvious issue identified in 01–08, but not yet good enough; retain as baseline for future comparison",
+      "approval_scope": "baseline retention, not excellence or implementation approval",
+      "exact_generation_prompt": "not retained in recoverable local artifacts",
+      "exact_model_version": "not recorded",
+      "tool_attribution": "GPT Image; parallel HTML method labels do not describe image generation",
+      "interactive_validation": "not applicable to raster; no Web implementation accepted here"
+    },
+    {
+      "id": "08",
+      "title": "Issue triage B",
+      "task_brief": "10 issues in 3 state groups, a selected issue and its details",
+      "artifact": "GPT Image static raster",
+      "path": "images/08.png",
+      "sha256": "ab5c5617824533cea8e7495ef50ee4ab2c46339d2ebfd79934969f7b81d9a08b",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "source_reference": "https://linear.app/now/behind-the-latest-design-refresh",
+      "user_feedback": "No obvious issue identified in 01–08, but not yet good enough; retain as baseline for future comparison",
+      "approval_scope": "baseline retention, not excellence or implementation approval",
+      "exact_generation_prompt": "not retained in recoverable local artifacts",
+      "exact_model_version": "not recorded",
+      "tool_attribution": "GPT Image; parallel HTML method labels do not describe image generation",
+      "interactive_validation": "not applicable to raster; no Web implementation accepted here"
+    }
+  ]
+}

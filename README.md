@@ -61,3 +61,7 @@ These images represent different scopes. A visual study is not a tested implemen
 
 The references provide usable decision criteria, not a universal visual template. Images alone do not establish functioning interfaces. Selected runnable examples document their implemented behavior and unverified boundaries separately. Reference-asset redistribution and commercial-use rights are not granted by this repository.
 
+
+## Agent capability baselines
+
+[Eight functional UI image studies](benchmarks/agent-ui/2026-10-20/README.md) are retained as a current-capability benchmark, not gold-standard examples. Includes production provenance, reference sources, qualified review scope and a repeatable comparison protocol. Static GPT Image outputs only; no Web validation is implied.

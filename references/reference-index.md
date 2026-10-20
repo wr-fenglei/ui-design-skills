@@ -90,3 +90,7 @@ An approved generated editorial programme: meaningful objects, shared lighting, 
 ## Experimental code-first systems
 
 - [Anatomy-inspired UI](../examples/anatomy-ui/README.md): a small, attributed adaptation of Anatomy’s surface, geometry-relationship, state and verification ideas. Includes a runnable research archive with table, document preview, filters, form and local saving. This user-requested code-first experiment has no GPT Image comparison and is awaiting aesthetic review; it is not a universally validated UI system or an official Anatomy release.
+
+## Agent capability baselines — evaluation, not exemplars
+
+- [2026-10-20: 01–08 functional UI studies](../benchmarks/agent-ui/2026-10-20/README.md): eight unchanged GPT Image outputs with task briefs, source provenance and a later-improvement comparison protocol. Retained at the user's request as usable-but-not-yet-excellent baselines; not approved implementations or mature design systems.
