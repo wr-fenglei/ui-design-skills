@@ -1,18 +1,29 @@
 # UI Design Skills
 
-## Gold standard
+A reference-led method for developing beautiful, functional interfaces into **small, coherent design systems**.
 
-**First decide what carries the beauty; then organize space around it.**
+## The journey
 
-Every design starts here. For new exploration, Web and GPT Image independently discover the expressive core from the same problem and constraints. Their layouts, colors, shapes and materials may be radically different. Present both for user review before expanding a selected core into its surrounding space. Do not force agreement or a hybrid. See [SKILL.md](SKILL.md#gold-standard--first-decide-what-carries-the-beauty) for the required starting point.
+1. Find a compelling visual inspiration and identify the relationships that make it work
+2. Study excellent actual interfaces solving similar tasks, including relevant content, states and flows
+3. Explore independently in Web and GPT Image, then review and select a core and overall baseline
+4. Refine a bounded functional example, expand its components and states, and audit the whole
+5. Retain a scoped example with its own DESIGN.md, real tools, provenance and validation limits
 
-A unified design skill for interfaces, components, visual assets, and app icons.
+**First decide what carries the beauty; then organize space around it.** Neither isolated tokens nor a polished generated image establishes a design system.
 
-Start with [SKILL.md](SKILL.md). Read only the references relevant to the design problem.
+Start with [SKILL.md](SKILL.md). Follow the [development method](references/design-system-development.md), [DESIGN.md contract](references/design-contract.md) and [agent error checks](references/agent-design-pitfalls.md). The skill teaches the method; each example owns its selected visual choices.
+
+## Repository map
+
+- [SKILL.md](SKILL.md): stages, gates and task-specific reading
+- [References](references/design-system-development.md): design reasoning, production methods and recurring-error corrections
+- [Examples by scope](examples/README.md): visual studies, experimental systems and scoped reusable outcomes, without inflating their maturity
+- [Actual visual references](references/reference-index.md): retained images and original-source boundaries
 
 ## Selected examples
 
-A few outcomes refined through practice and user feedback. Open an example for its method, source and validation limits.
+A few outcomes refined through practice and user feedback. Their scopes differ: see the [example index](examples/README.md). Open each example for its method, source and validation limits.
 
 ### A complete page
 

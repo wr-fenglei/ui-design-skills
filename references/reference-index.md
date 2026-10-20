@@ -1,5 +1,7 @@
 # Reference Index
 
+Use this index for actual visual evidence. Use the [example scope index](../examples/README.md) to distinguish still studies, experimental systems and scoped implementations; use [design sources](design-sources.md) for the separate functional-reference search. An attractive retained image alone is not evidence of a reusable system.
+
 ## Included assets
 
 ### [Icon directions 01-18](../assets/icon-directions-01-18.jpeg)

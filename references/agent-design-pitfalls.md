@@ -2,6 +2,16 @@
 
 A feedback-derived corrective guide. Use it before choosing a direction, after a reference reconstruction, and before delivery. These are checks for recurring failures, not a universal house style or a claim that one palette suits every interface.
 
+## Use the checks at the stage where failure begins
+
+- Inspiration and functional references: sections 1, 2, 4, 13 and 15
+- Baseline selection: sections 0, 3 and 12
+- Coordinated refinement and supporting regions: sections 5–11
+- System expansion and documentation: sections 16–17
+- Verification and retention: section 14, feedback boundaries and the delivery gate
+
+Use [system development](design-system-development.md) for the overall journey. Do not turn this guide into a house palette or make every check equally prominent in every task.
+
 ## 0. Reading the skill but bypassing its stages
 
 Keywords: procedural compliance, premature finish, missing baseline, skipped model comparison, approval gate.
@@ -138,6 +148,27 @@ Keywords: visual review, scope of approval, subjective preference, verified beha
 - **Correction:** Evaluate the whole composition and the intended relationship separately from technical checks. Preserve only the approved aspect. Treat “B is better than A” as relative feedback, not necessarily acceptance of B.
 - **Check:** Mark whole-example approval, local approval, rejection and inconclusive comparisons separately. Do not infer tested interactions or responsive behavior from a still image.
 
+## 15. Mistaking inspiration for functional evidence
+
+- **Failure signal:** A beautiful material or promotional image is treated as proof of a usable application layout, while navigation, dense content and error states are invented by habit.
+- **Mistaken assumption:** One visually strong reference can answer every functional question.
+- **Correction:** Keep two lenses: the expressive inspiration and excellent actual examples of the same task. Inspect relevant states and explain how the relationships transfer. Do not claim an unseen original screen was inspected.
+- **Check:** For each important region, identify the source of its visual relationship and its functional reasoning; label missing evidence instead of inventing it.
+
+## 16. Declaring a system by naming tokens or writing DESIGN.md
+
+- **Failure signal:** One screen becomes a “mature design system” after adding a palette, radius scale and a specification, despite untested content, states or related layouts.
+- **Mistaken assumption:** Documentation and component names establish reuse and quality.
+- **Correction:** Start with a complete bounded task, extract actual repeating responsibilities, then test a relevant variation. Write the [design contract](design-contract.md) progressively from evidence. Label an experiment as experimental.
+- **Check:** Which artifacts implement each rule? Which variations were inspected? Which behavior was tested? Keep tools that actually exist distinct from plans, and do not infer new user approval from repository inclusion.
+
+## 17. Expanding the system by repetition or erasing its core
+
+- **Failure signal:** Every page repeats identical expressive cards, or generalizing the design removes the proportions/material relationships that made the original work.
+- **Mistaken assumption:** Consistency means identical density and layout, or universal reuse requires stripping away character.
+- **Correction:** Preserve explicit invariants while redesigning density and surrounding space for each task. Audit component → region → page transitions; keep the system bounded when a new task needs different rules.
+- **Check:** Compare the complete new scope, not just reused components. Record what stayed, what changed and why. Recheck supporting regions and preserve actual approval boundaries.
+
 ## Feedback boundaries
 
 - Repeated feedback can reveal a process failure; one disliked color does not establish a universal rule.
@@ -155,5 +186,7 @@ Keywords: visual review, scope of approval, subjective preference, verified beha
 6. Is the comparison perceptible without exaggerating it into an unrealistic design?
 7. Were actual outputs inspected, with untested behavior identified?
 8. Does the retained evidence match the exact scope of approval?
+9. Are inspiration, functional evidence and project-specific choices distinguished?
+10. If retained as a system example, does its DESIGN.md match actual tools, demonstrated variation and maturity?
 
 See [composition](composition-preservation.md), [grouping](grouping-and-hierarchy.md), [color](color-in-context.md), [typography](typography.md), [material](shape-and-material.md), and [code-image collaboration](code-image-collaboration.md) for the corresponding design methods.

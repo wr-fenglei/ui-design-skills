@@ -12,6 +12,10 @@ Follow the [gold standard](../SKILL.md#gold-standard--first-decide-what-carries-
 - Show both actual candidates and let the user review the core before expanding the surrounding page or component. Keep the initial output bounded to the requested discovery stage.
 - Select one, request alternatives, or selectively combine compatible strengths after review. A hybrid is optional; averaging unrelated solutions can weaken both.
 
+## Connection to system development
+
+Use [system development](design-system-development.md) to distinguish inspiration from same-function reference evidence. Both routes can inspect those sources while independently interpreting their useful relationships; neither inherits the other route's unselected answer. After selection, record invariants and open variables in the example's [DESIGN.md](design-contract.md). Expand from a complete bounded task to related components and states, not from a single attractive asset directly to a claimed universal library.
+
 ## Shared baseline after selection
 
 Once a core or composition has been selected, identify approved relationships and open variables. A screenshot, common visual thesis and controlled image-to-code handoff now support faithful refinement. This later sharing does not replace independent discovery.

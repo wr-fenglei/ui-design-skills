@@ -4,7 +4,7 @@ A small, evolving example system: **thin luminous surfaces, readable content and
 
 ![Pastel Workspace — actual Web screenshot](pastel-workspace/screenshots/desktop.jpg)
 
-**[Explore the Web example](pastel-workspace/README.md)** · **[Read the visual case study](case-study.md)**
+**[Design contract](DESIGN.md)** · **[Explore the Web example](pastel-workspace/README.md)** · **[Read the visual case study](case-study.md)**
 
 ## The system at three scales
 

@@ -4,6 +4,8 @@ A runnable, fictional project overview within the [Translucent UI example system
 
 ![Desktop overview](screenshots/desktop.jpg)
 
+This page inherits the [family design contract](../DESIGN.md); its concrete implementation and validation below remain authoritative for this page.
+
 ## What carries the beauty
 
 Keywords: quiet luminous surface, content color, unequal density, thin contours, readable ink.

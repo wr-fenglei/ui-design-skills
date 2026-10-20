@@ -1,82 +1,74 @@
 ---
 name: ui-design
-description: Design and refine interface layouts, components, visual assets, and app icons using reference-led composition, hierarchy, typography, color, shape, and material. Use for visual design exploration, foundational exercises, independent examples, and translating selected directions into HTML/CSS or SwiftUI.
+description: Develop beautiful, functional interfaces from visual inspiration and best-in-class task references into small, tested design systems. Use for reference research, independent visual exploration, components, pages, app icons, iterative refinement, and retaining scoped examples with DESIGN.md and real design tools.
 ---
 
 # UI Design
 
+## Purpose — from inspiration to a small design system
+
+Find a compelling visual idea, understand why it works, study excellent interfaces solving a similar task, then develop and refine a coherent small design system. Retain the result as an example only when its method, demonstrated scope and remaining limits are clear.
+
+The skill teaches **how to discover, judge, develop and correct**. An example's **DESIGN.md records that system's concrete choices**. Its code, components, tokens and tools implement only the capabilities that actually exist. Neither a specification nor an attractive picture establishes a finished system.
+
+Read this entrypoint before each foundational exercise, independent example, page or component task. Read [agent design pitfalls](references/agent-design-pitfalls.md) before design and again before delivery. Role responsibilities and daily scheduling belong outside this skill.
+
 ## Gold standard — first decide what carries the beauty
 
-**First decide what carries the beauty; then organize space around it.** Apply this starting point to every design: page, component, icon, foundational exercise or independent example. For an existing approved design, identify and preserve its expressive core before making a narrow change.
+**First decide what carries the beauty; then organize space around it.** The core may be meaningful content, typography, product UI, shape or an integrated material relationship. It need not be decoration. Do not lock a sidebar, card template or page silhouette before finding it.
 
-The core may be meaningful content, typography, product UI, a shape or an integrated material relationship. It need not be a decorative object. Do not lock a page silhouette, sidebar or card template before finding it.
+For new exploration, Web and GPT Image independently propose the expressive core from the same user problem, content needs and hard constraints. Actual source references can inform both, but neither receives the other's solution or an agent-prescribed layout/palette to imitate. Divergence is useful evidence; compare actual results and do not force a hybrid. For an already selected inspiration or approved design, preserve its approved relationships rather than pretending to rediscover them.
 
-For new exploration, **Web and GPT Image must independently propose the expressive core**. Share the user problem, content needs, usage context and hard constraints, not a visual answer. Do not give either route the other's draft, prescribed core, layout, palette, shape or material to imitate. Their results may be radically different; divergence is useful evidence, not a defect to correct. Inspect both, explain what carries each one's appeal and whether it serves the task, and obtain the user's review before expanding space around a selected core. Do not force a hybrid.
+See [code-image collaboration](references/code-image-collaboration.md). Shared implementation baselines belong to refinement after selection, not to disguised duplication of initial discovery.
 
-See [independent exploration and later handoff](references/code-image-collaboration.md). Shared visual baselines belong to refinement after selection, not to this initial discovery.
+## Evidence before advancement
 
-## Start here — do not skip the design stages
+Reading documents is preparation, not proof that the stages happened. Do not jump from requirements or an inspiration image to a polished full screen.
 
-Read this entrypoint before creating a foundational exercise or independent design example, as well as before page or component work. Read the relevant references for the task; use [agent design pitfalls](references/agent-design-pitfalls.md) before selecting a direction and again before delivery.
+| Stage | Work and evidence | Gate / next step |
+| --- | --- | --- |
+| 1. Inspiration | Inspect actual visuals; identify expressive core, proportions, grouping, density, type/color/shape/material relationships and use context | Explain what to preserve, not just a palette or radius |
+| 2. Functional references | Inspect excellent real interfaces for the same task, relevant regions, states and flows | Separate visual inspiration from functional evidence; resolve mismatches |
+| 3. Independent exploration | Render bounded Web and GPT Image candidates under shared task/content/canvas constraints, each discovering its own answer | User reviews/selects the core; unavailable route is an explicit gap |
+| 4. Overall baseline | Expand the selected core into low-detail overall studies; preserve plausible content mass, approximate proportions and broad light/material feel | Show both actual routes; obtain user selection/approval before refinement |
+| 5. Small-system development | Refine a complete bounded use case, then components, states and related layouts; test real content and preserve invariants | Scope is earned through inspected examples, not declared by naming tokens |
+| 6. Implementation and audit | Real text/controls/data/behavior in code; inspect whole, supporting regions, reading and relevant interactions | Record visual, readability, functional and user-review results separately |
+| 7. Retention | Keep a useful example, its DESIGN.md, reproduction method, actual tools, sources, selected iterations and limits | Label maturity honestly; distill general methods without copying project style into the skill |
 
-Design relationships before embellishments. The workflow zooms from the whole into detail, with permission to return to an earlier decision when the whole stops working. It is not a rigid waterfall.
+The sequence can loop. A complete useful component or functional region can be the initial scope; do not start with a large page just to appear comprehensive. Foundations come before motion. For a narrow edit to approved work, retain the baseline and inspect affected relationships; do not restart both routes unnecessarily.
 
-### Evidence before advancement
+At the overall-impression stage use contour-led layout, representative content mass, approximate silhouettes and broad light/shadow/material cues. Full copy, precise typography, finished controls and microtexture belong after approval. A low-detail study must still have a plausible functional structure, not a poster or an empty card grid.
 
-Reading this skill is preparation, not evidence that its workflow was followed. For a new page or a substantial visual redesign, do not jump from a requirements list to a polished, fully populated screen.
+Observe the user's review gates. Do not expand an unapproved direction into a finished page. If a required route is unavailable or restricted, disclose the missing comparison and obtain agreement on reduced scope, rather than claiming the stage completed.
 
-1. **Reference and direction:** Inspect a task-relevant interface, including the regions and states being borrowed. Produce a compact problem brief with the primary task, actual content needs and hard constraints. Let each route discover its own expressive core and spatial relationships before selecting proportions or density. A marketing article's first screen alone does not establish a dashboard reference.
-2. **Core discovery, then overall impression:** First deliver the independent expressive-core candidates required by the gold standard above. After user selection, expand the chosen core into overall-impression studies using Web and GPT Image. A common canvas can aid inspection when appropriate; it must not prescribe the same visual solution. Explore overall layout, approximate spatial relationships, dominant silhouettes, visual focus, density, broad color/light distribution and the overall sense of material. Keep them contour-led and low-detail. Use sparse representative text or placeholders that preserve plausible content mass; omit complete copy, precise type styling, finished controls and fine texture. Broad shadow masses and material cues belong here; exact shadow parameters, reflections and surface microdetail do not. Inspect both as whole compositions, explain their strengths and trade-offs, and show both to the user with a recommendation. Obtain the user's review and explicit selection or approval of the overall baseline before refinement; agent self-review cannot replace this gate. Follow [code-image collaboration](references/code-image-collaboration.md); do not substitute an intention to compare for actual renders.
-3. **Controlled refinement:** Only after the user's overall-baseline approval, populate real content and refine group spacing, exact type size/weight/color, control geometry, surface colors, shadows and material. Show the current stage and open decisions; do not silently expand an unapproved composition into a finished page.
-4. **Implementation and validation:** Integrate real behavior only within the requested scope, after any required visual/operation-path approval. Inspect the actual implementation against the selected baseline.
+## Stage-specific reading
 
-When the user asks for staged review or a sample before implementation, stop at the requested review gate and obtain their feedback before advancing. Label overall-impression studies with their stage. Keep short-lived stage evidence locally rather than adding process logs to this skill.
+- **Find and compare:** [design sources](references/design-sources.md), [actual reference index](references/reference-index.md), [composition](references/composition-preservation.md)
+- **Develop the system:** [development method](references/design-system-development.md), [design principles](references/design-principles.md), [grouping and hierarchy](references/grouping-and-hierarchy.md)
+- **Refine coordinated relationships:** [typography](references/typography.md), [color in context](references/color-in-context.md), [shape and material](references/shape-and-material.md)
+- **Make and validate:** [code-image collaboration](references/code-image-collaboration.md), [image prompting](references/image-prompting.md), [pitfalls and stage checks](references/agent-design-pitfalls.md)
+- **Document and retain:** [DESIGN.md contract](references/design-contract.md), [example scope index](examples/README.md)
 
-Both routes and the user review gate are required for new overall-impression exploration in this workflow, not a requirement to regenerate an approved layout for a copy fix or narrowly specified adjustment. Respect explicit tool restrictions. If a route is unavailable, disclose the missing comparison and ask the user whether to proceed with reduced scope; do not silently bypass a route or claim this gate was completed.
+For icon design also read [icon design](references/icon-design.md), [icon principles](references/icon-design-principles.md), [analysis framework](references/icon-analysis-framework.md), and inspect the actual reference images in the [reference index](references/reference-index.md). Use this unified skill, not obsolete standalone icon paths.
 
-## Inputs and reference
+## Design relationships before parameters
 
-Identify the task, audience, platform, actual content, target dimensions and primary action. For an existing design, distinguish approved relationships from open variables.
+State the task, audience, platform, actual content, target dimensions and primary action. At each scale decide what carries expression and what supports it. Establish reading order, occupied area, crop, quiet space, group membership and separately chosen canvas/section/component densities.
 
-Use [design sources](references/design-sources.md) to locate suitable work and the [reference index](references/reference-index.md) to inspect retained examples. Observe the actual reference, including relevant scroll states and movement. Do not infer a design from a textual description alone.
+Coordinate rough type scale and color roles with composition from the beginning. After baseline selection, refine real glyphs, size/weight/line height, surface separation, control geometry, curvature, shadows and material together. Do not reduce a reference to isolated colors and radii, or treat all refinements as independent decorative layers.
 
-## 1. Visual thesis and composition
+Use libraries when their actual capabilities fit. Record inherited, adapted, estimated and newly chosen values; inspect the rendered result. A library does not confer aesthetic quality, and direct HTML/CSS still follows this method. Do not invent tool superiority from different content or uninspected outputs.
 
-Decide what carries expression and what supports it: product, product UI, type, imagery or a material-led component. Establish reading order, region proportions, visible mass, crop and quiet space. Set rough type scale and color roles now because they affect composition.
+## Verify, learn and preserve
 
-Read [design principles](references/design-principles.md) for the shared reasoning and [composition](references/composition-preservation.md) for spatial decisions.
+First judge the complete baseline, then make perceptible controlled comparisons. If a difference is too small to judge, record **inconclusive**, not a manufactured preference.
 
-## 2. Groups and component relationships
+Protect the attractive core while deliberately designing the supporting text, navigation, controls, state, spacing and transitions. Inspect each repaired region back in the whole. Recheck actual outputs after changes, including real content, narrow layouts and relevant states; successful execution alone does not establish beauty.
 
-Organize meaning into regions and subgroups. Set density separately at canvas, section and component levels. Coordinate alignment, spacing, surfaces and type; a correct grouping mechanism does not rescue an unattractive whole.
+Classify feedback as whole approval, local approval, relative improvement, dislike or inconclusive. Extract the failure mechanism, correction and check, not a list of quotations or universal rules from one palette preference. Keep only representative iterations needed to explain the method; do not maintain a permanent failed-draft archive.
 
-Read [grouping and hierarchy](references/grouping-and-hierarchy.md).
+## Output and repository boundaries
 
-## 3. Coordinated visual treatment
+Deliver the current-stage visual or implementation, why its relationships work, exact approval scope and unverified items. Generated concepts are not editable interfaces or validated interactions.
 
-Refine the selected structure as one composition:
-- Shape and material: silhouette, curvature, light, surface and neighboring controls.
-- Typography: actual glyphs, size, weight, rhythm and reading distance.
-- Color: media, canvas, surfaces, information, actions and state.
-
-Read [shape and material](references/shape-and-material.md), [typography](references/typography.md) and [color in context](references/color-in-context.md) as needed. None is a final decorative layer independent of the others.
-
-For icon work, read [icon design](references/icon-design.md), [icon principles](references/icon-design-principles.md), the [analysis framework](references/icon-analysis-framework.md), and the actual reference images in the [reference index](references/reference-index.md).
-
-## 4. Implement and compare
-
-Use code for editable structure, real typography, controls, data and behavior. Use image generation for bounded artwork, material or visual exploration. Either route can propose a composition; compare actual results with the same content and canvas.
-
-Read [code-image collaboration](references/code-image-collaboration.md) for reconstruction and handoff, and [image prompting](references/image-prompting.md) for generation briefs.
-
-Preserve one selected baseline. A foundational experiment needs a coherent whole and a perceptible comparison, not merely a changed numeric parameter.
-
-## 5. Verify and refine
-
-Inspect actual rendering, first as a whole and then in detail. Check real text, small sizes, narrow layouts, changed backgrounds and relevant interaction states. Study motion after static hierarchy works.
-
-Report visual review, readability and functional testing separately. User approval of appearance does not verify browser behavior; successful execution does not establish aesthetic quality.
-
-## Output
-
-Provide the selected visual or implementation, the essential relationships and reproduction parameters, and unresolved limits. Keep raw trials outside the reusable skill. Retain a method when its application and boundary are clear, or a particularly valuable example with an explanation of why it works.
+A retained system example links its visible outcome, DESIGN.md, runnable specimens/tools that actually exist, source provenance and validation. A visual study may remain valuable without becoming a system; label it accordingly. Draft system specifications must not promote an experiment to mature status. Keep daily plans and raw trials outside this reusable skill. See [retention and contract guidance](references/design-contract.md).

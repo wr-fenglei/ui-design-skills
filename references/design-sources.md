@@ -1,5 +1,11 @@
 # Design Sources
 
+## Use two complementary lenses
+
+Find a visually compelling inspiration, then inspect excellent real interfaces solving a similar function. The first explains expressive relationships; the second supplies task, content, state and flow evidence. Keep source roles explicit and combine them through the [system development method](design-system-development.md), not by assembling isolated colors or components.
+
+For every retained reference record author, original link, publication date if known, access date, inspected regions/states, license and unresolved access or verification limits. “Best-in-class” is a reasoned task-specific assessment after inspection, not a popularity label.
+
 ## [Refero Styles](https://styles.refero.design/?sort=popular)
 
 A discovery library of website styles, previews, and extracted DESIGN.md descriptions.

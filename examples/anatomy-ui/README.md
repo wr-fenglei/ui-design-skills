@@ -4,7 +4,7 @@ An isolated, experimental small UI system and working research archive, based on
 
 ![Fieldnotes — real browser screenshot](screenshots/desktop.jpg)
 
-[Source transfer map](source-map.md) · [Rules](rules.md) · [Attribution](provenance.md) · [Validation](VALIDATION.md)
+[Experimental design contract](DESIGN.md) · [Source transfer map](source-map.md) · [Rules](rules.md) · [Attribution](provenance.md) · [Validation](VALIDATION.md)
 
 ## Open and reproduce
 
