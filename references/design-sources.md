@@ -41,6 +41,13 @@ A focused reference for graph-canvas hierarchy, node density, connections and st
 - **Evidence:** introduction text was accessible on 2026-10-23 (Asia/Shanghai); publication date not established.
 - **Limits:** this is a motion reference, not a replacement for Figma layout, foundations or component practice. No runtime integration or animation was tested in this check. Pricing and asset licensing were not verified; do not infer that every feature or asset is free.
 
+## Supplemental discovery reference: [Inspora on X](https://x.com/insporadesign)
+
+- **Source / linked website:** @insporadesign, a design-curation account; its profile links [inspora.design](https://inspora.design). The curator is not necessarily the original creator of the featured work.
+- **Role:** user-endorsed supplemental source for discovering component, interaction and material references. It does not replace Panel UI as the primary practice reference, and endorsement of the source is not approval of every featured work or implementation.
+- **Evidence:** profile, linked website address, visible post listings and creator credits were checked in a cloud browser on 2026-10-23 (Asia/Shanghai). The account has no single publication date; record the selected post's date when using it. Full videos were not inspected, so motion quality and interaction behavior are not verified.
+- **Use / rights boundary:** follow each curated item to the credited original creator and original post; inspect the actual media, surrounding task and relevant states before adopting it. Record that work's permalink, date and applicable rights. Visibility on X does not grant reuse or redistribution permission. Only source links and descriptions are retained here, not third-party media.
+
 ## [Refero Styles](https://styles.refero.design/?sort=popular)
 
 A discovery library of website styles, previews, and extracted DESIGN.md descriptions.

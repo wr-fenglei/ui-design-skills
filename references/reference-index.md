@@ -9,6 +9,8 @@ Use this index for actual visual evidence. Use the [example scope index](../exam
 - [EasyUI](design-sources.md#supplemental-reference-easyui): supplemental React component discovery.
 - [Rive](design-sources.md#supplemental-motion-reference-rive-introduction): supplemental interactive-graphics and motion documentation, after layout fundamentals.
 
+- [Inspora on X](design-sources.md#supplemental-discovery-reference-inspora-on-x): user-endorsed supplemental discovery for components, interactions and materials; trace curated work to its original creator and inspect the actual media.
+
 These are external source entries, not retained approved outcomes or newly implemented skills. See each entry for creator, original links, access date, inspected scope and unverified rights or behavior. Existing examples and references below retain their original scope.
 
 ## Included assets
