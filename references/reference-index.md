@@ -2,6 +2,15 @@
 
 Use this index for actual visual evidence. Use the [example scope index](../examples/README.md) to distinguish still studies, experimental systems and scoped implementations; use [design sources](design-sources.md) for the separate functional-reference search. An attractive retained image alone is not evidence of a reusable system.
 
+## External practice references — selection is not validation
+
+- [Panel UI](design-sources.md#primary-practice-reference-panel-ui): user-designated primary reference for UI exercises made in Figma; retain its grouping, density and hierarchy only after inspecting the chosen source region.
+- [Panel UI: Flow](design-sources.md#panel-ui-flow): focused graph-canvas, connection and status reference.
+- [EasyUI](design-sources.md#supplemental-reference-easyui): supplemental React component discovery.
+- [Rive](design-sources.md#supplemental-motion-reference-rive-introduction): supplemental interactive-graphics and motion documentation, after layout fundamentals.
+
+These are external source entries, not retained approved outcomes or newly implemented skills. See each entry for creator, original links, access date, inspected scope and unverified rights or behavior. Existing examples and references below retain their original scope.
+
 ## Included assets
 
 ### [Icon directions 01-18](../assets/icon-directions-01-18.jpeg)
