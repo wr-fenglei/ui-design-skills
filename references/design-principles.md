@@ -64,7 +64,7 @@ Establish an appealing complete baseline before isolating a variable. During rec
 - Revisit the composition when changes to type, color or material disturb it.
 - A motion-led reference requires actual motion inspection; a still frame is incomplete evidence.
 
-Use [code-image collaboration](code-image-collaboration.md) for implementation and [agent pitfalls](agent-design-pitfalls.md) for corrective checks.
+Use [code and image handoff](code-and-image-handoff.md) for implementation and [agent pitfalls](agent-design-pitfalls.md) for corrective checks.
 
 ## Scope of evidence
 

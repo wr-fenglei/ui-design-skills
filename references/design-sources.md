@@ -2,51 +2,17 @@
 
 ## Use two complementary lenses
 
-Find a visually compelling inspiration, then inspect excellent real interfaces solving a similar function. The first explains expressive relationships; the second supplies task, content, state and flow evidence. Keep source roles explicit and combine them through the [system development method](design-system-development.md), not by assembling isolated colors or components.
+Find a visually compelling inspiration, then inspect excellent real interfaces solving a similar function. The first explains expressive relationships; the second supplies task, content, state and flow evidence. Keep source roles explicit and combine them through each direction's method, not by assembling isolated colors or components.
 
 For every retained reference record author, original link, publication date if known, access date, inspected regions/states, license and unresolved access or verification limits. “Best-in-class” is a reasoned task-specific assessment after inspection, not a popularity label.
 
-## Primary practice reference: [Panel UI](https://panelui.dev/)
+## Direction-specific sources
 
-Panel UI is the user-designated primary reference for upcoming UI exercises, with designs to be produced in Figma. This priority is a source-selection decision, not blanket aesthetic approval of every component, a claim of a ready-made Figma library, or permission to bypass review gates. Keep the existing references available when the task needs other functional evidence.
+- **Linear:** [sources](../directions/linear/research/2026-10-20-reference-first/sources.md) and [baseline provenance](../directions/linear/examples/linear-baseline/provenance.md).
+- **Panel UI:** [Panel UI and its supplemental sources](../directions/panel-ui/sources.md) (EasyUI, Rive, Inspora).
+- **Inspiration-led:** sources recorded with each [example](../directions/inspiration-led/README.md).
 
-- **Creator / original source:** Khalid Abdi, credited on the site; [official repository](https://github.com/panel-ui/PanelUI).
-- **Source type:** component references for Expo / React Native and React Web. Translate inspected relationships into Figma rather than assuming source components are native Figma assets.
-- **Inspected scope:** homepage middle-section component overview, visually inspected in a cloud browser. It presents grouped components, forms, charts, calendar and status feedback across multiple columns, with low-contrast boundaries, light shadows and restrained local status colors.
-- **Practice questions:** how grouping supports substantial control density; how information hierarchy and consistent component treatment hold a busy interface together. Inspect the chosen component's actual states and surrounding context before measuring or rebuilding it.
-- **Figma route:** use the existing [reference-first calibration process](reference-first-workflow.md) and [Linear example's construction process](../examples/linear-baseline/README.md), not that example's visual style. Organize foundations, components and screens. Record measured versus estimated values and review actual exports; do not count an imported image as editable design.
-- **Provenance:** accessed 2026-10-23 (Asia/Shanghai); publication date not established. The site / repository marks MIT licensing; check the applicable files and any third-party asset terms before reuse.
-- **Limits:** the complete site, mobile layouts, accessibility and all interaction states have not been audited. Only source links and descriptions are retained here, not third-party screenshots or code.
-
-### [Panel UI: Flow](https://panelui.dev/docs/web/components/flow)
-
-A focused reference for graph-canvas hierarchy, node density, connections and status, not a generic page-layout template.
-
-- **Creator / date / rights:** Panel UI / Khalid Abdi; accessed 2026-10-23 (Asia/Shanghai); publication date not established. See the Panel UI licensing boundary above.
-- **Observed evidence:** the page and graph canvas were inspected in a cloud browser. Advancing the demo changed Edit from Now to Done and Fact check from Waiting to Now. Text retrieval failed twice, but the browser route worked.
-- **Documented scope:** nodes, edges, groups, states, zoom and pan. Node positions are arranged by the implementer; do not assume automatic layout. A fixed linear sequence may be better served by a simple list.
-- **Practice boundary:** a Figma reconstruction can study spatial and state relationships. The observed source-demo transition does not validate interactions in a future Figma file or implementation; untested canvas behaviors remain unverified.
-
-## Supplemental reference: [EasyUI](https://easyui.site)
-
-- **Creator / original source:** the site credits Suraj; [official repository](https://github.com/Surajmaurya1/easyui).
-- **Source type / potential use:** React components, with a catalog covering charts, inputs, dropdowns, pagination, accordions, toggles and navigation. Use as a supplemental component-discovery source, then inspect a chosen example for its specific task.
-- **Evidence:** website text and catalog were accessible on 2026-10-23 (Asia/Shanghai). Animation was not visually inspected; do not describe its motion quality as verified.
-- **Limits:** publication date and license were not established in this check. Verify both the chosen component and applicable reuse rights before copying code or assets. Inclusion is not visual or functional approval.
-
-## Supplemental motion reference: [Rive introduction](https://rive.app/docs/getting-started/introduction)
-
-- **Creator / original source:** Rive's official documentation.
-- **Source type / potential use:** interactive graphics and animation tooling, including vector design, timelines, state-machine interaction, data binding, scripting and cross-platform runtimes. Use for purposeful motion after the underlying interface and functional structure are sound.
-- **Evidence:** introduction text was accessible on 2026-10-23 (Asia/Shanghai); publication date not established.
-- **Limits:** this is a motion reference, not a replacement for Figma layout, foundations or component practice. No runtime integration or animation was tested in this check. Pricing and asset licensing were not verified; do not infer that every feature or asset is free.
-
-## Supplemental discovery reference: [Inspora on X](https://x.com/insporadesign)
-
-- **Source / linked website:** @insporadesign, a design-curation account; its profile links [inspora.design](https://inspora.design). The curator is not necessarily the original creator of the featured work.
-- **Role:** user-endorsed supplemental source for discovering component, interaction and material references. It does not replace Panel UI as the primary practice reference, and endorsement of the source is not approval of every featured work or implementation.
-- **Evidence:** profile, linked website address, visible post listings and creator credits were checked in a cloud browser on 2026-10-23 (Asia/Shanghai). The account has no single publication date; record the selected post's date when using it. Full videos were not inspected, so motion quality and interaction behavior are not verified.
-- **Use / rights boundary:** follow each curated item to the credited original creator and original post; inspect the actual media, surrounding task and relevant states before adopting it. Record that work's permalink, date and applicable rights. Visibility on X does not grant reuse or redistribution permission. Only source links and descriptions are retained here, not third-party media.
+The general sources below serve any direction.
 
 ## [Refero Styles](https://styles.refero.design/?sort=popular)
 
@@ -76,7 +42,7 @@ Use it to study product hierarchy, navigation emphasis, and interface density.
 
 Do not transfer one product's density or dark theme to unrelated content without testing.
 
-For measured values (not extracted descriptions) see the [Linear baseline provenance](../examples/linear-baseline/provenance.md).
+For measured values (not extracted descriptions) see the [Linear baseline provenance](../directions/linear/examples/linear-baseline/provenance.md).
 
 ## [Apple: Materials](https://developer.apple.com/design/human-interface-guidelines/materials)
 
@@ -109,3 +75,11 @@ Verify the original author, permanent link, date, and actual media. Watch a vide
 3. A curated preview or extracted description as a discovery aid.
 
 Record source and license information with any retained asset. Access does not imply redistribution or commercial-use permission.
+
+## Reference hierarchy
+
+When sources disagree, decide in this order:
+1. Actual task and content requirements.
+2. Selected direction and its essential spatial relationships.
+3. The reference's design thesis and applicable dimensions.
+4. Platform and implementation constraints.

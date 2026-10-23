@@ -10,17 +10,17 @@ A feedback-derived corrective guide. Use it before choosing a direction, after a
 - System expansion and documentation: sections 16–17
 - Verification and retention: section 14, feedback boundaries and the delivery gate
 
-Use [system development](design-system-development.md) for the overall journey. Do not turn this guide into a house palette or make every check equally prominent in every task.
+Use the [multi-direction workflow](multi-direction-workflow.md) for the overall journey. Do not turn this guide into a house palette or make every check equally prominent in every task.
 
 ## 0. Reading the skill but bypassing its stages
 
-Keywords: procedural compliance, premature finish, missing baseline, skipped model comparison, approval gate.
+Keywords: procedural compliance, premature finish, missing baseline, skipped direction, approval gate.
 
-- **Failure signal:** The agent reads the documents, glances at a reference's opening screen, then delivers a dense, fully styled page using familiar cards, muted text and default spacing. There is no inspected direction study, selected baseline or code/image comparison.
-- **Mistaken assumption:** Reading instructions, including every requested feature and taking a browser screenshot are enough to establish reference-led design. Calling the result a sample does not repair missing exploration.
-- **Correction:** Return to the earliest missing stage in [SKILL.md](../SKILL.md#evidence-before-advancement). Inspect a relevant interface rather than its promotional cover. Establish task, hierarchy and proportions; compare Web and GPT Image direction studies under a shared brief; present both routes and the overall evaluation to the user, and obtain approval of one baseline before detailing the entire page. Keep overall-impression studies contour-led: layout, approximate space, main shapes and broad light/material feel. Full copy, precise typography, finished controls and surface microdetail belong to refinement. Coarse material character belongs in the overall impression and must not be excluded merely because fine material treatment comes later. Observe the user's review gates.
+- **Failure signal:** The agent reads the documents, glances at a reference's opening screen, then delivers a dense, fully styled page using familiar cards, muted text and default spacing. There are no three direction versions, no inspected references and no selected baseline.
+- **Mistaken assumption:** Reading instructions, including every requested feature and taking a browser screenshot are enough to establish reference-led design. Calling the result a sample does not repair missing work.
+- **Correction:** Return to the earliest missing stage of the [multi-direction workflow](multi-direction-workflow.md). Inspect a relevant interface rather than its promotional cover. Fix the shared brief; produce the Linear, Panel UI and inspiration-led versions as complete low-detail pages; present all three to the user, and obtain a selection before detailing any page. Low detail means unfinished component internals, not missing regions; broad colour, light and material character still belong in the comparison. Observe the user's review gates.
 - **Check:** Point to the actual reference region, rendered studies, selected relationships and the user's explicit overall-baseline approval. If these do not exist, report the stage as incomplete. A written checklist, tool-call success or polished screenshot is not a substitute.
-- **Boundary:** Preserve approved work for narrow edits. If a tool is restricted or unavailable, state the reduced scope instead of fabricating comparison evidence. Do not treat a rejected palette or card shape as universally wrong; the recurring error is choosing them by habit without a validated composition.
+- **Boundary:** Preserve approved work for narrow edits. If a tool is restricted or unavailable, say which version is missing instead of fabricating comparison evidence. Do not treat a rejected palette or card shape as universally wrong; the recurring error is choosing them by habit without a validated composition.
 
 ## 1. Reusing a default visual vocabulary
 
@@ -47,7 +47,7 @@ Keywords: whole before detail, stable baseline, composition gate.
 - **Failure signal:** A reviewer cannot engage with the intended comparison because the surrounding layout, color or type is unpleasant.
 - **Mistaken assumption:** A controlled variable makes the exercise useful regardless of the presentation.
 - **Correction:** First reconstruct a strong reference or use an approved composition. Establish that the whole works before varying alignment, spacing, color or material.
-  See [reference-first calibration](reference-first-workflow.md) for the measured-rebuild procedure.
+  See [reference calibration](reference-calibration.md) for the measured-rebuild procedure.
 - **Check:** Would the baseline still be worth looking at without the A/B labels and explanation? If not, fix the baseline first.
 
 ## 4. Treating an attractive asset as an attractive interface
@@ -190,4 +190,4 @@ Keywords: visual review, scope of approval, subjective preference, verified beha
 9. Are inspiration, functional evidence and project-specific choices distinguished?
 10. If retained as a system example, does its DESIGN.md match actual tools, demonstrated variation and maturity?
 
-See [composition](composition-preservation.md), [grouping](grouping-and-hierarchy.md), [color](color-in-context.md), [typography](typography.md), [material](shape-and-material.md), and [code-image collaboration](code-image-collaboration.md) for the corresponding design methods.
+See [composition](composition-preservation.md), [grouping](grouping-and-hierarchy.md), [color](color-in-context.md), [typography](typography.md), [material](shape-and-material.md), and [code and image handoff](code-and-image-handoff.md) for the corresponding design methods.
