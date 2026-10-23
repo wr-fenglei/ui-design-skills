@@ -43,4 +43,4 @@ Start from the closest complete example. Preserve proportions and content relati
 
 These examples were approved for their individual scopes; this is not a production component library. Component specimens are static, without implemented resizing. The page demo has local browser state, no real App launch, backend or owner handoff. Physical mobile, Safari and real trackpad behavior remain unverified; see the validation notes.
 
-The case study includes an attributed Apple image for critical comparison, not a reusable UI asset. Source credits and compression exceptions are recorded with the examples.
+The case study describes an Apple reference in text and links the original; no Apple image is redistributed. Source credits and compression exceptions are recorded with the examples.

@@ -6,7 +6,7 @@ A visual case study · 05min → Selection → a usable workspace
 
 **Find the core → expand one step → compare and explain → expand again.**
 
-Explore independently with Web and GPT Image. At each scale, keep the relationships that make it beautiful; redesign the surrounding space for the new information. Review the whole before moving on.
+Explore the core with GPT Image. At each scale, keep the relationships that make it beautiful; redesign the surrounding space for the new information. Review the whole before moving on.
 
 ## 1. A feeling worth keeping
 
@@ -30,11 +30,11 @@ Explore independently with Web and GPT Image. At each scale, keep the relationsh
 
 ## 4. Learn the relationships from Apple
 
-![Apple macOS Tahoe promotional reference](case-study-assets/04-apple-reference.jpg)
+*Reference (not reproduced here; rights remain with Apple):* Apple's macOS Tahoe 26 announcement image shows the Music app on a MacBook Pro. A saturated blue wallpaper fills the screen. The app window is a calm, light, blurred surface: a translucent sidebar with small coloured icons sits beside a near-white content area. Album artwork carries almost all of the colour. A floating glass playback bar, translucent widgets and the Dock add selective glass controls on top.
 
 **Borrow:** a rich background, a calm blurred app surface, distinct content surfaces and selective glass controls. Color and material have different jobs. Avoid washing everything in one theme color.
 
-[Apple reference · June 9, 2025](https://www.apple.com/uk/newsroom/2025/06/macos-tahoe-26-makes-the-mac-more-capable-productive-and-intelligent-than-ever/)
+[Original Apple Newsroom image · June 9, 2025](https://www.apple.com/uk/newsroom/2025/06/macos-tahoe-26-makes-the-mac-more-capable-productive-and-intelligent-than-ever/)
 
 ## 5. Bring it back to a working page
 
@@ -44,4 +44,4 @@ Explore independently with Web and GPT Image. At each scale, keep the relationsh
 
 **The lesson:** preserve the feeling, reconsider its scale. Glass can lead a small composition and become a supporting material on a dense page.
 
-<sub>Images 1–2 are generated studies; image 3 is an anonymized reconstruction; image 4 belongs to Apple; image 5 is an actual Web screenshot. This is a small reference system with local demo state, not a connected product. Physical mobile, Safari and real trackpad behavior still need validation.</sub>
+<sub>Images 1–2 are generated studies; image 3 is an anonymized reconstruction; section 4 describes an Apple image by link only; the final image is an actual Web screenshot. This is a small reference system with local demo state, not a connected product. Physical mobile, Safari and real trackpad behavior still need validation.</sub>

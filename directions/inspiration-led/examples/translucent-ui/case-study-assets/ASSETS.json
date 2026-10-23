@@ -1,6 +1,5 @@
 {
   "assets": "Retained originals; not recompressed in this intake.",
   "reason": "No existing OxiPNG binary; obtaining one was blocked. Generated selection/overextension images retain caBX provenance.",
-  "apple": "Apple promotional image, 2025-06-09; included for attributed critical comparison only, not part of the reusable UI asset library.",
-  "source": "https://www.apple.com/uk/newsroom/2025/06/macos-tahoe-26-makes-the-mac-more-capable-productive-and-intelligent-than-ever/"
+  "apple_reference": "Apple promotional image (2025-06-09) removed from the repository; case-study.md section 4 describes it and links the original: https://www.apple.com/uk/newsroom/2025/06/macos-tahoe-26-makes-the-mac-more-capable-productive-and-intelligent-than-ever/"
 }
