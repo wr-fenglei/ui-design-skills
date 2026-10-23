@@ -1,32 +1,67 @@
-# Agent 操作 Figma 的实测记录（2026-10-20）
+# Figma Execution with figmosha
 
-Figma 文件：https://www.figma.com/design/cytw6jxvr7NDe0K406hGME （作者的 Starter 团队；是否公开分享由仓库所有者决定）
+Shared tool note for building any direction's Foundations, Components and Screens in Figma. Tools change; verify current behaviour with `--help` and the tool's own documentation rather than relying on this page.
 
-## 做了什么
-用 Figma MCP 的 `use_figma`（在文件里执行 Plugin API 脚本），按设计师顺序共约 20 次写入：
-1. 变量 77 个（Primitives 23 / Color 25 / Radius 5 / Spacing 12 / Layout 12），文字样式 10 个，效果样式 2 个
-2. 组件：Button（Primary/Secondary × Small 32/Large 44）、Sidebar row（Default/Selected）、List row（Default/Selected）、Toolbar group（2/3 项）、Input（Default/Focus），以及 Icon ×18、Status、Avatar、Tag
-3. 栅格：桌面 1440，12 栏、边距 80、栏间距 32；手机 390，4 栏、边距 24、栏间距 16
-4. 页面：桌面 1440×7263、手机 390×5771，逐区块用自动布局、组件实例和变量拼装
-5. 截图审查：与 Linear 原站对比做了两轮修复
-审计结果：两张页面 697 个纯色填充 **全部绑定变量**；阴影只出现在浮层（Agent 面板、手机 toast）和主按钮上。
+## Current route: figmosha CLI → local bridge → Figma Desktop plugin
 
-## 有效的地方
-- 脚本是原子的：报错时整段回滚，不会留下半成品，可以放心重试。
-- 用"按名字查 token、查不到就报错"的辅助函数，自动挡住了表外数值（例如 padding 20 直接报错，改成 24）。
-- 变量、样式、变体、组件属性（文字、布尔、实例替换）都能正确建出来；改组件一次，所有实例跟着修好（Tag 宽度 bug 就是这样一次修完的）。
-- 截图接口返回短期 URL，用 curl 下载即可。
+[figmosha2-extended](https://github.com/wr-fenglei/figmosha2-extended) (branch `console-mcp-port`) sends Figma Plugin API JavaScript through a local bridge to a development plugin running inside Figma Desktop. No MCP server is needed. Read the repository's `AGENTS.md` before use; a machine may also have a gitignored `CLAUDE.local.md` with its own paths.
 
-## 遇到的限制
-| 限制 | 影响 | 对策 |
+**Where it runs.** Commands must run on the machine where Figma Desktop is open. A cloud or remote agent's `localhost` is not that machine. The browser version of Figma cannot run the plugin.
+
+**One-time setup.**
+1. Follow the repository README to create its virtual environment and install the user-level `figmosha` command (`install-cli.py`). The installed command starts or reuses the bridge on demand; the default port is 18787.
+2. In Figma Desktop: **Plugins → Development → Import plugin from manifest…**, then choose `plugin/manifest.json` from the checkout. Import once; re-importing is not needed after restarts.
+
+**Each session and each file.**
+1. In every target Design file run the plugin (**Actions → search "Figmosha" → Figmosha Bridge**) and keep its window open. Closing the plugin or restarting Figma disconnects that file.
+2. `figmosha status` should report `plugin_connected: true` and list the file.
+3. `figmosha targets` lists connected files. Pass `-T "<file name or doc id>"` **after** the subcommand. Do not hard-code old document ids; check `targets` first.
+4. Read-only round trip before writing:
+   ```sh
+   figmosha exec 'return {file: figma.root.name, page: figma.currentPage.name, roundTrip: 1 + 1};' -T "<file>" --parallel --timeout 10
+   ```
+5. Longer scripts: `figmosha exec --file /absolute/path/script.js -T "<file>"`. Scripts support `await`, the Plugin API and the repository's `h.*` helpers; `return` the result. Check `figmosha --help` and subcommand `--help` for higher-level commands (for example `tree`, `doctor`).
+
+**Safety.**
+- These commands change real design files. Confirm the target file and the user's authorised scope first; prefer a new page over editing an approved page.
+- Use `--parallel` only for read-only scripts. Leave writes on the default per-file queue and name the caller with `--agent <name>`. Do not let two agents modify the same nodes.
+- A 504 timeout may mean the script is still running: inspect the file before retrying a write. A 503 means the plugin is not connected in that file. On a port conflict, do not kill an unknown process.
+
+## Practice notes
+
+From the Linear exercises (2026-10-20 and the 2026-10-23 five-group redo):
+- **Bind values to variables.** Copy the selected direction's colour variables and text styles into the working file under their original names and bind every fill and stroke to them. A token lookup that throws when a name is missing blocks unlisted values.
+- **Library access.** Components from another file can be used directly only if that file is published as a library. Otherwise copy what is needed and make it a local component, and record where it came from.
+- **Auto-layout sizing.** `resize()` switches auto-layout children to fixed sizing; set HUG/FILL after resizing. An empty auto-layout frame defaults to 100px tall; give spacer frames an explicit size.
+- **CJK fonts.** Load and set fonts explicitly. Inter has no CJK glyphs; Noto Sans SC was used for Chinese and JetBrains Mono for identifiers.
+- **The agent cannot see the canvas.** After each composed section export an image and inspect it. Also run a script check for text overflowing its frame and content escaping its window or artboard. A successful script is not visual approval.
+
+## Historical: 2026-10-20 Figma MCP findings (outdated)
+
+> **Outdated.** This records the first Linear exercise, built with Figma MCP `use_figma` on a Starter-plan team. The route has since moved to figmosha, and plan limits may differ. Verify current capabilities before relying on any limit below.
+
+File: https://www.figma.com/design/cytw6jxvr7NDe0K406hGME (owner's Starter team; sharing is the repository owner's decision).
+
+**What was built** in about 20 scripted writes, in a designer's order:
+1. 77 variables (Primitives 23 / Color 25 / Radius 5 / Spacing 12 / Layout 12), 10 text styles, 2 effect styles
+2. Components: Button (Primary/Secondary × Small 32 / Large 44), Sidebar row (Default/Selected), List row (Default/Selected), Toolbar group (2/3 items), Input (Default/Focus), plus Icon ×18, Status, Avatar, Tag
+3. Grids: desktop 1440, 12 columns, margin 80, gutter 32; mobile 390, 4 columns, margin 24, gutter 16
+4. Pages: desktop 1440×7263 and mobile 390×5771, assembled section by section with auto layout, component instances and variables
+5. Two rounds of screenshot review against Linear's site
+
+Audit: all 697 solid fills on the two pages were bound to variables; shadows appeared only on floating layers (Agent panel, mobile toast) and the primary button.
+
+**What worked:** scripts were atomic (an error rolled back the whole script, so retries were safe); a "look up token by name, throw if missing" helper blocked values outside the table (padding 20 failed and became 24); variables, styles, variants and component properties (text, boolean, instance swap) were created correctly; fixing a component once fixed every instance; screenshot URLs were short-lived and downloaded with curl.
+
+**Limits recorded at the time:**
+| Limit | Effect | Workaround used |
 |---|---|---|
-| Starter 方案每个变量集合只能有 **1 个 mode** | 不能做 Light/Dark 主题切换，也不能用 mode 区分桌面/手机 | 桌面、手机拆成两组变量（`layout/desktop/*`、`layout/mobile/*`）；需要多 mode 就升级付费方案 |
-| 字号、字重、行高 **不能绑定变量** | 字体只能靠文字样式约束 | 建好文字样式后一律用样式，禁止散设字号 |
-| 渐变、焦点环阴影 **不能绑定颜色变量** | 光晕、渐隐、焦点环里是写死的值 | 保持极少，并在文档里列出例外 |
-| 尺寸模式的坑：`resize()` 会把自动布局改成固定尺寸；空的自动布局框默认 100px 高 | 造成了 3 个视觉 bug：样本卡片塌缩、工具栏没铺满、Tag 文字重叠 | 先 resize 再设 HUG/FILL；空白占位框显式设成 1px；**每次组合后必须截图看** |
-| Agent 搭建时 **看不到画布** | 只能靠"导出截图再读图"来检查 | 每个区块组合完截一次图，修复后再截一次 |
-| 截图在原始尺寸下 **最高只有 1x** | 手机图没有 @2x 版本 | 需要高清时在 Figma 里手动导出 |
-| Figma 里 **没有 PingFang SC**，Inter 不含中文字形 | 中文必须显式指定字体 | 中文统一用 Noto Sans SC，编号和标签用 JetBrains Mono |
+| Starter plan: **one mode** per variable collection | No Light/Dark switch; no desktop/mobile modes | Separate `layout/desktop/*` and `layout/mobile/*` variables |
+| Font size, weight and line height **cannot bind to variables** | Type constrained only by text styles | Always use text styles; no loose font sizes |
+| Gradients and focus-ring shadows **cannot bind colour variables** | Hard-coded values in glows, fades, focus ring | Keep them rare and list them as exceptions |
+| Auto-layout sizing traps | Three visual bugs: collapsed sample card, toolbar not filling, overlapping Tag text | Resize before HUG/FILL; explicit 1px spacers; inspect after every composition |
+| The agent **cannot see the canvas** | Checking only by exporting and reading images | Capture after each section and after each fix |
+| Screenshots at most **1x** at native size | No @2x mobile image | Export manually in Figma when high resolution is needed |
+| No **PingFang SC** in Figma; Inter lacks CJK glyphs | CJK fonts must be set explicitly | Noto Sans SC for CJK, JetBrains Mono for IDs and labels |
 
-## 结论
-质量上和"同一套数值手写 HTML"相当，真正的增益是 **可复用的变量、样式和组件**，以及设计师可以直接在 Figma 里接手修改。好看的前提仍然是先有被认可的专业参考，工具本身不会带来审美。
+**Conclusion then:** quality matched hand-written HTML from the same values; the real gain was reusable variables, styles and components that a designer can take over in Figma. Good looks still depended on an approved professional reference; the tool itself adds no taste.
