@@ -1,5 +1,11 @@
 # Code and Image Collaboration
 
+## Scope: free exploration versus reference calibration
+
+This document governs **free exploration** and independent Web/GPT Image comparison. For a selected-reference task, use [multi-exemplar calibration](reference-first-workflow.md): the same requirement, content and canvas become independent complete low-detail page versions, one per applicable selected exemplar. That mode establishes control inventory, regions, proportions, whitespace, colour relationships and type hierarchy before comparison, while deferring fine component internals, detailed states and interactions until user selection.
+
+Do not impose an exemplar × Web × GPT Image matrix on every task. State the mode and keep agreed review gates. Multiple successful versions may remain separate; neither mode requires a hybrid.
+
 ## Independent discovery comes first
 
 Keywords: expressive core, independent proposals, divergent results, user selection.
@@ -28,7 +34,7 @@ Once a core or composition has been selected, identify approved relationships an
 - **At the detail stage, after user approval:** Hand the selected baseline to both routes when another comparison is useful. Now introduce real copy and precise type, spacing, colors, controls, shadows and materials. For a Web baseline, capture a real screenshot for the image route; for an image baseline, preserve its spatial relationships in code. State which regions may change and which must remain stable.
 - **At a user review gate:** Deliver the current-stage studies and the specific decision needed. Wait for requested approval before further refinement or functional implementation.
 
-Use both routes and the explicit user review gate for new overall-impression studies and substantial visual redesigns. A small correction to an approved baseline need not restart both routes. Missing or restricted image-generation access must be disclosed and reduced scope agreed with the user; a code-only result cannot stand in for a completed two-route comparison.
+In free exploration, use both routes and the explicit user review gate for new overall-impression studies and substantial visual redesigns. A small correction to an approved baseline need not restart both routes. Missing or restricted image-generation access must be disclosed and reduced scope agreed with the user; a code-only result cannot stand in for a completed two-route comparison.
 
 ## Responsibilities
 
@@ -54,7 +60,7 @@ Return to earlier decisions when a detail changes the whole. Do not place the co
 - Compare the code render and generated concept at the same size.
 - Name the actual advantage: proportion, type rhythm, color relationship, form or material.
 - Transfer compatible strengths rather than averaging layouts or accumulating decoration.
-- Retain one selected baseline for the next pass.
+- Retain each user-selected baseline independently for the next pass; a comparison may keep multiple good versions without forced fusion.
 - When claiming a hybrid improves the result, compare code-only, image-only and combined outputs.
 
 ## Asset handoff

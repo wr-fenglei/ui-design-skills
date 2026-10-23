@@ -1,103 +1,94 @@
 # Reference-First Calibration
 
-Use with [SKILL.md](../SKILL.md) when the agent's own baseline is not professional. Signals: the user calls the result cluttered or amateur, or rejects layout, type, colour and shadow all at once, or independent explorations keep converging on a generic "AI look". Calibrate to one approved professional reference first; explore your own expression only after the calibrated baseline is accepted. This adds to stages 1–4; it does not replace independent exploration.
+Use with [SKILL.md](../SKILL.md) for an explicitly selected reference-led task, or when the agent's own baseline is not professional. Signals include repeated rejection of layout, type, colour and shadow together or independent explorations converging on a generic "AI look".
 
-Worked example: [Linear baseline](../examples/linear-baseline/README.md). Process notes (Chinese): [research/2026-10-20-reference-first](../research/2026-10-20-reference-first/README.md).
+The reusable process is **measure → foundations → components → complete page → screenshot review**. Concrete palettes, radii, grids and layouts belong to the selected reference's own contract, not to this method. [Linear baseline](../examples/linear-baseline/README.md) is an accepted calibration example, not a universal original style. Its [DESIGN.md](../examples/linear-baseline/DESIGN.md) and [rules](../examples/linear-baseline/rules.md) retain its one-accent palette, pill buttons, radius scale and three-pane product mock.
 
-## 1. Let the user pick a real reference
+## 1. Choose the mode and applicable references
 
-- Offer 4–6 real, clearly different products: live sites or official app screenshots, desktop and mobile first screens. Do not offer your own mock-ups.
-- Proceed only with the references the user approves. Record the URL and access date. In a public repository, link to the source; do not redistribute third-party screenshots.
-- Keep visual inspiration separate from functional reference. A marketing hero is not evidence of how the application works.
+- **Multi-exemplar reference calibration:** use the small [exemplar shortlist](../examples/README.md#exemplar-shortlist) to choose applicable references. For a new page, make one independent version per selected applicable exemplar using the same requirement, content inventory, canvas and target sizes. Compare layout, density, typography hierarchy, component language and intended interaction, not colour swaps.
+- **Free exploration:** when discovering a new expressive core, keep the independent Web/GPT Image process in [code-image collaboration](code-image-collaboration.md). It is not an obligation to multiply every exemplar by every tool route.
+- State which mode is being used. Do not silently replace an agreed two-route exploration with calibration, or force a full matrix for every task. A narrow correction to approved work retains its baseline.
+- If no reference has been chosen, offer a small, clearly different set of actual products or official screenshots. Proceed with user-selected references; explain inapplicability rather than forcing every exemplar into every task.
+- Record original URL, access date, inspected regions and source rights. Link third-party sources instead of redistributing their screenshots. A marketing hero is not evidence of application behavior.
 
 ## 2. Measure; label every value
 
 | Label | Method | Use |
 | --- | --- | --- |
-| `[DOM]` | Playwright/headless Chrome `getComputedStyle` at 1440 and 390 | Exact CSS values |
-| `[est]` | Pixel measurement on a screenshot (scale may be unknown) | Proportions only; never present as exact |
-| `[official]` / `[community]` | Platform guidelines / published measurements | Cite the page |
-| `[unknown]` | Nothing reliable | Leave blank; do not invent |
+| `[DOM]` | Inspect computed styles at the agreed viewport sizes | Exact observed CSS values for that source and viewport |
+| `[est]` | Pixel measurement on a screenshot, recording any scale uncertainty | Estimated proportions, never claimed as exact |
+| `[official]` / `[community]` | Platform guidelines / published measurements | Cite the source and its scope |
+| `[adapted]` | Deliberate change for content, language, platform or accessibility | Record the original relationship and reason |
+| `[unknown]` | No reliable evidence | Leave unresolved; do not invent |
 
-Measure the alignment lines and container widths, the type scale (size/line height/weight/tracking), the text colour levels, the surface steps, borders and shadows, radii, button heights, section padding, and sidebar and row proportions.
+Measure alignment lines, containers, column ratios, control count, density, type size/line height/weight/tracking, text and colour roles, surfaces, borders, shadows, radii, control sizes and spacing. Inspect relevant states and narrow layouts separately; a still cannot establish interaction.
 
 ## 3. Deconstruct before building
 
-For each reference, write down:
-- the **skeleton**: alignment lines and column ratios;
-- the **hierarchy**: how many size, weight and colour levels, and what is deliberately quiet;
-- the **surfaces**: grey steps, line or shadow, nesting radii;
-- the **content technique**: real data, cropping, floating layers.
+For each reference, record:
+- **Skeleton:** regions, alignment, proportions, grouping, navigation and content volume.
+- **Hierarchy:** reading order, type and colour levels, emphasis and deliberately quiet areas.
+- **Component language:** control geometry, surface treatment, nesting and state cues.
+- **Interaction model:** observed flow and states versus proposed or unverified behavior.
+- **Applicability:** what fits this task, what must adapt, and what should not transfer.
 
-Name the pitfalls of imitating it, e.g. pure #FFF/#888 instead of tinted greys, or 700-weight headings.
+Do not reduce a reference to a palette or copy its page silhouette when the task does not fit.
 
 ## 4. Define foundations as variables
 
-- **Colour:** primitives plus semantic aliases. Surfaces differ by one or two grey steps. Use four text levels of one hue. Use exactly **one accent**, reserved for the primary action, selection, focus and links. Status colours appear only as small product-UI marks.
-- **Type:** at most 5 sizes per breakpoint. Headings weight 500–600 with tight tracking. Body text has no tracking for CJK (see §8).
-- **Radius:** 12 / 8 / 6 / 4, nested outer-to-inner; pill for buttons and tags.
-- **Spacing:** a 4-based scale. Section padding scales with the viewport: desktop 96–128, mobile 48–64.
-- **Elevation:** a shadow style exists only for floating layers.
+Derive colour roles, typography, spacing, radii, elevation and responsive grids from the actual selected reference. Record measured, estimated and adapted values in that version's contract.
 
-Every later value must resolve to a foundation. If a value cannot be found there, it is wrong: change the value, or add a foundation deliberately and record why.
+There is no universal requirement for one accent, four text levels, five type sizes, 12/8/6/4 radii, pill buttons, shadow-free rows or three columns. Those choices are reference-specific. The [Linear contract](../examples/linear-baseline/DESIGN.md) is one worked example, not default values for Panel UI or other directions.
 
-## 5. Components with variants
+Every implementation value must trace to a foundation or an explicitly documented exception. Add a foundation deliberately when the task needs it; do not call an unexplained deviation a measurement.
 
-Build in this order: atoms (icon, status, avatar, tag), then button, sidebar row, list row, toolbar group, input. Give every state a variant (default/selected, default/focus, primary/secondary × sizes). Bind fill, stroke, radius, padding and gap to variables. Flat rows are separated by a 1px line, never a card with a shadow.
+## 5. Components before page refinement
 
-## 6. Alignment grids
+Identify the components needed by the complete task, then build basic reusable specimens with reference-derived geometry and hierarchy. Bind supported fill, stroke, radius, padding and gap to variables; use text styles where appropriate.
 
-- Desktop 1440: 12 columns; text column x=80–1360 unless the reference measures otherwise.
-- Mobile 390: 4 columns, 24 margin.
+At the comparison stage, use enough fidelity to establish component language and visible state cues, but defer fine internal treatment, exhaustive state variants and polished interactions until selection. Do not postpone the controls themselves or replace the task with empty rectangles.
 
-Navigation, headings, panels and the footer all sit on the same lines. No section invents its own margin.
+## 6. Complete low-detail page versions
 
-## 7. Compose section by section
+- Build the **whole page skeleton** for every selected applicable exemplar. Include the required sections, navigation, realistic content volume and visible control count.
+- Get region proportions, whitespace, density, broad colour relationships, type hierarchy and primary actions in place before comparison. Low detail means unfinished component internals, not missing page regions.
+- Use the same requirement, content inventory and canvas across versions. Do not make one direction look better by removing difficult content.
+- Use the selected reference's alignment and responsive logic. Desktop may be a list, canvas, dashboard or multi-pane layout; mobile adaptations must fit the actual task rather than shrink a desktop screen.
+- Compose incrementally and inspect screenshots, but compare complete pages rather than isolated attractive components.
 
-- **Desktop application UI:** sidebar (17–20% of the window), list and detail, with a toolbar grouped by function (navigate / view / act / search).
-- **Mobile:** one column at a time with drill-in navigation. Never a shrunken three-pane window.
-- **Content:** realistic IDs, names, times and numbers. No lorem ipsum or abstract geometry standing in for a product.
-- **Build order:** one section per step; screenshot after each composition.
+## 7. User comparison before detail
 
-## 8. CJK typography adjustments
+Show the independent complete-page versions at equal size. Explain differences in layout, density, type hierarchy, component treatment and intended interaction, with applicability and remaining gaps.
 
-| Property | Latin reference (e.g. Linear) | CJK |
-| --- | --- | --- |
-| Heading tracking | −0.022em | −0.012 to −0.015em |
-| Heading line height | 1.0 | 1.1–1.17 |
-| Body tracking | −0.011em | 0 |
-| Display sizes | 64 / 48 | about 56 / 40: direct transfer looks heavy |
-| Mono / uppercase labels | any | Latin and numerals only |
+Wait for the user's selection before refining component internals, detailed states and interactions. The user may keep multiple good versions; do not force a single winner or merge them into an averaged style. Refine each retained version against its own relationships.
 
-Font: PingFang SC, falling back to Noto Sans SC. In Figma use Noto Sans SC explicitly; Inter has no CJK glyphs and Figma does not ship PingFang.
+## 8. Typography and language adaptation
+
+Inspect actual glyphs, wrapping, line height, tracking, numerals and fallback behavior in the target language. Do not transfer Latin display sizes or tracking unchanged to CJK. Label adaptations and validate them in the whole page.
+
+The concrete Noto Sans SC sizes and tracking used in the [Linear example](../examples/linear-baseline/DESIGN.md) are local calibration choices, not a universal CJK prescription. Verify font availability in the actual tool.
 
 ## 9. Screenshot review against the reference
 
-- Capture full pages at 1440 and 390. Compare the same regions side by side with the reference.
-- Write each issue as *location / current / target value*. Fix, re-capture, and recheck only the affected region in the whole.
-- Do at least two rounds. Record what remains different and why (content, CJK, deliberate omission).
-- Review passing is not aesthetic approval; the user decides.
+- Capture full pages at the agreed desktop/narrow sizes and compare corresponding regions with the selected reference. Keep version and viewport labels explicit.
+- Write issues as *location / current / reference target or justified adaptation*. Fix, re-capture and inspect the affected region in the whole.
+- Do at least two calibration review rounds. Record remaining differences and why.
+- Separate visual fidelity, readability, tested behavior and user approval. A screenshot pass is not interaction validation or aesthetic approval.
 
-## 10. Rules to check before delivery
+## 10. Delivery and retention checks
 
-1. One set of alignment lines.
-2. At most 5 sizes, headings 500–600.
-3. Text levels in one hue.
-4. One accent, interactive states only.
-5. Adjacent regions differ by 1–2 grey steps; thin dividers only between panes.
-6. Radii nest from outer to inner; pill buttons.
-7. Shadows only on floating layers.
-8. Realistic product content.
-9. Desktop three-pane, mobile single-column.
-10. Whitespace exceeds content; padding scales with the viewport; body lines no longer than about 70 characters.
+1. The selected reference and applicable scope are named.
+2. Measured, estimated, adapted and unknown values are distinguishable.
+3. Foundations, component language and layout match that reference, not a universal Linear template.
+4. The comparison includes complete low-detail pages with comparable content and canvas.
+5. User selection precedes detail refinement; multiple retained directions remain independent.
+6. Actual screenshots and relevant interaction tests support the stated result.
+7. Approval and validation scope, limitations, sources and reproduction steps are recorded.
+8. Entry points link to the actual artifacts, with missing work explicitly pending.
 
-## Figma route: known constraints
+## Figma organization and execution
 
-Driving Figma through `use_figma` works for variables, styles, variants and screens; it is equal in quality to hand-written HTML at the same values. Its advantage is reuse. Expect these constraints:
-- Starter plans allow 1 mode per collection, so split desktop and mobile into separate variables.
-- Font size, weight and line height cannot be bound to variables; use text styles.
-- Gradients and ring shadows cannot bind colour variables.
-- `resize()` turns auto-layout sizing into FIXED, and empty auto-layout frames default to 100px. Set HUG/FILL after resizing.
-- The agent cannot see the canvas, so screenshot every composition.
-- Exports at natural size are 1x.
-- Select a CJK font explicitly.
+For **each version**, keep three pages: **Foundations / 设计规范**, **Components / 组件**, and **Screens / 整体页面**, clearly prefixed by the exemplar/version name when sharing a file. Foundations record measured/adapted values; Components contain the actual specimens; Screens contain complete pages and viewport variants. During comparison these may be low-detail; after selection add detailed states and interactions. An imported image is not an editable reconstruction.
+
+Verify the current tool and plan capabilities rather than assuming a historical constraint still applies. The Linear exercise used variables, text styles, variants and grids; its process recorded auto-layout sizing corrections, explicit CJK fonts, raw gradient/focus values and 1x exports. See its [README](../examples/linear-baseline/README.md) and [process notes](../research/2026-10-20-reference-first/README.md) for that specific execution. Inspect actual exports after composition; tool success alone does not establish quality.

@@ -2,6 +2,8 @@
 
 Use this index for actual visual evidence. Use the [example scope index](../examples/README.md) to distinguish still studies, experimental systems and scoped implementations; use [design sources](design-sources.md) for the separate functional-reference search. An attractive retained image alone is not evidence of a reusable system.
 
+For reference-led page comparisons, start with the small [exemplar shortlist](../examples/README.md#exemplar-shortlist) and [multi-version method](reference-first-workflow.md). Linear is an accepted calibration example; Panel UI is prioritized but still a candidate without a validated reproduction. Other examples retain their documented approval scope.
+
 ## External practice references — selection is not validation
 
 - [Panel UI](design-sources.md#primary-practice-reference-panel-ui): user-designated primary reference for UI exercises made in Figma; retain its grouping, density and hierarchy only after inspecting the chosen source region.

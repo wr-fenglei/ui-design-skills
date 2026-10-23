@@ -13,6 +13,12 @@ The skill teaches **how to discover, judge, develop and correct**. An example's 
 
 Read this entrypoint before each foundational exercise, independent example, page or component task. Read [agent design pitfalls](references/agent-design-pitfalls.md) before design and again before delivery. Role responsibilities and daily scheduling belong outside this skill.
 
+## Choose the working mode
+
+- **Multi-exemplar reference calibration:** for a reference-led new page, select applicable directions from the [exemplar shortlist](examples/README.md#exemplar-shortlist). Measure each actual reference, derive its own foundations and basic components, then make an independent complete low-detail page version for the same requirement, content and canvas. Compare with the user before fine component treatment, detailed states and interactions. Keep multiple good versions if selected; do not force fusion. See [reference-first workflow](references/reference-first-workflow.md).
+- **Free exploration:** when discovering a new expressive core, use the independent Web/GPT Image stages below. References inform discovery without prescribing a shared answer.
+- State the mode. These are complementary methods, not a mandatory exemplar × tool-route matrix for every task. Do not force unsuitable references or restart approved work for a narrow edit.
+
 ## Gold standard — first decide what carries the beauty
 
 **First decide what carries the beauty; then organize space around it.** The core may be meaningful content, typography, product UI, shape or an integrated material relationship. It need not be decoration. Do not lock a sidebar, card template or page silhouette before finding it.
@@ -24,6 +30,8 @@ See [code-image collaboration](references/code-image-collaboration.md). Shared i
 When repeated feedback rejects the whole baseline (layout, type, colour and shadow together), calibrate to one user-approved professional reference first; resume independent exploration from that accepted baseline.
 
 ## Evidence before advancement
+
+The exploration sequence below describes free exploration. Reference-led multi-version work uses the comparison gate and complete-page skeleton defined in the [calibration workflow](references/reference-first-workflow.md), while keeping the same evidence and approval boundaries.
 
 Reading documents is preparation, not proof that the stages happened. Do not jump from requirements or an inspiration image to a polished full screen.
 
@@ -39,7 +47,7 @@ Reading documents is preparation, not proof that the stages happened. Do not jum
 
 The sequence can loop. A complete useful component or functional region can be the initial scope; do not start with a large page just to appear comprehensive. Foundations come before motion. For a narrow edit to approved work, retain the baseline and inspect affected relationships; do not restart both routes unnecessarily.
 
-At the overall-impression stage use contour-led layout, representative content mass, approximate silhouettes and broad light/shadow/material cues. Full copy, precise typography, finished controls and microtexture belong after approval. A low-detail study must still have a plausible functional structure, not a poster or an empty card grid.
+At the overall-impression stage use contour-led layout, representative content mass, approximate silhouettes and broad light/shadow/material cues. In free exploration, full copy, precise typography, finished controls and microtexture belong after approval. In multi-exemplar page comparison, include the complete required control and section inventory, realistic content volume, proportions, whitespace, colour relationships and type hierarchy; only fine component internals, detailed states and interactions wait. A low-detail study must still have a plausible functional structure, not a poster or an empty card grid.
 
 Observe the user's review gates. Do not expand an unapproved direction into a finished page. If a required route is unavailable or restricted, disclose the missing comparison and obtain agreement on reduced scope, rather than claiming the stage completed.
 

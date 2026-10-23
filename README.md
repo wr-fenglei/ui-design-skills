@@ -6,7 +6,7 @@ A reference-led method for developing beautiful, functional interfaces into **sm
 
 1. Find a compelling visual inspiration and identify the relationships that make it work
 2. Study excellent actual interfaces solving similar tasks, including relevant content, states and flows
-3. Explore independently in Web and GPT Image, then review and select a core and overall baseline
+3. Choose the mode: independently explore in Web and GPT Image, or compare complete low-detail versions from applicable reference exemplars under the same brief; let the user select before refinement
 4. Refine a bounded functional example, expand its components and states, and audit the whole
 5. Retain a scoped example with its own DESIGN.md, real tools, provenance and validation limits
 
@@ -18,9 +18,9 @@ Start with [SKILL.md](SKILL.md). Follow the [development method](references/desi
 
 - [SKILL.md](SKILL.md): stages, gates and task-specific reading
 - [References](references/design-system-development.md): design reasoning, production methods and recurring-error corrections
-- [Examples by scope](examples/README.md): visual studies, experimental systems and scoped reusable outcomes, without inflating their maturity
+- [Exemplar shortlist and examples by scope](examples/README.md): visual studies, experimental systems and scoped reusable outcomes, without inflating their maturity
 - [Actual visual references](references/reference-index.md): retained images and original-source boundaries
-- [Reference-first calibration](references/reference-first-workflow.md): measure an approved professional reference and rebuild it as variables, components and screens (HTML and Figma)
+- [Reference-first calibration](references/reference-first-workflow.md): measure selected references, derive separate foundations/components, compare complete low-detail page versions, then refine the user's choices; each Figma version has Foundations, Components and Screens pages
 - [Research notes](research/2026-10-20-reference-first/README.md): process records in Chinese; not skill rules
 
 ## Selected examples
