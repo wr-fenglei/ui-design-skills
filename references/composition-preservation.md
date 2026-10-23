@@ -43,6 +43,6 @@ Keywords: occlusion, perspective, curvature, near/far, scale gradient.
 
 A coherent baseline comes before a local spacing or alignment experiment; inspect [grouping](grouping-and-hierarchy.md) for density inside each region.
 
-Example: [Curved gallery](../examples/gallery-001/README.md).
+Example: [Curved gallery](../directions/inspiration-led/examples/gallery-001/README.md).
 
 Reference proportions are useful study evidence, not permission to copy protected artwork or brand identity.

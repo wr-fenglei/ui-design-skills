@@ -21,7 +21,7 @@ Keywords: face opacity, backing field, blur, thickness, edge strength, microtext
 - Brighter rims can increase perceived thickness and attention simultaneously. Preserve quiet edges when low emphasis is intentional.
 - Keep broad faces calm when boundaries and large tonal transitions already explain the form.
 
-See [material and attention studies](../examples/material-attention/README.md). These are visual approximations, not a physical refraction model.
+See [material and attention studies](../directions/inspiration-led/examples/material-attention/README.md). These are visual approximations, not a physical refraction model.
 
 ## Light and shadow
 
@@ -41,7 +41,7 @@ Keywords: proximity, shared light, temperature, visual weight, coherence.
 - Keep type legible and comparatively simple; it need not imitate the material to belong.
 - Judge the whole with and without the asset. If controls still feel detached, repair their scale, position and surrounding space before adding more detail.
 
-Examples: [Amber clock](../examples/amber-clock/README.md), [Green ribbon](../examples/green-ribbon/README.md).
+Examples: [Amber clock](../directions/inspiration-led/examples/amber-clock/README.md), [Green ribbon](../directions/inspiration-led/examples/green-ribbon/README.md).
 
 ## Functional surfaces
 

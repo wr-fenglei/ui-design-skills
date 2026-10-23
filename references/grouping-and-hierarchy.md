@@ -28,7 +28,7 @@ Keywords: containment, ownership, neutral values, theme roles.
 - Preserve semantic roles across themes without assuming identical colors or a universal monotonic lightness sequence.
 - Distinguish a section background from an interactive affordance.
 
-See [neutral surface layers](../examples/surface-layers/README.md) and [color roles](color-in-context.md).
+See [neutral surface layers](../directions/inspiration-led/examples/surface-layers/README.md) and [color roles](color-in-context.md).
 
 ## State and separators
 

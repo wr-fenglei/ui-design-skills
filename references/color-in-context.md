@@ -37,7 +37,7 @@ Keywords: semantic role, local relationship, light theme, dark theme.
 - Do not infer a universal palette or elevation formula from one illustration.
 - Generated colors are exploration evidence, not official design tokens.
 
-Example: [neutral surface layers](../examples/surface-layers/README.md).
+Example: [neutral surface layers](../directions/inspiration-led/examples/surface-layers/README.md).
 
 ## Legibility and aesthetic fit
 
