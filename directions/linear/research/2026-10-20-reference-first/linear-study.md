@@ -1,73 +1,73 @@
-> 公开仓库说明：本文提到的第三方截图（Linear、Apple、Bear、Mimestream、Ars Technica 等）**未随仓库分发**，文中原本的本地截图路径已替换为来源链接。来源链接见 [sources.md](sources.md)。所有实测值的出处标签（[DOM]/[量]/[官方]/[社区]/[未知]）保持原样。
+> Public-repository note: third-party screenshots mentioned here (Linear, Apple, Bear, Mimestream, Ars Technica and others) are **not distributed** with this repository; original local screenshot paths were replaced with source links. See [sources.md](sources.md). Measurement labels: [DOM] computed CSS, [est] pixel-measured estimate, [official], [community], [unknown].
 
-# Linear 首页研究（linear.app，2026-10-20 20:40 北京时间采集）
+# Linear homepage study (linear.app, captured 2026-10-20 20:40 Asia/Shanghai)
 
-采集方式：headless Chrome，1440×900 与 390×844(@2x)，滚动加载后整页截图 + `getComputedStyle` 测量。
-参考页面：[linear.app](https://linear.app/) 整页截图（桌面 1440×9960；手机 390 宽，@2x 输出 780×11752），截图未随仓库分发。
-字体：Inter Variable（非整百字重 **510 / 590**），等宽 Berkeley Mono。
+Method: headless Chrome at 1440×900 and 390×844 (@2x), full-page screenshots after scroll-loading, plus `getComputedStyle` measurement.
+Reference page: [linear.app](https://linear.app/) full-page captures (desktop 1440×9960; mobile 390 wide, @2x output 780×11752). Screenshots are not distributed.
+Fonts: Inter Variable (non-standard weights **510 / 590**), monospace Berkeley Mono.
 
-## 1. 页面骨架（桌面 1440）
-| 区块 | y 位置 | 高度 | 说明 |
+## 1. Page skeleton (desktop 1440)
+| Block | y | Height | Notes |
 |---|---|---|---|
-| 导航 | 0 | 72(+1px 底线) | fixed，`backdrop-filter: blur(20px)`，背景 `linear-gradient(rgba(11,11,11,.8), rgba(..,.76))`，底边 1px `rgba(255,255,255,.08)` |
-| Hero 标题 | 242 | 2 行 ×64 | 标题顶到导航底 ≈170px |
-| Hero 副标题行 | 432 | 24 | 左：副标题；右：`New  Loops →` 链接，同一基线 |
-| Hero 产品窗 | 527 | 720 | 窗宽 1320（x=60），下方有 768 高的渐变底座 |
-| Logo 条 + 等宽小标签 | 1407 / 1483 | 40 | 标签 12px mono 大写 #62666D |
-| 宣言段落 H2 | 1596 | 3 行 ×48 | 第一句 #F7F8F8，后半句 #8A8F98 |
-| 三栏 FIG 0.1–0.3 | 1876 | 468 | 12 列网格，栏间 1px 竖线；线稿等轴图 + 标题 + 两行说明 |
-| 分隔线 | 2505 | 1 | 全宽 1px `rgba(255,255,255,.08)`，上方再叠 1px 纯黑阴影线 |
-| 功能区 ×4 | 2546 / 3782 / 5021 / 6263 | ≈1230 each | `padding: 128px 0`，区与区之间都是上面那条全宽分隔线 |
-| Changelog | 7644 | ≈400 | 4 栏（272px，gap 64），顶部一条横线串 4 个圆点 |
-| 客户引言卡 | 8226 | 564 | 两张亮色卡（浅蓝渐变 / 荧光黄），全站唯一亮色块 |
-| Prefooter | 9014 | 228 | `margin-top:224px`，居中 72px 标题 + 两个 44px 胶囊按钮 |
-| Footer | 9466 | 494 | 上边 1px #23252A；6 列 ×224px，padding 56px 46px |
+| Nav | 0 | 72 (+1px bottom line) | fixed, `backdrop-filter: blur(20px)`, background `linear-gradient(rgba(11,11,11,.8), rgba(..,.76))`, 1px bottom `rgba(255,255,255,.08)` |
+| Hero title | 242 | 2 lines × 64 | ≈170px from nav bottom to title top |
+| Hero subtitle row | 432 | 24 | left: subtitle; right: `New  Loops →` link, same baseline |
+| Hero product window | 527 | 720 | window width 1320 (x=60), with a 768-tall gradient base below |
+| Logo strip + mono label | 1407 / 1483 | 40 | label 12px mono uppercase #62666D |
+| Manifesto H2 | 1596 | 3 lines × 48 | first clause #F7F8F8, second half #8A8F98 |
+| Three columns FIG 0.1–0.3 | 1876 | 468 | 12-column grid, 1px vertical rules between columns; line-art isometric drawing + title + two-line caption |
+| Divider | 2505 | 1 | full-width 1px `rgba(255,255,255,.08)`, with a 1px solid black shadow line above |
+| Feature sections ×4 | 2546 / 3782 / 5021 / 6263 | ≈1230 each | `padding: 128px 0`; every section is separated by that full-width divider |
+| Changelog | 7644 | ≈400 | 4 columns (272px, gap 64), a horizontal line at the top threading 4 dots |
+| Customer quote cards | 8226 | 564 | two light cards (pale blue gradient / fluorescent yellow), the only light blocks on the site |
+| Prefooter | 9014 | 228 | `margin-top:224px`, centred 72px title + two 44px pill buttons |
+| Footer | 9466 | 494 | 1px #23252A top border; 6 columns × 224px, padding 56px 46px |
 
-**容器**：外层 max-width 1436px；各区左右再缩进 48px → 内容框 1344px；文字再内缩 32px → 文字列 x=80…1360（宽 1280）。导航 logo 左缘 x=79、Sign up 右缘 x=1361，与文字列对齐。
-**功能区头部**：两栏网格 672/672；左 H2，右侧描述（内缩 32px，宽 ≈566–608）；头部 padding-bottom 96px，然后是产品视觉面板；面板下 "Features" 标签 + 两列 304px 功能清单（中间 1px 竖线）。
+**Container:** outer max-width 1436px; each section insets 48px on both sides → content box 1344px; text insets a further 32px → text column x=80…1360 (1280 wide). The nav logo's left edge (x=79) and the Sign up button's right edge (x=1361) align with the text column.
+**Feature-section header:** two-column grid 672/672; H2 on the left, description on the right (inset 32px, width ≈566–608); header padding-bottom 96px, then the product visual panel; below the panel a "Features" label and a two-column 304px feature list (1px vertical rule between).
 
-## 2. 字体层级（桌面 / 手机）
-| 层级 | 字号/行高 | 字重 | 字距 | 颜色 |
+## 2. Type hierarchy (desktop / mobile)
+| Level | Size / line height | Weight | Tracking | Colour |
 |---|---|---|---|---|
-| H1 hero | 64/64 → 手机 38/41.8 | 510 | -1.408px (-0.022em) | #F7F8F8 |
+| H1 hero | 64/64 → mobile 38/41.8 | 510 | -1.408px (-0.022em) | #F7F8F8 |
 | H2 prefooter | 72/72 → 38/41.8 | 510 | -1.584px (-0.022em) | #F7F8F8 |
-| H2 区块 | 48/48 → 24/31.92 | 510 | -1.056px (-0.022em) | #F7F8F8（宣言后半句 #8A8F98） |
-| 区块描述 lead | 24/31.92 | 400 | -0.288px (-0.012em) | #D0D6E0 |
-| 产品内标题 H3 | 20/26.6 | 590 | -0.24px | #D0D6E0 |
-| 正文/副标题 | 15/24 | 400 | -0.165px (-0.011em) | #8A8F98 |
-| 小标题（栏标题） | 15/24 | 510 | -0.165px | #D0D6E0 |
-| 导航/页脚链接 | 13/19.5 | 400 | normal / -0.13px | #8A8F98 |
-| 页脚列标题 | 13/19.5 | 510 | -0.13px | #F7F8F8 |
-| 产品 UI 文本 | 12–14 | 400/510 | ≈-0.01em | #D0D6E0 / #8A8F98 / #62666D |
-| 等宽标签 | 12/16.8 Berkeley Mono 大写 | 400 | normal | #62666D / #8A8F98 |
-| 按钮 | 13（导航）/ 16（大） | 510 | normal | 见下 |
+| H2 section | 48/48 → 24/31.92 | 510 | -1.056px (-0.022em) | #F7F8F8 (manifesto second half #8A8F98) |
+| Section lead | 24/31.92 | 400 | -0.288px (-0.012em) | #D0D6E0 |
+| In-product H3 | 20/26.6 | 590 | -0.24px | #D0D6E0 |
+| Body / subtitle | 15/24 | 400 | -0.165px (-0.011em) | #8A8F98 |
+| Small heading (column title) | 15/24 | 510 | -0.165px | #D0D6E0 |
+| Nav / footer links | 13/19.5 | 400 | normal / -0.13px | #8A8F98 |
+| Footer column title | 13/19.5 | 510 | -0.13px | #F7F8F8 |
+| Product UI text | 12–14 | 400/510 | ≈-0.01em | #D0D6E0 / #8A8F98 / #62666D |
+| Mono label | 12/16.8 Berkeley Mono uppercase | 400 | normal | #62666D / #8A8F98 |
+| Button | 13 (nav) / 16 (large) | 510 | normal | see below |
 
-## 3. 颜色
-- 背景 `#08090A`；产品面板 `#0F1011` / 窗框 `#101112` / 窗内 `#090A0B`；抬升面 `#161718`、`#1C1C1D`
-- 文字四级：`#F7F8F8`（主）→ `#D0D6E0`（次）→ `#8A8F98`（三级）→ `#62666D`（四级）
-- 线：`rgba(255,255,255,.08)`（主分隔/窗框）、`rgba(255,255,255,.05)`（内层）、实色 `#23252A`（页脚/面板 inset）、`#2E2E32`（产品内分隔）
-- 强调色只在产品 UI 里：靛蓝 `#5E6AD2`（发送按钮，外圈 `0 0 0 3px rgba(94,106,210,.4)`）、提及 `#6D78D5` 底 15%；绿 `#27A644`、红 `#F34E52`、黄（进行中）≈`#F2C94C`；营销层面不出现强调色
+## 3. Colour
+- Background `#08090A`; product panel `#0F1011` / window frame `#101112` / window interior `#090A0B`; raised surfaces `#161718`, `#1C1C1D`
+- Four text levels: `#F7F8F8` (primary) → `#D0D6E0` (secondary) → `#8A8F98` (tertiary) → `#62666D` (quaternary)
+- Lines: `rgba(255,255,255,.08)` (main dividers / window frame), `rgba(255,255,255,.05)` (inner), solid `#23252A` (footer / panel inset), `#2E2E32` (in-product dividers)
+- Accent only inside the product UI: indigo `#5E6AD2` (send button, ring `0 0 0 3px rgba(94,106,210,.4)`), mention `#6D78D5` on a 15% fill; green `#27A644`, red `#F34E52`, yellow (in progress) ≈`#F2C94C`. No accent appears in the marketing layer
 
-## 4. 形状、边框、阴影
-- 按钮全部胶囊 `9999px`：导航 32px 高（padding 0 12px，13px/510）；大按钮 44px 高（16px/510）
-  - 主按钮：底 `#E5E5E6`、字 `#08090A`，阴影是 5 层极淡投影（0 0 1px .08 / 0 1px 1px .07 / 0 3px 2px .04 …）
-  - 次按钮：底 `rgba(255,255,255,.05)`，`inset 0 0 0 1px rgba(255,255,255,.03), inset 0 1px 0 rgba(255,255,255,.04), 0 0 0 1px rgba(0,0,0,.6), 0 4px 4px rgba(0,0,0,.1)`
-- Hero 产品窗：外框 radius 12、底 `#101112`、1px `rgba(255,255,255,.08)`、padding 8；内视图 radius 8、1px `rgba(255,255,255,.05)`、外加 `0 0 0 2px rgba(0,0,0,.2)`；侧栏 232px 无边框直接放在外框上
-- Hero 底座：窗后 1416×768、radius 6，`radial-gradient(52% 57% at 50% 100%, transparent, rgba(8,9,10,.5)), linear-gradient(#08090A 10%, #D0D6E0 100%)` → 窗下方一圈灰白光，是首屏唯一的"亮"
-- 区块产品面板：底 `#0F1011`，`inset 0 0 0 1px #23252A`，只圆上角 12px，底边被下一段内容截断（淡出）
-- 卡片：radius 6–9px，1px `rgba(255,255,255,.08)`，底加 `rgba(255,255,255,.02)` 叠层；标签胶囊 24px 高 1px 边
-- 浮动面板（Agent 对话）：radius 12，1px `rgba(255,255,255,.12)`，`0 2px 32px rgba(0,0,0,.25)`
-- 微光：400px 圆形 `radial-gradient(rgba(255,255,255,.04), transparent 50%)` 放在面板后
-- 没有任何彩色渐变背景、没有玻璃拟态卡片、没有图标圆圈
+## 4. Shape, borders, shadows
+- All buttons are pills `9999px`: nav 32px tall (padding 0 12px, 13px/510); large buttons 44px tall (16px/510)
+  - Primary: fill `#E5E5E6`, text `#08090A`; the shadow is five very faint layers (0 0 1px .08 / 0 1px 1px .07 / 0 3px 2px .04 …)
+  - Secondary: fill `rgba(255,255,255,.05)`, `inset 0 0 0 1px rgba(255,255,255,.03), inset 0 1px 0 rgba(255,255,255,.04), 0 0 0 1px rgba(0,0,0,.6), 0 4px 4px rgba(0,0,0,.1)`
+- Hero product window: outer frame radius 12, fill `#101112`, 1px `rgba(255,255,255,.08)`, padding 8; inner view radius 8, 1px `rgba(255,255,255,.05)`, plus `0 0 0 2px rgba(0,0,0,.2)`; the 232px sidebar sits directly on the outer frame without a border
+- Hero base: behind the window, 1416×768, radius 6, `radial-gradient(52% 57% at 50% 100%, transparent, rgba(8,9,10,.5)), linear-gradient(#08090A 10%, #D0D6E0 100%)` → a grey-white glow under the window, the only "bright" element above the fold
+- Section product panel: fill `#0F1011`, `inset 0 0 0 1px #23252A`, only the top corners rounded 12px; the bottom edge is cut off (faded) by the next content
+- Cards: radius 6–9px, 1px `rgba(255,255,255,.08)`, with a `rgba(255,255,255,.02)` overlay; tag pills 24px tall with a 1px border
+- Floating panel (Agent chat): radius 12, 1px `rgba(255,255,255,.12)`, `0 2px 32px rgba(0,0,0,.25)`
+- Glow: a 400px circle `radial-gradient(rgba(255,255,255,.04), transparent 50%)` behind panels
+- No coloured gradient backgrounds, no glassmorphism cards, no icon circles
 
-## 5. 产品 UI 模拟的手法
-- 用真实感的 HTML 产品界面（非插图），字号 12–14px，密度高，有真实 ID（DRV-8852）、相对时间、头像
-- 窗口大于视口时直接被裁切（看板右侧、代码 diff 右半）并用渐隐收尾 → 显得"产品很大"
-- 层叠：主视图上再浮一个 Agent 面板（右下），制造景深
+## 5. Product-UI mock technique
+- A realistic HTML product interface (not an illustration), 12–14px type, high density, real IDs (DRV-8852), relative times, avatars
+- When the window is larger than the viewport it is simply cropped (right side of the board, right half of the code diff) and finished with a fade → the product feels "big"
+- Layering: an Agent panel floats over the main view (bottom right), creating depth
 
-## 6. 手机（390）
-- 导航 65px；左右边距 16px + 内缩 8px → 文字 x=24
-- H1 38/41.8，副标题 15/24；产品窗按约 0.5 比例缩小，向右溢出被裁切（不出现横向滚动）
-- 区块 H2 降到 24/31.92；功能区不再有 128px 上下内边距（每区 ≈575px 高）
-- FIG 三栏变成横向滑动卡片（328px 宽，gap 8）
-- Prefooter H2 38px，按钮仍 44px 胶囊
+## 6. Mobile (390)
+- Nav 65px; side margins 16px + 8px inset → text at x=24
+- H1 38/41.8, subtitle 15/24; the product window is scaled to about 0.5 and overflows to the right, cropped (no horizontal scroll)
+- Section H2 drops to 24/31.92; feature sections lose the 128px vertical padding (≈575px tall each)
+- FIG three columns become horizontally scrolling cards (328px wide, gap 8)
+- Prefooter H2 38px; buttons stay 44px pills

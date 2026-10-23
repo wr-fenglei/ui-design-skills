@@ -1,208 +1,211 @@
-> 公开仓库说明：本文提到的第三方截图（Linear、Apple、Bear、Mimestream、Ars Technica 等）**未随仓库分发**，文中原本的本地截图路径已替换为来源链接。来源链接见 [sources.md](sources.md)。所有实测值的出处标签（[DOM]/[量]/[官方]/[社区]/[未知]）保持原样。
+> Public-repository note: third-party screenshots mentioned here (Linear, Apple, Bear, Mimestream, Ars Technica and others) are **not distributed** with this repository; original local screenshot paths were replaced with source links. See [sources.md](sources.md).
 
-# 专业 UI 基准拆解与借鉴笔记
+# Professional UI baselines: breakdown and transferable lessons
 
-整理：2026-10-20（北京时间）。基准对象（已认可）：**Linear 官网**（首页 + /plan /build /method）、**macOS 27 Finder**、**macOS 27 Mail**、**HIG 窗口结构图**（Finder 浅/深、Notes 工具栏）、**Bear**。
-数据来源标记：
-- **[DOM]** 用 headless Chrome `getComputedStyle` 读出的真实 CSS 值（只有 Linear 有）
-- **[量]** 我用 Pillow 在截图上逐像素测出的值（**估算**，受 JPEG、缩放、壁纸透色影响）
-- **[官方]/[社区]** 引自 [macos-tokens.md](macos-tokens.md)，出处见该文件
-- **[未知]** 没有可靠数据，不填数字
+Compiled 2026-10-20 (Asia/Shanghai). Baselines (user-approved): **Linear website** (home + /plan /build /method), **macOS 27 Finder**, **macOS 27 Mail**, **HIG window anatomy diagrams** (Finder light/dark, Notes toolbar), **Bear**.
+Source labels:
+- **[DOM]** actual CSS values read with headless Chrome `getComputedStyle` (Linear only)
+- **[est]** values I measured pixel by pixel on screenshots with Pillow (**estimates**, affected by JPEG, scaling and wallpaper show-through)
+- **[official] / [community]** quoted from [macos-tokens.md](macos-tokens.md); sources are listed there
+- **[unknown]** no reliable data; no number given
 
-配图：
-- 标注图（在 Linear 首屏和 Mail 截图上画框）：属于第三方截图的衍生图，未随仓库分发
-- Linear 页面：[首页](https://linear.app/)（整页 1440×9960）、[/plan](https://linear.app/plan)（1440×14771）、[/build](https://linear.app/build)（1440×15295）、[/method](https://linear.app/method)（1440×2701）
-- macOS 与 Bear：见 [sources.md](sources.md)（Bear 官网整窗图 2516×1838，[bear.app](https://bear.app/)）
-
----
-
-## 1. Linear（linear.app）
-
-### 1.1 布局骨架
-- **一条贯穿全站的文字列**：内容框 1344（左右各 48），文字再内缩 32 → 文字列 **x=80…1360（1280 宽）**；导航 logo 左缘 x=79、Sign up 右缘 x=1361，正好压在这两条线上 [DOM，见 linear-study.md]。/plan、/build 的 H1、H2 也都在 x=78 [DOM]。**全站只有这一组左右对齐线**，这是"干净"的根源。
-- **首屏**：导航 72 → 大段留白 → 两行 H1 → 副标题行（左副标题、右链接，同一基线）→ 产品窗（x=60，1320×720，y=527）→ 窗下 768 高灰白渐变底座 [DOM]。截图像素复核：窗外框 x=60–1380、y=527–1247；内视图 x=300–1372、y=535 起；视图头 535–579（**44px**）；侧栏区 x=60–300（232 + 8 内边距）；Agent 浮层 x≈959–1359、y≈706–1223 [量]。
-  - 注：H1 文字墨迹在截图里位于 y≈280–403 [量]，比 DOM 记录的行框顶 y=242 低约 25–40px（行框顶到大写字母顶有空隙，截图时机也可能不同）。写 CSS 以 DOM 为准，看比例以截图为准。
-- **功能区（/plan、/build 统一模板）** [DOM]：
-  - 区块头是 **两栏 672/672**：左 H2 48/48（x=78，宽 542），右 lead 24/31.92 #D0D6E0（x=752，宽 566），lead 下面一个 15px #8A8F98 的小链接（如 "Projects →"）
-  - 然后是全宽产品面板：外层 1344 宽（x=48–1391）的灰色打光面板，里面居中一个 1120 宽的产品窗（x=160–1279，底 #121314，1px #1E1F1F）[量]。另一处实例为 672×720 的窗，圆角 12，1px #23252A，放在 1344×840、底 #0F1011 的 figure 里 [DOM]
-  - 面板下是 **2×2 特性格**：每格 h3 15/24 字重 510 #F7F8F8 + 说明 15/24 #8A8F98，左格 x=81、右格 x=752，格宽 ≈606 [DOM]；格之间用 1px 线分隔，没有卡片底色（截图可见）
-- **/method（文章型页）**：居中单列。小号大写眉题 "THE LINEAR METHOD" → **衬线 H1 128/128 字重 400**（x=376，宽 688，居中）[DOM] → 17/27.2 #8A8F98 的引言（宽 410，居中）[DOM] → 线稿双圆 → 目录：分组标题小号大写，条目左边是标题，右边是编号 "2.1"，组与组之间一条细线；目录列宽约 686px（x≈377–1063，**估算**）[量]。
-
-### 1.2 信息层级
-- **颜色四级**代替字号级数：#F7F8F8（标题）→ #D0D6E0（lead、产品内标题）→ #8A8F98（正文、导航）→ #62666D（等宽小标签）[DOM]。宣言段落把同一句拆成两种颜色：前半 #F7F8F8 是重点，后半 #8A8F98 是补充。
-- 字号只有几个台阶：72/64 → 48 → 24 → 15 → 13 → 12。**正文统一 15px**，标题靠字重 510（不是 700）和负字距显得紧致 [DOM]。
-- 有意弱化的东西：导航链接（13px 灰）、页脚、等宽标签、特性格说明。营销层**完全不用强调色**，靛蓝 #5E6AD2 只出现在产品 UI 里（发送按钮）[DOM]。
-- **真正的视觉主角是产品窗**：首屏唯一的亮光（窗下渐变底座）把视线引到产品上，标题只负责一句话定位。
-
-### 1.3 形状与表面
-- 按钮全是胶囊：导航 32 高，大按钮 44 高；主按钮浅底 #E5E5E6 + 黑字，次按钮 5% 白底 + 内描边 [DOM]。
-- 圆角很克制：窗 12 → 内视图 8 → 卡片 6–9 → 标签 4 [DOM]。**外大内小，嵌套关系清楚**（和 macOS 的"同心圆角"是同一个思路）。
-- 边框比阴影更常用：1px rgba(255,255,255,.08)/.05/#23252A；阴影只给浮层（0 2px 32px rgba(0,0,0,.25)）[DOM]。
-- 区与区之间用全宽 1px 线 + 128px 上下内边距分隔，不用色块 [DOM]。
-
-### 1.4 字体与颜色
-Inter Variable 字重 400/510/590，等宽 Berkeley Mono；/method 的 H1 用衬线。背景 #08090A，面板 #0F1011/#121314，抬升面 #161718/#1C1C1D [DOM]。
-
-### 1.5 值得借的内容手法
-1. **放真实产品窗，不放插画**：真实的 ID（DRV-8852）、相对时间（"2 min ago"）、人名头像、代码标识符（`vehicle_state`）、diff 数字（+22 −10）。数据可信 = 页面专业。
-2. **产品窗用标准三件套**：侧栏（导航）+ 主视图（issue 正文 + Activity 时间线）+ 浮层（Agent 对话），一张图同时展示结构、内容和交互。
-3. **窗比视口大就直接裁切**，底部或右侧渐隐收尾，让产品显得"大"。
-4. **/plan 的属性行**：左边灰色标签列（Properties / Initiatives / Labels / Resources），右边一排带小图标的值胶囊（状态、优先级、负责人、日期）。这是表达"对象详情"的高效写法。
-5. **区块模板可复用**：左 H2 / 右 lead → 全宽产品面板 → 2×2 特性格（短标题 + 两行说明）。
-6. **文章页换衬线大标题 + 编号目录**：同一品牌里，用字体切换区分"产品页"和"思想页"。
-
-### 1.6 模仿时的坑
-- 用纯白 #FFFFFF 当标题色、纯灰 #888 当正文色：Linear 的灰都略带冷蓝（#8A8F98、#D0D6E0）。
-- 标题用 700 粗体：会显得笨重，Linear 用 510 加负字距。
-- 产品窗里塞 Lorem ipsum 或几何占位块：一眼假。
-- 到处加强调色或彩色渐变：Linear 营销层一处强调色都没有。
-- 卡片都套上底色加阴影：Linear 的特性格只靠 1px 线分隔。
-- 每个区块自己定左边距：对齐线一乱就"杂乱"。
+Figures:
+- Annotated images (boxes drawn on Linear's first screen and a Mail screenshot) are derivatives of third-party screenshots and are not distributed
+- Linear pages: [home](https://linear.app/) (full page 1440×9960), [/plan](https://linear.app/plan) (1440×14771), [/build](https://linear.app/build) (1440×15295), [/method](https://linear.app/method) (1440×2701)
+- macOS and Bear: see [sources.md](sources.md) (Bear website full-window image 2516×1838, [bear.app](https://bear.app/))
 
 ---
 
-## 2. macOS 27 Finder（[Ars Technica 评测截图](https://arstechnica.com/gadgets/2026/09/macos-27-golden-gate-the-ars-technica-review/)）
+## 1. Linear (linear.app)
 
-### 2.1 布局骨架（图 1980×1200，深色模式）[量]
-- 窗口 x≈64–1906（1842 宽）、y≈139–1061；**侧栏 ≈17% 宽**（x≈64–385），右边是图标网格内容区，底部一条状态栏（"73 items, 348.54 GB available" 居中，右边缩放滑块）。
-- 侧栏与内容区之间**没有竖线**，只靠底色区分：侧栏 #282737（透出壁纸的紫色）vs 内容 #25252D。这就是 macOS 27 的"edge-to-edge sidebar"[官方说法见 macos-tokens.md]。
-- 侧栏行距约 64 图内像素（**若为 @2x 截图则≈32pt**）；选中行高约 63 图内像素、左右各内缩约 10pt（**估算**）。
-- 工具栏：左边 ‹ › 胶囊 + 标题 "Applications"，中间视图切换组（图标/列表/分栏/画廊），右边操作组（分享/标签/…），最右单独一个搜索圆钮。胶囊高约 69 图内像素（**估算**）。
+### 1.1 Layout skeleton
+- **One text column across the whole site:** content box 1344 (48 each side), text inset a further 32 → text column **x=80…1360 (1280 wide)**; the nav logo's left edge x=79 and Sign up's right edge x=1361 sit exactly on these lines [DOM, see linear-study.md]. H1 and H2 on /plan and /build are also at x=78 [DOM]. **The site has only this one pair of alignment lines**; this is where the "clean" feeling comes from.
+- **First screen:** nav 72 → large gap → two-line H1 → subtitle row (subtitle left, link right, same baseline) → product window (x=60, 1320×720, y=527) → 768-tall grey-white gradient base under the window [DOM]. Pixel re-check: outer window x=60–1380, y=527–1247; inner view x=300–1372 from y=535; view header 535–579 (**44px**); sidebar area x=60–300 (232 + 8 padding); Agent overlay x≈959–1359, y≈706–1223 [est].
+  - Note: the H1 ink sits at y≈280–403 in the screenshot [est], about 25–40px below the DOM line-box top y=242 (there is space between the line-box top and cap height, and capture timing may differ). Use DOM for CSS; use screenshots for proportions.
+- **Feature sections (shared template on /plan and /build)** [DOM]:
+  - The section header is **two columns 672/672**: H2 48/48 on the left (x=78, width 542), lead 24/31.92 #D0D6E0 on the right (x=752, width 566), with a small 15px #8A8F98 link below the lead (e.g. "Projects →")
+  - Then a full-width product panel: an outer 1344-wide (x=48–1391) grey lit panel with a centred 1120-wide product window inside (x=160–1279, fill #121314, 1px #1E1F1F) [est]. Another instance is a 672×720 window, radius 12, 1px #23252A, inside a 1344×840 figure with fill #0F1011 [DOM]
+  - Below the panel a **2×2 feature grid**: each cell h3 15/24 weight 510 #F7F8F8 + caption 15/24 #8A8F98; left cell x=81, right cell x=752, cell width ≈606 [DOM]; cells are separated by 1px lines with no card fill (visible in screenshots)
+- **/method (article page):** centred single column. Small uppercase eyebrow "THE LINEAR METHOD" → **serif H1 128/128 weight 400** (x=376, width 688, centred) [DOM] → 17/27.2 #8A8F98 intro (width 410, centred) [DOM] → line-art double circle → table of contents: small uppercase group titles, entries with the title on the left and a number such as "2.1" on the right, a thin line between groups; TOC column ≈686px wide (x≈377–1063, **estimate**) [est].
 
-### 2.2 信息层级
-- 三级：工具栏标题（粗）> 侧栏条目与图标名（常规）> 分组标题 "Favorites / Locations"（小号、灰）和状态栏（小号、灰、居中）。
-- 选中态只用"浅一档的圆角底 + 蓝色图标"，文字颜色不变。
-- **刻意弱化的是工具栏**：玻璃胶囊几乎和内容融为一体，内容滚到工具栏下面能透出来。
+### 1.2 Information hierarchy
+- **Four colour levels** replace many type sizes: #F7F8F8 (titles) → #D0D6E0 (lead, in-product titles) → #8A8F98 (body, nav) → #62666D (mono labels) [DOM]. The manifesto paragraph splits one sentence into two colours: the first half #F7F8F8 is the point, the second half #8A8F98 is supporting.
+- Only a few size steps: 72/64 → 48 → 24 → 15 → 13 → 12. **Body is always 15px**; titles look tight through weight 510 (not 700) and negative tracking [DOM].
+- Deliberately quiet: nav links (13px grey), footer, mono labels, feature captions. The marketing layer **uses no accent at all**; indigo #5E6AD2 appears only inside the product UI (send button) [DOM].
+- **The real visual subject is the product window:** the only light above the fold (the gradient base under the window) leads the eye to the product; the title only positions it in one sentence.
 
-### 2.3 形状与表面
-- 三代对比（[Ars Technica](https://arstechnica.com/gadgets/2026/09/macos-27-golden-gate-the-ars-technica-review/) 的窗角对比图）：Sequoia 窗角最硬，Tahoe 最圆，27 介于两者之间、所有窗口统一 [官方/社区，具体值见 tokens，27 的准确值未知]。
-- 工具栏按钮**按功能分组**放进同一个玻璃胶囊，组内用细竖线分隔，组与组之间留空。
-- 对比 Sequoia（[Ars Technica](https://arstechnica.com/gadgets/2026/09/macos-27-golden-gate-the-ars-technica-review/) 的 macOS 15 截图）：旧版工具栏按钮没有底，侧栏和内容之间有清楚的分界。
+### 1.3 Shape and surface
+- All buttons are pills: nav 32 tall, large 44 tall; primary light fill #E5E5E6 + black text, secondary 5% white fill + inner stroke [DOM].
+- Restrained radii: window 12 → inner view 8 → cards 6–9 → tags 4 [DOM]. **Large outside, small inside; nesting is clear** (the same idea as macOS concentric corners).
+- Borders are used more than shadows: 1px rgba(255,255,255,.08)/.05/#23252A; shadows only on floating layers (0 2px 32px rgba(0,0,0,.25)) [DOM].
+- Sections are separated by a full-width 1px line + 128px vertical padding, not colour blocks [DOM].
 
-### 2.4 可借鉴规则
-- 侧栏宽度取窗口的 17–20%（Finder ≈17%，Mail ≈19%，Mimestream 1200 宽窗里侧栏 209pt ≈17%）[量]。
-- 侧栏分组：小号灰色组标题 + 图标 + 13pt 标签，组间留空，不加分隔线。
-- 工具栏控件按"导航 / 视图 / 操作 / 搜索"四组排列，组内连在一起，组间留空。
+### 1.4 Type and colour
+Inter Variable weights 400/510/590, monospace Berkeley Mono; the /method H1 is serif. Background #08090A, panels #0F1011/#121314, raised surfaces #161718/#1C1C1D [DOM].
 
-### 2.5 坑
-- 侧栏与内容之间加粗分隔线，或侧栏用彩色底：macOS 只差一两档灰。
-- 工具栏每个按钮都单独加边框：显得碎。macOS 是"一组一个胶囊"。
-- 把玻璃效果用在内容卡片上：HIG 明确说玻璃只给悬浮的功能层 [官方]。
+### 1.5 Content techniques worth borrowing
+1. **Show a real product window, not an illustration:** real IDs (DRV-8852), relative times ("2 min ago"), names and avatars, code identifiers (`vehicle_state`), diff counts (+22 −10). Credible data = a professional page.
+2. **The product window uses the standard trio:** sidebar (navigation) + main view (issue body + Activity timeline) + overlay (Agent chat); one image shows structure, content and interaction at once.
+3. **Crop the window when it is larger than the viewport**, finishing the bottom or right with a fade, so the product feels "big".
+4. **/plan property rows:** a grey label column on the left (Properties / Initiatives / Labels / Resources), a row of value pills with small icons on the right (status, priority, assignee, date). An efficient way to express "object details".
+5. **Reusable section template:** H2 left / lead right → full-width product panel → 2×2 feature grid (short title + two-line caption).
+6. **Article pages switch to a large serif title + numbered TOC:** within one brand, a typeface change separates "product pages" from "thinking pages".
 
----
-
-## 3. macOS 27 Mail（[apple.com/os/macos](https://www.apple.com/os/macos/) 官网渲染图）
-
-### 3.1 布局骨架（图 1392×904，是官网渲染图，缩放比例未知，只看比例）[量]
-- 窗口 x≈75–1291；**三栏比例：侧栏 ≈19% / 消息列表 ≈37% / 阅读区 ≈43%**（236 / 455 / 522 图内像素）。
-- 工具栏带约 59 图内像素（≈窗宽 4.9%），横跨列表和阅读区；列表顶部的 "Searching / All Mailboxes, 4 results" 是**窗口标题 + 副标题**，和工具栏在同一行。
-- 列表上方一排过滤胶囊（图标胶囊 ×4 + 深色选中胶囊 "All Mail"）。
-
-### 3.2 信息层级
-- 列表行固定四层：**发件人（粗）+ 右侧日期（灰小）/ 主题（常规）/ 两行摘要（灰）**。搜索词用黄色高亮。分区小标题 "Top Hits / All Results" 灰色小号。
-- 阅读区：头像 + 姓名（粗）+ 主题 + 收件人（灰），正文常规黑字。
-- 弱化：侧栏计数（灰色右对齐数字 "4"、"28"）、分组标题（"Favorites"、"Smart Mailboxes"）。
-
-### 3.3 形状与表面（取色均为估算）[量]
-- 侧栏 #EDECE8（偏暖，透出壁纸），列表/阅读区 #FFFFFF。
-- 列表**选中行 #DCDCDC 浅灰实底 + 圆角，没有蓝色描边**。它恰好等于 `unemphasizedSelectedContentBackgroundColor` 的浅色值 #DCDCDC [社区，tokens]。
-- 列表行之间用细分隔线，左边从文字处起头，不通栏。
-- 全窗**只有一处蓝色**：搜索框的聚焦环。
-
-### 3.4 可借鉴规则
-- 列表 + 详情的经典比例 ≈ 2:5:5（侧栏:列表:详情）。
-- 列表行模板："粗主名 + 右对齐灰时间 / 常规副标题 / 灰色两行摘要"，行与行之间用内缩的细线隔开。
-- 选中用中性灰底，蓝色只留给焦点。
-
-### 3.5 坑
-- 列表行都做成带阴影的卡片：Mail 只是平铺的行 + 细线。
-- 用强调色铺选中背景：失焦窗口里 macOS 用灰色，只有焦点处才出现蓝色。
-- 日期和标题一样黑：日期要灰、要小，右对齐。
+### 1.6 Pitfalls when imitating
+- Pure white #FFFFFF for titles and neutral grey #888 for body: Linear's greys all lean slightly cool blue (#8A8F98, #D0D6E0).
+- 700 bold titles: they look heavy; Linear uses 510 with negative tracking.
+- Lorem ipsum or geometric placeholder blocks in the product window: instantly fake.
+- Accents or colourful gradients everywhere: Linear's marketing layer has no accent at all.
+- A fill and a shadow on every card: Linear's feature grid is separated only by 1px lines.
+- Each section choosing its own left margin: once the alignment lines drift, the page looks messy.
 
 ---
 
-## 4. HIG 窗口结构图（[HIG Toolbars](https://developer.apple.com/design/human-interface-guidelines/toolbars)）
+## 2. macOS 27 Finder ([Ars Technica review screenshot](https://arstechnica.com/gadgets/2026/09/macos-27-golden-gate-the-ars-technica-review/))
 
-是 Apple 自己画的"标准答案"，比真截图更干净，适合直接当线框模板。**都是插图，缩放比例未知，下面数值只作比例参考。**
+### 2.1 Layout skeleton (image 1980×1200, dark mode) [est]
+- Window x≈64–1906 (1842 wide), y≈139–1061; **sidebar ≈17% wide** (x≈64–385), icon-grid content on the right, a status bar at the bottom ("73 items, 348.54 GB available" centred, zoom slider on the right).
+- **No vertical line** between sidebar and content; only the fill differs: sidebar #282737 (purple wallpaper showing through) vs content #25252D. This is macOS 27's "edge-to-edge sidebar" [official wording in macos-tokens.md].
+- Sidebar row pitch ≈64 image pixels (**≈32pt if the screenshot is @2x**); selected row ≈63 image pixels tall, inset ≈10pt on each side (**estimate**).
+- Toolbar: ‹ › pill + title "Applications" on the left, a view-switch group in the middle (icon/list/column/gallery), an action group on the right (share/tags/…), and a separate round search button at the far right. Pills ≈69 image pixels tall (**estimate**).
 
-### 4.1 Finder 结构图（浅 1464×922 / 深）[量]
-- 窗口 x=46–1297、顶 y=42；侧栏 x=46–297（≈20% 宽）；圆角弧在顶部约 46–48 图内像素内完成。
-- 浅色：侧栏 #E2E2E2，内容 #FFFFFF，图标占位块 #F2F2F2。深色：侧栏 #252525，内容 #000000，占位 #333333。
-- 工具栏：‹ › 一组胶囊，"Documents" 标题，视图切换一个胶囊，操作组（分组/分享/标签/…）一个胶囊，搜索单独一个圆。胶囊有 1px 浅描边（图中约 #DADADA）。
-- 窗口阴影很柔：边缘约 12 图内像素内从 α≈0.35 渐隐到 0，底部更深更长（约 20 像素）。
+### 2.2 Information hierarchy
+- Three levels: toolbar title (bold) > sidebar items and icon names (regular) > group titles "Favorites / Locations" (small, grey) and the status bar (small, grey, centred).
+- Selection uses only "a rounded fill one step lighter + a blue icon"; text colour does not change.
+- **The toolbar is deliberately quiet:** the glass pills almost merge with the content, which shows through when scrolled underneath.
 
-### 4.2 Notes 工具栏图（1198×846，浅/深）[量]
-- 窗口 x=17–1074；工具栏胶囊顶边距窗口顶约 8 图内像素，胶囊高约 45 图内像素（≈窗宽 4.3%），1px 描边浅色 #D8D8D8、深色约 #494949。
-- 布局：侧栏开关 | 返回 | **标题 "Notes" + 副标题 "103 notes"**（两行，副标题灰小）| 新建 | 格式组（Aa、清单、表格、附件、协作）| 锁 | 分享 | 更多 | 搜索。
-- 菜单（深色图）：选中项是整行圆角的黄色底（Notes 的应用强调色），条目左边是小图标，右边是 ›。
+### 2.3 Shape and surface
+- Three generations compared ([Ars Technica](https://arstechnica.com/gadgets/2026/09/macos-27-golden-gate-the-ars-technica-review/) window-corner comparison): Sequoia has the hardest corners, Tahoe the roundest, 27 sits between them and is uniform across windows [official/community; values in macos-tokens.md; the exact value for 27 is unknown].
+- Toolbar buttons are **grouped by function** into one glass pill, with thin vertical dividers inside a group and space between groups.
+- Compared with Sequoia ([Ars Technica](https://arstechnica.com/gadgets/2026/09/macos-27-golden-gate-the-ars-technica-review/) macOS 15 screenshot): old toolbar buttons had no fill, and sidebar and content had a clear boundary.
 
-### 4.3 可借鉴规则
-- 工具栏结构：**[导航] 标题（可带副标题）……[核心操作组] [次要操作] [更多] [搜索]**。
-- 浅色三层灰：侧栏 #E2E2E2–#F5F5F5、内容 #FFFFFF、占位 #F2F2F2；深色：侧栏 #252525、内容 #000/#1E1E1E。
-- 应用强调色只出现在选中和焦点（Notes 是黄，Mail 是蓝，Bear 是红）。
+### 2.4 Transferable rules
+- Sidebar width 17–20% of the window (Finder ≈17%, Mail ≈19%, Mimestream 209pt in a 1200-wide window ≈17%) [est].
+- Sidebar groups: small grey group title + icon + 13pt label; space between groups, no dividers.
+- Toolbar controls in four groups, "navigation / view / actions / search"; joined within a group, spaced between groups.
 
-### 4.4 坑
-- 只照抄插图里的色块，不放真实内容：插图是骨架，真做时要像 Mail、Finder 那样填真数据。
-- 把插图里的像素当成 pt：比例未知，尺寸请用 tokens 里的 13pt 正文、控件尺寸。
-
----
-
-## 5. Bear（[bear.app](https://bear.app/) 官网整窗图）
-
-### 5.1 布局骨架（图 2516×1838，按 @2x 换算成 pt，**估算**）[量]
-- 窗口 x=204–2313、y≈168–1596 → **约 1054×714pt**。
-- **三栏：侧栏 180pt（深色）/ 笔记列表 280pt / 编辑区 ≈594pt**（≈17% / 27% / 56%）；列表与编辑区之间 1pt 分隔线 #D9D9D9。
-- 编辑区：标题、正文、图片、表格左对齐在同一条线上（左缘距编辑区左边约 53pt，内容宽约 486pt）。底部居中悬浮一条格式工具条（H、清单、列表 | B I 高亮 | 链接 表格 图片 …）。右上只有 BIU / ⓘ / ⋯ 三个弱图标。
-- 侧栏行距 ≈28pt；有两级缩进（Notes ▸ Untagged/Todo/Today/Locked），标签树带图标。
-
-### 5.2 信息层级
-- 编辑区：**标题（emoji + 粗大号，#2D2D2D）> 正文（#252525，行距宽松）> 表格表头（粗、#F4F5F7 底）> 链接（品牌红）**。
-- 列表卡：标题（粗，近黑）/ 两行摘要 #747577 / 缩略图 / 日期 #9C9D9F（最弱）。
-- 刻意弱化：工具栏图标、侧栏非选中项（#E3E4E6 在 #2E3235 上）、日期。
-
-### 5.3 形状与表面（取色为估算）[量]
-- 侧栏深色 #2E3235，选中行 #484848 圆角；**列表选中项 #F4F5F7 浅底 + 左侧约 5pt 宽的红色竖条 #DD4B4E**（品牌色只用在这里和链接上）。
-- `#bear` 标签是灰色胶囊；表格 1px 浅线、表头浅灰底，圆角很小。
-- 整窗只有一层柔和的大阴影，内部没有任何阴影。
-
-### 5.4 值得借的地方
-1. **深色侧栏 + 白色正文**：不跟系统配色，也能显得原生，因为字号、行距、图标尺寸都按系统规范来。
-2. **编辑器排版**：正文宽度受限（约 486pt），行距宽松，标题、图片、表格共享一条左对齐线，像印刷品。
-3. **列表卡片化但不加框**：靠缩略图和留白分隔，选中只用左侧色条。
-4. **格式工具条悬浮在底部**、平时很淡：工具让位给内容。
-
-### 5.5 坑
-- 照搬红色到处用：Bear 的红只出现在选中竖条、链接和脚注上。
-- 编辑区通栏铺满文字：Bear 限制了行宽。
-- 侧栏深色后文字也用纯白：Bear 非选中项是 #E3E4E6，只有选中项是纯白。
+### 2.5 Pitfalls
+- A heavy divider between sidebar and content, or a coloured sidebar: macOS differs by only one or two grey steps.
+- A separate border on every toolbar button: looks fragmented. macOS uses "one pill per group".
+- Glass on content cards: HIG says explicitly that glass is for the floating functional layer [official].
 
 ---
 
-## 6. 交叉核对（与 macos-tokens.md / linear-study.md 一致性）
-| 项目 | Linear | macOS（官方/实测） | 结论 |
+## 3. macOS 27 Mail ([apple.com/os/macos](https://www.apple.com/os/macos/) marketing render)
+
+### 3.1 Layout skeleton (image 1392×904, a marketing render with unknown scale; proportions only) [est]
+- Window x≈75–1291; **three-pane ratio: sidebar ≈19% / message list ≈37% / reading pane ≈43%** (236 / 455 / 522 image pixels).
+- Toolbar band ≈59 image pixels (≈4.9% of window width), spanning the list and reading pane; "Searching / All Mailboxes, 4 results" above the list is a **window title + subtitle** on the same row as the toolbar.
+- A row of filter pills above the list (four icon pills + a dark selected pill "All Mail").
+
+### 3.2 Information hierarchy
+- List rows have four fixed layers: **sender (bold) + date on the right (grey, small) / subject (regular) / two-line preview (grey)**. Search terms are highlighted in yellow. Section headers "Top Hits / All Results" are small grey.
+- Reading pane: avatar + name (bold) + subject + recipients (grey); body in regular black.
+- Quiet: sidebar counts (grey right-aligned numbers "4", "28"), group titles ("Favorites", "Smart Mailboxes").
+
+### 3.3 Shape and surface (all colours estimated) [est]
+- Sidebar #EDECE8 (warm, wallpaper showing through), list/reading pane #FFFFFF.
+- The **selected list row is a solid light grey #DCDCDC with rounded corners and no blue outline**. This matches the light value of `unemphasizedSelectedContentBackgroundColor`, #DCDCDC [community, tokens].
+- Thin dividers between list rows, starting at the text, not full-bleed.
+- **Only one blue element in the whole window:** the search field's focus ring.
+
+### 3.4 Transferable rules
+- Classic list + detail ratio ≈ 2:5:5 (sidebar:list:detail).
+- List row template: "bold primary name + right-aligned grey time / regular subtitle / two-line grey preview", rows separated by inset thin lines.
+- Neutral grey for selection; blue only for focus.
+
+### 3.5 Pitfalls
+- Turning list rows into shadowed cards: Mail uses flat rows + thin lines.
+- Filling the selection with the accent: in an unfocused window macOS uses grey; blue appears only at focus.
+- Dates as dark as titles: dates should be grey, small and right-aligned.
+
+---
+
+## 4. HIG window anatomy diagrams ([HIG Toolbars](https://developer.apple.com/design/human-interface-guidelines/toolbars))
+
+Apple's own drawn "reference answers": cleaner than real screenshots and suitable as wireframe templates. **They are illustrations with unknown scale; the values below are proportions only.**
+
+### 4.1 Finder diagram (light 1464×922 / dark) [est]
+- Window x=46–1297, top y=42; sidebar x=46–297 (≈20% wide); the corner arc completes within ≈46–48 image pixels at the top.
+- Light: sidebar #E2E2E2, content #FFFFFF, icon placeholders #F2F2F2. Dark: sidebar #252525, content #000000, placeholders #333333.
+- Toolbar: ‹ › in one pill, "Documents" title, view switch in one pill, action group (group/share/tags/…) in one pill, search as a separate circle. Pills have a 1px light stroke (≈#DADADA in the image).
+- The window shadow is very soft: fading from α≈0.35 to 0 within ≈12 image pixels at the edges, deeper and longer at the bottom (≈20 pixels).
+
+### 4.2 Notes toolbar diagram (1198×846, light/dark) [est]
+- Window x=17–1074; the toolbar pill's top is ≈8 image pixels below the window top, pill height ≈45 image pixels (≈4.3% of window width), 1px stroke light #D8D8D8, dark ≈#494949.
+- Layout: sidebar toggle | back | **title "Notes" + subtitle "103 notes"** (two lines, subtitle small grey) | new | format group (Aa, checklist, table, attachment, collaborate) | lock | share | more | search.
+- Menu (dark image): the selected item is a full-row rounded yellow fill (Notes' app accent); items have a small icon on the left and › on the right.
+
+### 4.3 Transferable rules
+- Toolbar structure: **[navigation] title (optional subtitle) …… [core action group] [secondary actions] [more] [search]**.
+- Three light greys: sidebar #E2E2E2–#F5F5F5, content #FFFFFF, placeholder #F2F2F2; dark: sidebar #252525, content #000/#1E1E1E.
+- The app accent appears only on selection and focus (Notes yellow, Mail blue, Bear red).
+
+### 4.4 Pitfalls
+- Copying only the diagram's colour blocks without real content: the diagram is a skeleton; real work fills it with real data like Mail and Finder.
+- Treating diagram pixels as points: scale is unknown; use the 13pt body and control sizes in macos-tokens.md.
+
+---
+
+## 5. Bear ([bear.app](https://bear.app/) website full-window image)
+
+### 5.1 Layout skeleton (image 2516×1838, converted to pt assuming @2x, **estimate**) [est]
+- Window x=204–2313, y≈168–1596 → **≈1054×714pt**.
+- **Three panes: sidebar 180pt (dark) / note list 280pt / editor ≈594pt** (≈17% / 27% / 56%); a 1pt divider #D9D9D9 between list and editor.
+- Editor: title, body, images and tables share one left alignment line (≈53pt from the editor's left edge, content width ≈486pt). A floating format bar is centred at the bottom (H, checklist, list | B I highlight | link table image …). Top right has only three quiet icons: BIU / ⓘ / ⋯.
+- Sidebar row pitch ≈28pt; two indent levels (Notes ▸ Untagged/Todo/Today/Locked), a tag tree with icons.
+
+### 5.2 Information hierarchy
+- Editor: **title (emoji + large bold, #2D2D2D) > body (#252525, generous line height) > table header (bold, #F4F5F7 fill) > links (brand red)**.
+- List cards: title (bold, near black) / two-line preview #747577 / thumbnail / date #9C9D9F (weakest).
+- Deliberately quiet: toolbar icons, unselected sidebar items (#E3E4E6 on #2E3235), dates.
+
+### 5.3 Shape and surface (colours estimated) [est]
+- Dark sidebar #2E3235, selected row #484848 rounded; **selected list item #F4F5F7 light fill + a ≈5pt red bar on the left #DD4B4E** (brand colour used only here and on links).
+- The `#bear` tag is a grey pill; tables use 1px light lines, light grey header fill, very small radii.
+- The whole window has one soft large shadow; nothing inside has a shadow.
+
+### 5.4 Worth borrowing
+1. **Dark sidebar + white body:** feels native without following the system palette, because type sizes, line heights and icon sizes follow system conventions.
+2. **Editor typography:** limited body width (≈486pt), generous line height; titles, images and tables share one left alignment line, like print.
+3. **Card-like list without frames:** separated by thumbnails and space; selection only by the left colour bar.
+4. **Format bar floating at the bottom**, usually faint: tools give way to content.
+
+### 5.5 Pitfalls
+- Using the red everywhere: Bear's red appears only on the selection bar, links and footnotes.
+- Full-width text in the editor: Bear limits the measure.
+- Pure white text on the dark sidebar: Bear's unselected items are #E3E4E6; only the selected item is pure white.
+
+---
+
+## 6. Cross-check (consistency with macos-tokens.md / linear-study.md)
+| Item | Linear | macOS (official / measured) | Conclusion |
 |---|---|---|---|
-| 正文字号 | 15px（营销）/ 12–14px（产品 UI）[DOM] | 13pt Body [官方] | 产品界面 13–14，营销页 15 |
-| 次要文字 | 13px [DOM] | 11–12pt [官方] | 比正文小 2 号即可 |
-| 文字层级做法 | 4 个冷灰实色 [DOM] | 黑/白 + 透明度 .85/.50/.26 [社区] | 都是"同色不同明度"，不靠换颜色 |
-| 强调色 | 仅产品内靛蓝 [DOM] | 仅选中/焦点 [官方+量] | **一屏一种强调色，只用在交互状态** |
-| 圆角 | 12 → 8 → 6 → 4 嵌套 [DOM] | 同心圆角 [官方] | 外层大、内层小 |
-| 分隔 | 1px 8% 白 [DOM] | separator 10% 黑/白 [社区] | 1px、≈10% 不透明度 |
-| 侧栏宽 | 232px / 1320 窗（17.6%）[DOM] | Finder 17%、Mail 19%、Bear 180pt（17%）、Mimestream 209pt [量] | **17–20%，或 180–240px** |
-| 侧栏行高 | — | Bear ≈28pt、Mimestream ≈31pt、Finder ≈32pt（若 @2x）[量] | 28–32 |
-| 选中态 | 浅一档灰底 [截图] | 灰底 #DCDCDC（失焦）/ 蓝（焦点）| 默认中性灰 |
+| Body size | 15px (marketing) / 12–14px (product UI) [DOM] | 13pt Body [official] | Product UI 13–14, marketing 15 |
+| Secondary text | 13px [DOM] | 11–12pt [official] | Two steps below body |
+| Text hierarchy method | 4 solid cool greys [DOM] | black/white + opacity .85/.50/.26 [community] | Both use "same hue, different value", not different colours |
+| Accent | indigo inside the product only [DOM] | selection/focus only [official + est] | **One accent per screen, used only for interactive states** |
+| Radius | 12 → 8 → 6 → 4 nested [DOM] | concentric corners [official] | Larger outside, smaller inside |
+| Separation | 1px 8% white [DOM] | separator 10% black/white [community] | 1px, ≈10% opacity |
+| Sidebar width | 232px / 1320 window (17.6%) [DOM] | Finder 17%, Mail 19%, Bear 180pt (17%), Mimestream 209pt [est] | **17–20%, or 180–240px** |
+| Sidebar row height | — | Bear ≈28pt, Mimestream ≈31pt, Finder ≈32pt (if @2x) [est] | 28–32 |
+| Selection | one grey step lighter [screenshot] | grey #DCDCDC (unfocused) / blue (focused) | Neutral grey by default |
 
-没有出现矛盾的数值。Linear 首页 H1 的 DOM 位置和截图墨迹差 ≈25–40px 已在 1.1 注明。
+No contradictory values. The ≈25–40px difference between Linear's H1 DOM position and screenshot ink is noted in 1.1.
 
 ---
 
-## AI 生成 UI 时可直接照用的 10 条规则
-1. **先定一组对齐线**（如内容框 1280，左右边距固定），所有标题、导航、产品图左缘都压线，不许各区自定边距。
-2. **字号最多 5 档**：标题 48–72 / 小标题 20–24 / 正文 13–15 / 次要 12–13 / 标签 11–12；标题字重 500–600 加负字距（−0.02em），不用 700+ 粗体。
-3. **文字分 3–4 级明度**（主 ≈ 白或黑 85%，次 ≈ 60%，三级 ≈ 50%，四级 ≈ 30%），同色相，不靠换颜色区分层级。
-4. **一屏只用一种强调色**，只给主按钮、选中、焦点和链接；营销文案和装饰一律中性色。
-5. **表面差一两档灰就够**：侧栏比内容区深或浅约 3–6%，只在两栏之间用 1px、≈10% 不透明度的分隔线；不用彩色块分区。
-6. **圆角同心嵌套**：窗 12 → 内面板 8 → 卡片 6 → 标签 4（或按 macOS 16–26 → 控件）；大按钮用胶囊。
-7. **阴影只给浮层**（弹窗、菜单、浮动面板）；平铺的卡片和列表用 1px 线，不加阴影。
-8. **展示产品就放真实感的界面截图或 HTML 模拟**：真实 ID、人名、时间、数字、状态；禁止 Lorem ipsum 和抽象几何插画。
-9. **应用界面用标准结构**：侧栏（17–20%，行高 28–32，小号灰色分组标题）+ 列表（行 = 粗主名 + 右侧灰时间 / 副标题 / 灰摘要）+ 详情；工具栏按"导航 / 标题 / 操作组 / 搜索"成组排列，组内连成一个胶囊。
-10. **留白大于内容**：区块上下内边距 ≈96–128px，正文行宽 ≤ 约 70 字符（Bear ≈486pt、Linear 特性说明 ≈600px），宁可少放一段，不要挤满。
+## Rules derived for the Linear direction
+
+These rules summarise what the approved baselines above share. **They apply to the Linear direction only.** Other directions derive their own foundations from their own references; see [reference calibration](../../../../references/reference-calibration.md). The concrete Linear contract is in [DESIGN.md](../../examples/linear-baseline/DESIGN.md) and [rules](../../examples/linear-baseline/rules.md).
+
+1. **Fix one pair of alignment lines** (e.g. content box 1280, fixed side margins); all titles, nav and product images align to them; no section chooses its own margins.
+2. **At most five type sizes:** title 48–72 / subtitle 20–24 / body 13–15 / secondary 12–13 / label 11–12; titles weight 500–600 with negative tracking (−0.02em), no 700+ bold.
+3. **Three to four text value levels** (primary ≈ white or black 85%, secondary ≈ 60%, tertiary ≈ 50%, quaternary ≈ 30%), same hue; no hue change for hierarchy.
+4. **One accent per screen**, only for the primary button, selection, focus and links; marketing copy and decoration stay neutral.
+5. **Surfaces differ by one or two grey steps:** the sidebar is ≈3–6% darker or lighter than content; a 1px ≈10%-opacity divider only between panes; no coloured blocks for regions.
+6. **Concentric radii:** window 12 → inner panel 8 → card 6 → tag 4 (or macOS 16–26 → controls); large buttons are pills.
+7. **Shadows only on floating layers** (dialogs, menus, floating panels); flat cards and lists use 1px lines, no shadow.
+8. **Show the product as a realistic interface screenshot or HTML mock:** real IDs, names, times, numbers, states; no Lorem ipsum or abstract geometric illustrations.
+9. **App layout uses the standard structure:** sidebar (17–20%, row height 28–32, small grey group titles) + list (row = bold primary name + grey time on the right / subtitle / grey preview) + detail; toolbar grouped as "navigation / title / action groups / search", each group joined in one pill.
+10. **More space than content:** section vertical padding ≈96–128px, body measure ≤ about 70 characters (Bear ≈486pt, Linear feature captions ≈600px); leave a paragraph out rather than crowding.

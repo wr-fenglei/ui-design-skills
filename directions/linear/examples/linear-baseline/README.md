@@ -2,7 +2,7 @@
 
 A Chinese landing page for an AI UI workflow, rebuilt on values measured from linear.app, in two routes: hand-written HTML and an agent-built Figma file with variables, components and grids. **Calibration baseline:** on 2026-10-20 the user judged the Figma result more professional than the previous examples in this repository. It deliberately imitates Linear's system. It is not an original visual direction and should not be reused as a brand.
 
-[Figma file](https://www.figma.com/design/cytw6jxvr7NDe0K406hGME) · [DESIGN.md](DESIGN.md) · [Rules](rules.md) · [Provenance](provenance.md) · [Method](../../references/reference-first-workflow.md) · [Process notes (中文)](../../research/2026-10-20-reference-first/README.md)
+[Figma file](https://www.figma.com/design/cytw6jxvr7NDe0K406hGME) · [DESIGN.md](DESIGN.md) · [Rules](rules.md) · [Provenance](provenance.md) · [Method](../../references/reference-first-workflow.md) · [Process notes](../../research/2026-10-20-reference-first/README.md)
 
 | Figma desktop 1440 (resized to 960) | Figma mobile 390 |
 | --- | --- |

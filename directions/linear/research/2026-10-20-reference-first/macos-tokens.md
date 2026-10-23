@@ -1,4 +1,4 @@
-> 公开仓库说明：本文提到的第三方截图（Linear、Apple、Bear、Mimestream、Ars Technica 等）**未随仓库分发**，文中原本的本地截图路径已替换为来源链接。来源链接见 [sources.md](sources.md)。所有实测值的出处标签（[DOM]/[量]/[官方]/[社区]/[未知]）保持原样。
+> Public-repository note: third-party screenshots mentioned here (Linear, Apple, Bear, Mimestream, Ars Technica and others) are **not distributed** with this repository; original local screenshot paths were replaced with source links. See [sources.md](sources.md). Measurement labels are kept as recorded.
 
 # macOS UI tokens (for professional-looking UI baselines)
 
