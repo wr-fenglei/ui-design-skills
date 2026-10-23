@@ -6,7 +6,7 @@ Keywords: precise perimeter, transparent interior, soft handles, edge separation
 
 A thin dashed periwinkle perimeter defines the selected region without turning it into a solid panel. A pale fill keeps the underlying content visible. Four rounded-square handles combine a colored border with a white outer separator: this makes the control points distinct from both the dashed line and the image underneath.
 
-[Approved detail and complete composition](../examples/translucent-ui/README.md#selection-frame)
+[Approved detail and complete composition](README.md#2-components--selection-and-choice)
 
 ## Independent use
 
@@ -23,7 +23,7 @@ Candidate applications: screenshot selection, image cropping, canvas object boun
 
 ## Implementation starting point
 
-Use the namespaced variables and structural CSS in [tokens.css](../examples/translucent-ui/tokens.css). Start with real DOM/SVG geometry in the same coordinate space as the image. Convert pointer coordinates through the actual rendered image transform, account for zoom and scrolling, clamp only according to the product's selection rules, and keep the underlying content unchanged.
+Use the namespaced variables and structural CSS in [tokens.css](tokens.css). Start with real DOM/SVG geometry in the same coordinate space as the image. Convert pointer coordinates through the actual rendered image transform, account for zoom and scrolling, clamp only according to the product's selection rules, and keep the underlying content unchanged.
 
 A crop rectangle, object bounding box and screen capture region can look similar while requiring different resize, keyboard and aspect-ratio behavior. Define that behavior before production use.
 

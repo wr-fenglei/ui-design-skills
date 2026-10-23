@@ -36,7 +36,7 @@ Exact palette and geometry are this example's choices, not universal rules. New 
 | Artifact | Actual responsibility | Boundary |
 | --- | --- | --- |
 | [Instruction pill](step-pill.html) | Number and instruction share a quiet bounded surface | Static specimen |
-| [Selection frame](selection-frame.html) | Preview boundary, inset and handles; [guide](../../references/selection-frame.md) | No implemented resize/crop behavior; portability still needs testing |
+| [Selection frame](selection-frame.html) | Preview boundary, inset and handles; [guide](selection-frame.md) | No implemented resize/crop behavior; portability still needs testing |
 | Page project groups | Featured vs secondary scan priority and bounded next-step copy | Fictional overview, not real project integration |
 | Question stack | One question, three options and text alternative; one adjacent card per gesture | Physical touch/trackpad behavior not fully accepted |
 | Current-choice dialog | Compact local snapshot review over the overview | No backend, real handoff or permanent cross-device record |
@@ -67,4 +67,4 @@ R5 has recorded synthetic and actual browser checks; R6 changed wallpaper CSS/en
 - Preserve selected shape and spatial relationships while correcting supporting detail.
 - A local visual approval does not validate the complete family or untested interactions.
 
-Before delivery read [agent pitfalls](../../references/agent-design-pitfalls.md); after an adaptation update this contract only with evidence actually established.
+Before delivery read [agent pitfalls](../../../../references/agent-design-pitfalls.md); after an adaptation update this contract only with evidence actually established.

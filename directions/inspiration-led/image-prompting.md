@@ -2,7 +2,7 @@
 
 ## Match the prompt to the design stage
 
-During independent expressive-core discovery, give GPT Image the problem, usage context, content needs and hard constraints. Let it choose what carries the beauty. Do not preselect a visual thesis or supply the Web route's layout, palette or draft. Ask for a bounded core study and keep the surrounding interface unresolved. The relationship-specific guidance below applies after a core has been selected, or when faithfully studying a specific reference; it must not erase independence at discovery. See [code-image collaboration](code-image-collaboration.md).
+When producing the inspiration-led version, give GPT Image the shared brief: problem, usage context, content inventory, canvas and hard constraints, plus the inspiration and functional evidence gathered in the [method](method.md). Let it propose what carries the beauty. Do not paste another direction's layout, palette or draft into the prompt. Ask for a complete low-detail page at the comparison stage, as the [multi-direction workflow](../../references/multi-direction-workflow.md) requires. The relationship-specific guidance below applies after a core has been selected, or when faithfully studying a specific reference.
 
 ## Write relationships, not praise
 

@@ -40,4 +40,4 @@ Appearance was approved by the commissioning user on 2026-10-13. Desktop renderi
 
 Independent code study after [Adobe Spectrum Colors](https://spectrum.adobe.com/page/using-color/), accessed 2026-10-13; source publication date unverified. No original image or proprietary font is bundled.
 
-Read [grouping and hierarchy](../../references/grouping-and-hierarchy.md) and [color in context](../../references/color-in-context.md).
+Read [grouping and hierarchy](../../../../references/grouping-and-hierarchy.md) and [color in context](../../../../references/color-in-context.md).

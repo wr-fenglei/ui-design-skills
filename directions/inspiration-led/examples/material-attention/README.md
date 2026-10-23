@@ -41,4 +41,4 @@ Appearance was approved by the commissioning user on 2026-10-13. Desktop renderi
 
 Independent code study after [Adobe Spectrum Colors](https://spectrum.adobe.com/page/using-color/) and [Attention hierarchy](https://spectrum.adobe.com/foundations/attention-hierarchy), accessed 2026-10-13; source publication dates unverified. Adobe artwork and brand fonts are not bundled. No claim of official component or token fidelity.
 
-Read [shape and material](../../references/shape-and-material.md), [composition](../../references/composition-preservation.md) and [code-image collaboration](../../references/code-image-collaboration.md).
+Read [shape and material](../../../../references/shape-and-material.md), [composition](../../../../references/composition-preservation.md) and [code and image handoff](../../../../references/code-and-image-handoff.md).

@@ -1,50 +1,45 @@
-# Examples by Scope
+# Inspiration-Led Direction
+
+The repository's original method: find a compelling visual idea, understand why it works, study excellent interfaces solving a similar task, then develop a small, coherent design system. In the three-way comparison this direction contributes **one GPT Image version**.
+
+- **Suitable starting question:** where the expressive core (material, light, typography, meaningful content or shape) should carry the interface, rather than a measured product reference.
+- **Explicit non-fit:** it does not supply measured foundations; values read from generated images are estimates, never official tokens.
+- **Status and evidence boundary:** existing examples keep their documented scope below. [Translucent UI / Pastel Workspace](examples/translucent-ui/README.md) is the most complete scoped example; it is not certified as a universal system.
+
+## Contents
+
+- [Method](method.md): the gold standard, stages and evidence gates for this direction
+- [System development](design-system-development.md): from inspiration to a bounded small system
+- [Image prompting](image-prompting.md): GPT Image briefs and controlled edits
+- [Examples by scope](#examples-by-scope)
+
+Shared methods (brief, comparison, calibration, review, contract) live in [references](../../references/multi-direction-workflow.md).
+
+## Examples by scope
 
 An example is evidence for a bounded relationship, not a universal theme. These classifications describe the existing artifacts; this index does not grant new approval or validation.
 
-## Exemplar shortlist
-
-Use a small, evidence-labelled shortlist, not a universal "best theme" ranking. For the same new-page brief, build independent complete low-detail versions from the selected applicable exemplars, compare them with the user, then refine the retained versions. See the [multi-exemplar method](../references/reference-first-workflow.md). The label "candidate" does not grant approval or imply a finished artifact.
-
-| Direction | Suitable starting question | Status and evidence boundary |
-| --- | --- | --- |
-| [Linear baseline](linear-baseline/README.md) | Quiet product-led marketing, restrained hierarchy and a dense embedded product mock | Accepted calibration example for the recorded dark Chinese page; deliberate imitation, not universally excellent original design. [Contract](linear-baseline/DESIGN.md), [components](linear-baseline/screenshots/figma-components.jpg), [complete page](linear-baseline/screenshots/figma-desktop.jpg), [process](../research/2026-10-20-reference-first/README.md). Interaction remains untested. |
-| [Panel UI](../references/design-sources.md#primary-practice-reference-panel-ui) | Component-rich interfaces with substantial control density and clear grouping; inspect task-specific components first | User-prioritized reference, **candidate / reproduction not yet established**. No retained validated specification, component set or complete-page reproduction exists here. Source selection is not outcome approval. |
-| [Translucent UI / Pastel Workspace](translucent-ui/README.md) | Quiet personal overview and choice-oriented layouts using selected translucent relationships | Existing scoped example, not newly certified as a best exemplar. [Contract](translucent-ui/DESIGN.md), [complete page](translucent-ui/pastel-workspace/README.md), [process](translucent-ui/case-study.md), [validation](translucent-ui/pastel-workspace/VALIDATION.md). Preserve the original local approval and technical limits. |
-
-Do not force all three into every task. Explain exclusions; add a direction only when it answers a distinct need and has inspectable evidence. Existing static studies and experiments below keep their original status, not an automatic promotion into this shortlist.
-
-### Record for each retained exemplar
-
-Keep the record in its existing example family rather than creating a parallel library. Link:
-- applicable scenarios and explicit non-fit;
-- specification / DESIGN.md, with measured versus adapted parameters;
-- actual components and their implemented states;
-- complete-page examples and supported sizes;
-- construction process and representative comparison/selection history;
-- limitations, rights, validation and exact user-approval scope.
-
-Missing artifacts remain marked pending. Use the existing [DESIGN.md contract](../references/design-contract.md); do not fabricate artifacts to fill this list. In Figma each version has Foundations, Components and Screens pages. Multiple successful versions can coexist without forced fusion.
-
-## Small systems and runnable examples
+### Small system with a runnable page
 
 | Example | Current scope | Contract and implementation |
 | --- | --- | --- |
-| [Translucent UI](translucent-ui/README.md) | Evolving family with selected approved visual relationships, static component specimens and a scoped runnable page; not a production component library | [DESIGN.md](translucent-ui/DESIGN.md), [Pastel Workspace](translucent-ui/pastel-workspace/README.md), [validation](translucent-ui/pastel-workspace/VALIDATION.md) |
-| [Anatomy UI / Fieldnotes](anatomy-ui/README.md) | Experimental code-first system; functional evidence exists, aesthetic approval remains pending; no GPT Image comparison was part of this user-requested experiment | [DESIGN.md](anatomy-ui/DESIGN.md), [rules](anatomy-ui/rules.md), [validation](anatomy-ui/VALIDATION.md) |
-| [Linear baseline](linear-baseline/README.md) | Calibration baseline: one dark Chinese marketing page at 1440/390, user-approved for professional quality; imitates Linear, not an original direction; no interaction tests | [DESIGN.md](linear-baseline/DESIGN.md), [rules](linear-baseline/rules.md), [Figma](https://www.figma.com/design/cytw6jxvr7NDe0K406hGME), [provenance](linear-baseline/provenance.md) |
+| [Translucent UI](examples/translucent-ui/README.md) | Evolving family with selected approved visual relationships, static component specimens and a scoped runnable page; not a production component library | [DESIGN.md](examples/translucent-ui/DESIGN.md), [Pastel Workspace](examples/translucent-ui/pastel-workspace/README.md), [validation](examples/translucent-ui/pastel-workspace/VALIDATION.md), [case study](examples/translucent-ui/case-study.md) |
 
-## Bounded functional and material studies
+Translucent UI contains an approved selection-preview composition and a paired-choice composition. Use them together to study broad translucent surfaces, readable dark typography, numbered instruction pills, nested preview scale and restrained selected states. Retained PNGs preserve the whole and key details; implementation tokens are starting values, not a production system. The [selection frame guide](examples/translucent-ui/selection-frame.md) covers potential screenshot, crop and canvas use; its appearance is approved in the original context, while cross-background portability and complete interactions still require testing.
 
-- [Material and attention](material-attention/README.md): material/comparison and label-attention studies, with scoped HTML/CSS specimens.
-- [Neutral surface layers](surface-layers/README.md): light/dark grouping relationships, not an official component system.
+### Bounded functional and material studies
 
-## Static visual references
+- [Material and attention](examples/material-attention/README.md): equal-circle material comparisons and an outline-to-labeled-capsule attention progression. Use for geometry, transparency and edge emphasis; scoped HTML/CSS specimens.
+- [Neutral surface layers](examples/surface-layers/README.md): matched light/dark panels with neutral region separation. Use for common surfaces and theme-specific value relationships; not an official component system.
 
-- [Curved gallery](gallery-001/README.md): crop, curvature and near/far relationships; no tested carousel.
-- [Orbital progress](progress-001/README.md): scale and localized emphasis; no calibrated loading behavior.
-- [Amber clock](amber-clock/README.md): integrated material/type relationships; no functioning timer implied.
-- [Green ribbon](green-ribbon/README.md): shape/type/color relationship; no tested action implied.
-- [Form & Field](form-and-field/README.md): approved generated editorial programme; not a working event application.
+Both include editable HTML/CSS and the scope of visual approval and outstanding technical checks. They are independent studies, not official Adobe components.
 
-Do not promote these studies by simply adding DESIGN.md or token files. Use [system development](../references/design-system-development.md) to establish a functional scope and inspect real outputs before broadening claims.
+### Static visual references
+
+- [Curved gallery](examples/gallery-001/README.md): a dark three-panel gallery with a complete central panel and cropped neighbours. Study asymmetric near/far curvature, focus through warm artwork in a quiet black field, crop and peripheral typography. No tested carousel or responsive behaviour.
+- [Orbital progress](examples/progress-001/README.md): a large progress value, blue rim light and a small warm marker. Study information scale, localized contrast and the rhythm between type and curves. No calibrated progress arc or loading state.
+- [Amber clock](examples/amber-clock/README.md): a large warm-white time display in front of amber glass with a compact cool-edged action. Study material cues shared by artwork, type and controls. Not a functioning timer or verified type/colour specification; the original verbatim prompt is unavailable.
+- [Green ribbon](examples/green-ribbon/README.md): a stable black text block beside a flowing green ribbon and a small coral action. Study tactile context around typography, diagonal continuity and unequal colour areas. No tested action; the original verbatim prompt is unavailable.
+- [Form & Field](examples/form-and-field/README.md): an approved generated editorial programme: meaningful objects, shared lighting, distinct colour fields and integrated typography. Not a working event application.
+
+Do not promote these studies by simply adding DESIGN.md or token files. Use [system development](design-system-development.md) to establish a functional scope and inspect real outputs before broadening claims.

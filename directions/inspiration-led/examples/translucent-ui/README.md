@@ -21,7 +21,7 @@ Almost weightless sheets, broad multicolor light and delicate edges establish th
 A compact instruction group balances a generous preview and precise selection handles. The [Choice reference](choice-preview.png) adds equal comparison surfaces and a restrained selected boundary.
 
 - **Instruction pill:** [specimen](step-pill.html) · [image](step-pill.png). A numbered circle and a dark label share one quiet surface.
-- **Selection frame:** [specimen](selection-frame.html) · [image](selection-frame.png) · [independent guide](../../references/selection-frame.md). Generous inset, clear boundary and balanced handles. Portability to other contexts still needs testing.
+- **Selection frame:** [specimen](selection-frame.html) · [image](selection-frame.png) · [independent guide](selection-frame.md). Generous inset, clear boundary and balanced handles. Portability to other contexts still needs testing.
 - **Foundation CSS:** [tokens.css](tokens.css). Starting values for these specimens, not universal or measured reference-image tokens.
 
 ### 3. A full page — Pastel Workspace

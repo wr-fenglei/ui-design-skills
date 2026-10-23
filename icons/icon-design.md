@@ -219,7 +219,7 @@ Once a direction is selected, refine shape logic, spacing, color, material, and 
 
 ## Reference usage
 
-Read [icon principles](icon-design-principles.md), the [analysis framework](icon-analysis-framework.md), and the [reference index](reference-index.md). Inspect the actual selected sheet before using its numbered directions.
+Read [icon principles](icon-design-principles.md), the [analysis framework](icon-analysis-framework.md), and the [icon reference sheets](README.md#included-assets). Inspect the actual selected sheet before using its numbered directions.
 
 ## Quality checklist
 

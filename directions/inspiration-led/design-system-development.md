@@ -1,6 +1,6 @@
 # Develop a Small Design System
 
-Use with [SKILL.md](../SKILL.md). This method connects inspiration, functional references, approved relationships and bounded reuse. It does not prescribe a visual style or certify the existing examples as universal systems.
+Use with the [inspiration-led method](method.md). This method connects inspiration, functional references, approved relationships and bounded reuse. It does not prescribe a visual style or certify the existing examples as universal systems.
 
 ## 1. Two reference lenses
 
@@ -15,7 +15,7 @@ Keep the lenses distinct until the synthesis is explicit. For each proposed tran
 - what must change, what must not be copied, and what remains unknown;
 - author, original link, date if known, access date, rights and verification limits.
 
-Do not assemble “the glass from A + the palette from B + the sidebar from C” without checking the resulting whole. Multiple prestigious sources do not establish a coherent answer. See [design sources](design-sources.md) and [composition](composition-preservation.md).
+Do not assemble “the glass from A + the palette from B + the sidebar from C” without checking the resulting whole. Multiple prestigious sources do not establish a coherent answer. See [design sources](../../references/design-sources.md) and [composition](../../references/composition-preservation.md).
 
 ## 2. Write a relationship hypothesis, not a token sheet
 
@@ -27,11 +27,11 @@ Specify provisional relationships: main/supporting area, relative scale, content
 
 Output: a brief, reference-to-decision map and bounded scope. Acceptance: someone can explain how the inspiration supports the real task without calling a decorative poster an interface.
 
-## 3. Explore independently, then select
+## 3. Explore with GPT Image, then select
 
-Follow [code-image collaboration](code-image-collaboration.md). Common task/content/canvas constraints make comparison meaningful; they are not a command to produce identical designs. Each route must be actually rendered and inspected.
+Generate the direction's version from the shared brief and the relationship hypothesis, following [image prompting](image-prompting.md). The same task, content and canvas as the other two directions make the comparison meaningful; they are not a command to resemble them. Inspect the actual generated output before presenting it.
 
-Compare expressive strength, usability intent, reading order, grouping, density and integration. Identify specific strengths, not “the image is prettier” or “the library is better.” User selection determines the core and later overall baseline. Do not force a hybrid or proceed through an explicit approval gate silently.
+Compare expressive strength, usability intent, reading order, grouping, density and integration. Identify specific strengths, not "the image is prettier". User selection determines whether this direction is kept and what its baseline is. Do not proceed through an explicit approval gate silently.
 
 A user-supplied selected reference narrows what is open. A narrow edit to an approved design does not require rediscovering the entire system.
 
@@ -47,7 +47,7 @@ Acceptance:
 - secondary regions look deliberately designed;
 - the actual implementation and selected concept are not confused.
 
-Use [pitfalls](agent-design-pitfalls.md), especially relationships, weak baselines, supporting regions and approval scope.
+Use [pitfalls](../../references/agent-design-pitfalls.md), especially relationships, weak baselines, supporting regions and approval scope.
 
 ## 5. Extract rules from working relationships
 
@@ -59,7 +59,7 @@ Develop a small vocabulary sufficient for the demonstrated use case:
 - component responsibilities, variants, state and interaction boundaries;
 - composition adaptations when content or viewport changes.
 
-Record parameters as **inherited source fact**, **adapted relationship**, **estimated from visual reference**, **new implementation choice**, or **measured implementation result**. Never present generated pixel colors or approximate measurements as official tokens.
+Label parameters with the shared [provenance vocabulary](../../references/design-contract.md#parameter-provenance). Never present generated pixel colors or approximate measurements as official tokens.
 
 Extract code only where there is an actual repeating responsibility. A CSS variable file is not proof of a design system. A named component without states is not proof of reusable interaction.
 
@@ -73,19 +73,6 @@ If the system needs new rules for every screen, reconsider its scope. If it forc
 
 Do not declare broad production readiness from one excellent screen. A useful, explicitly bounded system is preferable to an unsupported universal library.
 
-## 7. Audit in distinct passes
+## 7. Audit and retain
 
-1. **Visual whole:** expression, balance, hierarchy, supporting regions and consistency with selected relationships.
-2. **Detail and readability:** real text, glyphs, state contrast, alignment, wrapping, backgrounds and sizes.
-3. **Behavior:** actual interactions, interrupted/repeated flows, state changes and viewport adaptation within scope.
-4. **Reference and feedback:** preserved approved properties, specific improvement, new regressions, exact approval scope.
-
-Repair a region, then return it to the full page. Record before → problem → bounded change → actual result → remaining limits. A layout check does not establish visual quality; a still-image approval does not validate behavior.
-
-## 8. Retain a scoped example and distill a method
-
-A system candidate becomes a reusable example when the selected effect, production method, parameters, sources, actual tools and tested boundary can be explained and reproduced. User review applies only to the stated scope.
-
-Write its [DESIGN.md](design-contract.md) from the selected and implemented evidence. Preserve original approval and validation records; the new contract summarizes and links them, not replaces or inflates them.
-
-Promote general lessons into the appropriate existing reference: input → method → output → acceptance → boundary. Retain a few representative failure mechanisms in [agent pitfalls](agent-design-pitfalls.md). Keep project-specific palette and geometry in the example, and research candidates in research notes, not in the universal skill.
+Audit with the shared [review and audit](../../references/review-and-audit.md) passes. Retain a scoped example and write its [DESIGN.md](../../references/design-contract.md) from selected and implemented evidence, following the contract's maturity and retention rules. Retain a few representative failure mechanisms in [agent pitfalls](../../references/agent-design-pitfalls.md); keep project-specific palette and geometry in the example.
