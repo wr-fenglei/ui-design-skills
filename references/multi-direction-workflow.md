@@ -1,6 +1,6 @@
 # Multi-Direction Workflow
 
-Use with [SKILL.md](../SKILL.md). For every new page or interface brief, produce **three versions, one per direction**, under the same requirement, compare them with the user, then refine what the user selects.
+Use with [SKILL.md](../SKILL.md). For every new page or interface brief, produce **three versions, one per direction**, under the same requirement, compare them with the user, then refine the version picked as the base while carrying over good details from the other two.
 
 | Direction | How its version is produced | Entry |
 | --- | --- | --- |
@@ -35,7 +35,7 @@ For each Figma-built version keep three pages: **Foundations**, **Components** a
 
 Show the three complete versions at equal size. Explain differences in layout, density, type hierarchy, component treatment and intended interaction, with remaining gaps. Name what is measured, estimated or generated.
 
-Wait for the user's selection before refining component internals, detailed states and interactions. The user may keep more than one version; do not force a single winner or merge them into an averaged style. Refine each retained version against its own relationships. An inspiration-led version that is selected is rebuilt as an editable design through [code and image handoff](code-and-image-handoff.md).
+Wait for the user's choice before refining component internals, detailed states and interactions. The user picks the best-looking version as the **base**. From the other two, list the specific details worth keeping (for example a component treatment, a density decision, a type pairing or a piece of layout), each with where it comes from. Refine the base against its own relationships and bring each kept detail in individually, adapted to the base's foundations; do not average the versions into a blended style. If an inspiration-led version is the base, it is first rebuilt as an editable design through [code and image handoff](code-and-image-handoff.md).
 
 ## 5. Record each retained version
 
@@ -55,6 +55,6 @@ Missing artifacts remain marked pending. Use the [DESIGN.md contract](design-con
 2. Measured, estimated, adapted, generated and unknown values are distinguishable.
 3. Each version's foundations, component language and layout match its own direction, not another direction's template.
 4. The comparison uses complete low-detail pages with the same brief and canvas.
-5. User selection precedes detail refinement; multiple retained versions remain independent.
+5. The user picks the base before detail refinement; details carried over from the other versions are listed with their source and adapted to the base.
 6. Actual screenshots and relevant tests support the stated result ([review and audit](review-and-audit.md)).
 7. Approval and validation scope, limitations, sources and reproduction steps are recorded.

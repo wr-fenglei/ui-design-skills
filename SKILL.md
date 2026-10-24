@@ -1,13 +1,13 @@
 ---
 name: ui-design
-description: Design interfaces in three parallel directions — Linear (reference-calibrated), Panel UI (reference-calibrated) and inspiration-led (GPT Image) — producing one version per direction for the same brief, then refining what the user selects. Shared methods cover measurement, Figma execution, screenshot review, the DESIGN.md contract and recurring agent errors. Also covers app-icon design and retaining scoped examples.
+description: Design interfaces in three parallel directions — Linear (reference-calibrated), Panel UI (reference-calibrated) and inspiration-led (GPT Image) — producing one version per direction for the same brief, then refining the version the user picks as the base and carrying over good details from the other two. Shared methods cover measurement, Figma execution, screenshot review, the DESIGN.md contract and recurring agent errors. Also covers app-icon design and retaining scoped examples.
 ---
 
 # UI Design
 
 ## Purpose
 
-For every new page or interface brief, produce **three versions, one per direction**, under the same requirement, content and canvas. Compare them with the user, let the user select, then refine the selected versions. Do not force a single winner or merge versions into an averaged style.
+For every new page or interface brief, produce **three versions, one per direction**, under the same requirement, content and canvas. Compare them with the user. The user picks the best-looking version as the **base** for refinement; good details from the other two versions are kept and carried into it. Carry details over individually and adapt them to the base; do not average the versions into a blended style.
 
 The shared layer teaches **how to measure, compare, review and record**. Each direction owns its concrete choices. Neither a specification nor an attractive picture establishes a finished system.
 
@@ -29,8 +29,8 @@ Follow the [multi-direction workflow](references/multi-direction-workflow.md):
 
 1. **Shared brief:** task, audience, platform, primary action, content inventory and canvas sizes, fixed once for all three versions.
 2. **Independent versions:** each direction derives its own foundations and components from its own sources and builds a complete low-detail page. Linear and Panel UI use [reference calibration](references/reference-calibration.md) in Figma ([execution note](references/figma-execution.md)); inspiration-led follows its [method](directions/inspiration-led/method.md) with GPT Image.
-3. **Comparison gate:** show the three versions at equal size; explain differences; wait for the user's selection before detailed component states and interactions.
-4. **Refinement:** refine each selected version against its own relationships. A selected GPT Image version is rebuilt as an editable design through [code and image handoff](references/code-and-image-handoff.md).
+3. **Comparison gate:** show the three versions at equal size; explain differences; the user picks the base version and marks details worth keeping from the other two, before detailed component states and interactions.
+4. **Refinement:** refine the base version against its own relationships and bring in the marked details from the other two, adapted to its foundations. If the GPT Image version is the base, it is first rebuilt as an editable design through [code and image handoff](references/code-and-image-handoff.md).
 5. **Review and retention:** audit with [review and audit](references/review-and-audit.md); record retained work in its direction folder with a [DESIGN.md contract](references/design-contract.md).
 
 Reading documents is preparation, not proof that a stage happened. If a version cannot be produced (for example a tool is unavailable), say which one is missing; do not fabricate it.

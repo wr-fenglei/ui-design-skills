@@ -1,6 +1,6 @@
 # UI Design Skills
 
-An agent skill for designing interfaces in **three parallel directions**. For the same brief it produces one version per direction, compares them with the user and refines what the user selects.
+An agent skill for designing interfaces in **three parallel directions**. For the same brief it produces one version per direction, compares them with the user, then refines the strongest version as the base while carrying over good details from the other two.
 
 | Direction | How its version is made | Start here |
 | --- | --- | --- |
@@ -12,8 +12,8 @@ An agent skill for designing interfaces in **three parallel directions**. For th
 
 1. Fix one brief: task, content inventory, canvas and primary action
 2. Produce three complete low-detail versions, one per direction, each from its own sources
-3. Compare them at equal size; the user selects one or more
-4. Refine each selected version against its own relationships, then audit the whole
+3. Compare them at equal size; the user picks the best-looking version as the base and marks good details in the other two
+4. Refine the base version, bring in the marked details adapted to its own relationships, then audit the whole
 5. Retain the result in its direction folder with a DESIGN.md, real tools, provenance and validation limits
 
 Start with [SKILL.md](SKILL.md). Neither isolated tokens nor a polished generated image establishes a design system.
@@ -22,7 +22,7 @@ Start with [SKILL.md](SKILL.md). Neither isolated tokens nor a polished generate
 
 - [SKILL.md](SKILL.md): the three directions, the workflow and its gates
 - [references/](references/multi-direction-workflow.md): methods shared by all directions
-  - [Multi-direction workflow](references/multi-direction-workflow.md): one brief, three versions, comparison and selection
+  - [Multi-direction workflow](references/multi-direction-workflow.md): one brief, three versions, comparison and choosing a base
   - [Reference calibration](references/reference-calibration.md): measure, deconstruct, foundations, components
   - [Review and audit](references/review-and-audit.md): audit passes, screenshot review, validation gates
   - [DESIGN.md contract](references/design-contract.md): what an example records, provenance labels, maturity
