@@ -41,4 +41,4 @@ Appearance was approved by the commissioning user on 2026-10-13. Desktop renderi
 
 Independent code study after [Adobe Spectrum Colors](https://spectrum.adobe.com/page/using-color/) and [Attention hierarchy](https://spectrum.adobe.com/foundations/attention-hierarchy), accessed 2026-10-13; source publication dates unverified. Adobe artwork and brand fonts are not bundled. No claim of official component or token fidelity.
 
-Read [shape and material](../../../../references/links.md), [composition](../../../../references/links.md) and [code and image handoff](../../../../references/links.md).
+Related reading: [Apple HIG on materials](https://developer.apple.com/design/human-interface-guidelines/materials) for layered surfaces, and [NN/g on Gestalt proximity](https://www.nngroup.com/articles/gestalt-proximity/) for grouping. More in the [reference links](../../../../references/links.md).

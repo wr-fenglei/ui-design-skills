@@ -40,4 +40,4 @@ Appearance was approved by the commissioning user on 2026-10-13. Desktop renderi
 
 Independent code study after [Adobe Spectrum Colors](https://spectrum.adobe.com/page/using-color/), accessed 2026-10-13; source publication date unverified. No original image or proprietary font is bundled.
 
-Read [grouping and hierarchy](../../../../references/links.md) and [color in context](../../../../references/links.md).
+Related reading: [NN/g on Gestalt proximity](https://www.nngroup.com/articles/gestalt-proximity/) for grouping, and [Stripe on accessible color systems](https://stripe.com/blog/accessible-color-systems) for surface and text pairs. More in the [reference links](../../../../references/links.md).
