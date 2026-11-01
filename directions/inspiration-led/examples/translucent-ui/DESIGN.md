@@ -67,4 +67,4 @@ R5 has recorded synthetic and actual browser checks; R6 changed wallpaper CSS/en
 - Preserve selected shape and spatial relationships while correcting supporting detail.
 - A local visual approval does not validate the complete family or untested interactions.
 
-Before delivery read [agent pitfalls](../../../../references/agent-design-pitfalls.md); after an adaptation update this contract only with evidence actually established.
+Before delivery read [agent pitfalls](../../../../references/links.md); after an adaptation update this contract only with evidence actually established.

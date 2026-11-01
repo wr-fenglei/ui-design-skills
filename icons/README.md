@@ -23,4 +23,4 @@ Use it to inspect silhouette, negative space, composition, material, and lightin
 
 ## Boundaries
 
-For a selected icon direction, preserve its thesis while maintaining recognition at intended sizes. For public production, check asset rights and create an original expression rather than copying protected identity. See [design sources](../references/design-sources.md) for external discovery platforms.
+For a selected icon direction, preserve its thesis while maintaining recognition at intended sizes. For public production, check asset rights and create an original expression rather than copying protected identity. See [design sources](../references/links.md) for external discovery platforms.
